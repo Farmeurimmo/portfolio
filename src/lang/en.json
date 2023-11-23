@@ -1,0 +1,29 @@
+{
+  "app": {
+    "presentation": {
+      "title": "Hello Worlda"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "dev": "Developer",
+    "sa": "System Administrator",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "pages": {
+    "home": {
+      "title": "Home - Farmeurimmo",
+      "iam": {
+        "hello": "Hello,",
+        "iam": "I am Farmeurimmo",
+        "dev": "a Developer",
+        "sysadmin": "also a System Administrator"
+      },
+      "presentations": {
+        "dev": "Developer",
+        "sysadmin": "System Administrator"
+      }
+    }
+  }
+}

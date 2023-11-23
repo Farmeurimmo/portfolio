@@ -1,0 +1,29 @@
+{
+  "app": {
+    "presentation": {
+      "title": "Salut le monde !"
+    }
+  },
+  "nav": {
+    "home": "Accueil",
+    "dev": "Développeur",
+    "sa": "Administrateur système",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "pages": {
+    "home": {
+      "title": "Accueil - Farmeurimmo",
+      "iam": {
+        "hello": "Bonjour,",
+        "iam": "Je suis Farmeurimmo",
+        "dev": "un Développeur",
+        "sysadmin": "Administrateur système"
+      },
+      "presentations": {
+        "dev": "Développeur",
+        "sysadmin": "Administrateur système"
+      }
+    }
+  }
+}
