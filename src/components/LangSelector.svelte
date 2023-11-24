@@ -1,14 +1,24 @@
 <script>
-    export let value = 'en';
     import {changeLocale} from "../i18n.js";
     import {Button, Dropdown, DropdownItem} from 'flowbite-svelte';
     import {ChevronDownSolid} from 'flowbite-svelte-icons';
 
-    $: handleLocaleChange = () => {
-        changeLocale(value);
-    }
+    export let value = 'en';
 
     let current = '🇬🇧 English';
+
+    $: handleLocaleChange = () => {
+        changeLocale(value);
+
+        switch (value) {
+            case 'en':
+                current = '🇬🇧 English';
+                break;
+            case 'fr':
+                current = '🇫🇷 Français';
+                break;
+        }
+    }
 
     let dropdownOpen = false;
 </script>
