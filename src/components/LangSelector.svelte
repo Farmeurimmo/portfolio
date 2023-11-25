@@ -1,7 +1,7 @@
 <script>
-    import {changeLocale} from "../i18n.js";
+    import {changeLocale, languageOptions} from "../i18n.js";
     import {Button, Dropdown, DropdownItem} from 'flowbite-svelte';
-    import {ChevronDownSolid} from 'flowbite-svelte-icons';
+    import {ChevronDownSolid, ChevronLeftSolid} from 'flowbite-svelte-icons';
     import {locale} from "svelte-i18n";
 
     let value = 'en';
@@ -45,16 +45,20 @@
 
 <div class="locale-selector flex bg-gray-800 p-4 rounded">
     <Button class="flex flex-row justify-items-center text-xl">{current}
-        <ChevronDownSolid class="w-3 h-3 ml-2 text-white dark:text-white"/>
+        {#if (dropdownOpen)}
+            <ChevronDownSolid class="w-3 h-3 ml-2 dark:text-white"/>
+        {/if}
+        {#if (!dropdownOpen)}
+            <ChevronLeftSolid class="w-3 h-3 ml-2 text-white dark:text-white"/>
+        {/if}
     </Button>
-    <Dropdown bind:open={dropdownOpen} class="justify-center bg-blue-950 flex flex-col items-center">
-        <DropdownItem
-                on:click={() => {value = 'en'; handleLocaleChange();}}>
-            <p class="p-3 text-2xl hover:text-black hover:font-bold hover:bg-gray-400">🇬🇧 English</p>
-        </DropdownItem>
-        <DropdownItem
-                on:click={() => {value = 'fr'; handleLocaleChange();}}>
-            <p class="p-3 text-2xl hover:text-black hover:font-bold hover:bg-gray-400">🇫🇷 Français</p>
-        </DropdownItem>
+    <Dropdown bind:open={dropdownOpen} class="justify-center bg-blue-950 flex flex-col items-center rounded mt-2.5">
+        {#each languageOptions as option}
+            <DropdownItem
+                    on:click={() => {value = option.code; handleLocaleChange();}}
+                    class="p-3 text-white dark:text-white hover:bg-blue-900 w-40 rounded">
+                {option.flag + ' ' + option.name}
+            </DropdownItem>
+        {/each}
     </Dropdown>
 </div>
