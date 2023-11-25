@@ -30,7 +30,6 @@
                 break;
             case 'fr':
                 current = '🇫🇷 Français';
-                console.log('b ', current);
                 break;
         }
     });
