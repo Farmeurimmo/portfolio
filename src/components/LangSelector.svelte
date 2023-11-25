@@ -2,13 +2,16 @@
     import {changeLocale} from "../i18n.js";
     import {Button, Dropdown, DropdownItem} from 'flowbite-svelte';
     import {ChevronDownSolid} from 'flowbite-svelte-icons';
+    import {onMount} from "svelte";
 
-    export let value = 'en';
-
+    let value = 'en';
     let current = '🇬🇧 English';
+    let dropdownOpen = false;
 
     $: handleLocaleChange = () => {
         changeLocale(value);
+
+        dropdownOpen = false;
 
         switch (value) {
             case 'en':
@@ -20,7 +23,9 @@
         }
     }
 
-    let dropdownOpen = false;
+    onMount(() => {
+        changeLocale(value)
+    });
 </script>
 
 <style>
@@ -37,11 +42,11 @@
     </Button>
     <Dropdown bind:open={dropdownOpen} class="justify-center bg-blue-950 flex flex-col items-center">
         <DropdownItem
-                on:click={() => {value = 'en'; current = '🇬🇧 English'; handleLocaleChange(); dropdownOpen = false;}}>
+                on:click={() => {value = 'en'; handleLocaleChange();}}>
             <p class="p-3 text-2xl hover:text-black hover:font-bold hover:bg-gray-400">🇬🇧 English</p>
         </DropdownItem>
         <DropdownItem
-                on:click={() => {value = 'fr'; current = '🇫🇷 Français'; handleLocaleChange(); dropdownOpen = false;}}>
+                on:click={() => {value = 'fr'; handleLocaleChange();}}>
             <p class="p-3 text-2xl hover:text-black hover:font-bold hover:bg-gray-400">🇫🇷 Français</p>
         </DropdownItem>
     </Dropdown>
