@@ -2,7 +2,7 @@
     import {changeLocale} from "../i18n.js";
     import {Button, Dropdown, DropdownItem} from 'flowbite-svelte';
     import {ChevronDownSolid} from 'flowbite-svelte-icons';
-    import {onMount} from "svelte";
+    import {locale} from "svelte-i18n";
 
     let value = 'en';
     let current = '🇬🇧 English';
@@ -23,8 +23,16 @@
         }
     }
 
-    onMount(() => {
-        changeLocale(value)
+    $: locale.subscribe((value) => {
+        switch (value) {
+            case 'en':
+                current = '🇬🇧 English';
+                break;
+            case 'fr':
+                current = '🇫🇷 Français';
+                console.log('b ', current);
+                break;
+        }
     });
 </script>
 

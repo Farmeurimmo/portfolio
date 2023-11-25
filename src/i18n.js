@@ -7,7 +7,7 @@ const fallbackLocale = 'en';
 addMessages('en', en);
 addMessages('fr', fr);
 
-let initialLocale;
+let initialLocale = '';
 let detectedLocale = getLocaleFromNavigator(); // the locale could be region specific, i.e. de-CH
 if (detectedLocale === null) detectedLocale = fallbackLocale;
 let split = detectedLocale.split('-');
@@ -17,11 +17,14 @@ if (split.length > 1) {
     initialLocale = detectedLocale;
 }
 
-init({
-    fallbackLocale,
-    initialLocale
-});
-
-export const changeLocale = (/** @type {any} */ loc) => {
+// @ts-ignore
+export let changeLocale = (loc) => {
     locale.set(loc);
 }
+
+changeLocale(initialLocale);
+
+init({
+    fallbackLocale,
+    initialLocale,
+});
