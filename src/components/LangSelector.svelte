@@ -1,23 +1,21 @@
 <script lang="ts">
-    import {changeLocale, languageOptions} from "../i18n.js";
+    import {changeLocale, fallbackLocale, languageOptions} from "../i18n.js";
     import {Button, Dropdown, DropdownItem} from 'flowbite-svelte';
     import {ChevronDownSolid, ChevronLeftSolid} from 'flowbite-svelte-icons';
     import {locale} from "svelte-i18n";
 
-    let value: string | null | undefined = 'en';
-    let current = '🇬🇧 English';
+    let value: string | null | undefined = fallbackLocale;
+    let current = '';
     let dropdownOpen = false;
 
     function localeChange() {
         dropdownOpen = false;
 
-        switch (value) {
-            case 'en':
-                current = '🇬🇧 English';
+        for (let i = 0; i < languageOptions.length; i++) {
+            if (languageOptions[i].code === value) {
+                current = languageOptions[i].flag + ' ' + languageOptions[i].name;
                 break;
-            case 'fr':
-                current = '🇫🇷 Français';
-                break;
+            }
         }
     }
 
@@ -30,7 +28,7 @@
     $: locale.subscribe((val) => {
         value = val;
         if (value === undefined) {
-            value = 'en';
+            value = fallbackLocale;
         }
 
         localeChange();

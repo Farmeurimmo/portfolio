@@ -2,7 +2,7 @@ import {addMessages, getLocaleFromNavigator, init, locale} from 'svelte-i18n';
 import en from './lang/en.json';
 import fr from './lang/fr.json';
 
-const fallbackLocale = 'en';
+export const fallbackLocale = 'en';
 
 addMessages('en', en);
 addMessages('fr', fr);
