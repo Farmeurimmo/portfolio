@@ -2,6 +2,15 @@
   "app": {
     "presentation": {
       "title": "Salut le monde !"
+    },
+    "date": {
+      "hour": "heure",
+      "minute": "minute",
+      "second": "seconde",
+      "day": "jour",
+      "month": "mois",
+      "year": "année",
+      "ago": "il y a"
     }
   },
   "nav": {

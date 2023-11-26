@@ -1,8 +1,9 @@
 <script>
-    import Navbar from "../components/navbar.svelte";
     import {_} from 'svelte-i18n';
     import Image from "../components/Image.svelte";
     import {onMount} from 'svelte';
+    import CommonFooter from "../components/CommonFooter.svelte";
+    import NavigationBar from "../components/NavigationBar.svelte";
 
     let presentations = [
         {
@@ -71,7 +72,7 @@
 
 <title>{$_('pages.home.title')}</title>
 
-<Navbar/>
+<NavigationBar/>
 
 <body class="flex flex-col h-screen">
 <section class="justify-center items-center flex flex-col">
@@ -85,6 +86,14 @@
         {/each}
     </div>
 </section>
+
+<section class="flex flex-col justify-center items-center">
+    <h2 class="text-2xl p-5">Under construction</h2>
+    <Image className="border-0 w-screen/2 h-auto" src="https://http.cat/204.jpg"/>
+</section>
+
+<CommonFooter/>
+
 </body>
 
 <style>
