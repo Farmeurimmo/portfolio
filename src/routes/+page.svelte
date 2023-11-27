@@ -89,7 +89,8 @@
 
 <section class="flex flex-col justify-center items-center">
     <h2 class="text-2xl p-5">Under construction</h2>
-    <Image className="border-0 w-screen/2 h-auto" src="https://http.cat/204.jpg"/>
+    <Image className="border-0 w-screen/2 h-auto hover:scale-105 transition-all duration-300"
+           src="https://http.cat/204.jpg"/>
 </section>
 
 <CommonFooter/>

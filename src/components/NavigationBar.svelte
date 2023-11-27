@@ -14,17 +14,15 @@
     }
 </script>
 
-<nav class="flex items-center h-16 w-screen border-0 bg-transparent mt-4 mb-10">
+<nav class="flex items-center w-screen border-0 mb-10 p-2 pt-3 bg-blend-soft-light bg-gradient-to-t from-gray-950 to-blue-950">
     <div class="flex flex-row items-center justify-evenly w-screen h-16" id="items">
         <a class="text-white hover:text-gray-300 flex flex-row items-center gap-3" href="https://farmeurimmo.fr">
-            <div class="w-16 h-16">
-                <Image className="rounded-full border-0" src="https://cdn.farmeurimmo.fr/img/logo.jpg"/>
-            </div>
+            <Image className="rounded-full border-0 w-14" src="https://cdn.farmeurimmo.fr/img/logo.jpg"/>
             Farmeurimmo
         </a>
         {#each Object.entries(endPoints) as [key, value]}
             {#if key === currentPage}
-                <a class="text-blue-700 font-bold hover:text-gray-300" href={value}>{$_("nav." + key)}</a>
+                <a class="text-orange-400 font-bold hover:text-gray-300" href={value}>{$_("nav." + key)}</a>
             {:else}
                 <a class="text-white hover:text-gray-300" href={value}>{$_("nav." + key)}</a>
             {/if}

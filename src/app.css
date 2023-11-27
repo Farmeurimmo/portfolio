@@ -11,6 +11,13 @@ body {
     animation: bio 2s ease-in-out;
 }
 
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: blue black;
+    scrollbar-width: auto;
+    overflow-x: hidden;
+}
+
 @keyframes bio {
     0% {
         opacity: 0;
