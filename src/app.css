@@ -9,11 +9,6 @@ body {
     min-width: 400px;
     min-height: 150vh;
     animation: bio 2s ease-in-out;
-    overflow-x: hidden;
-}
-
-html {
-    overflow-x: hidden;
 }
 
 @keyframes bio {
