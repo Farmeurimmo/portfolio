@@ -13,9 +13,6 @@ body {
 }
 
 html {
-    scroll-behavior: smooth;
-    scrollbar-color: blue black;
-    scrollbar-width: auto;
     overflow-x: hidden;
 }
 
