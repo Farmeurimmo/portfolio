@@ -74,7 +74,7 @@
 
 <NavigationBar/>
 
-<body class="flex flex-col h-screen">
+<body class="flex flex-col">
 <section class="justify-center items-center flex flex-col">
     <h1 class="text-4xl h-12" id="iam">{@html typingText}</h1>
     <div class="flex flex-row mt-20 justify-evenly gap-20 m-20" id="presentations">
