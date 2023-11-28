@@ -12,7 +12,6 @@
     }
 
     async function applyCommitHash() {
-        console.log(lastCommit);
         if (lastCommit !== undefined) {
             //@ts-ignore
             commitHash = lastCommit.sha.substring(0, 7)
