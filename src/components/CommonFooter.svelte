@@ -1,6 +1,7 @@
 <script>
     import {onMount} from "svelte";
     import Image from "./Image.svelte";
+    import {_} from "svelte-i18n";
 
     let commitHash = '';
     let lastCommit = {};
@@ -41,7 +42,7 @@
         <div>
             <a class="text-orange-500" href="https://status.farmeurimmo.fr" rel="noopener noreferrer"
                target="_blank">
-                Services Status
+                {$_("footer.services.status")}
             </a>
         </div>
         <Image className="rounded-full border-0" src="https://status.farmeurimmo.fr/api/badge/11/status"/>

@@ -20,6 +20,11 @@
     "about": "À propos",
     "contact": "Contact"
   },
+  "footer": {
+    "services": {
+      "status": "Statut des services"
+    }
+  },
   "pages": {
     "home": {
       "title": "Accueil - Farmeurimmo",
