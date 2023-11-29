@@ -81,7 +81,7 @@
         {#each presentations as presentation, index (presentation.title)}
             <div class="flex flex-col justify-center items-center bg-gray-800 rounded-t-3xl" id="card">
                 <h2 class="text-2xl p-5">{$_(presentation.title)}</h2>
-                <Image src={presentation.imageUrl} className="border-0 w-screen h-auto"/>
+                <Image src={presentation.imageUrl} className="border-0"/>
             </div>
         {/each}
     </div>
@@ -89,7 +89,7 @@
 
 <section class="flex flex-col justify-center items-center">
     <h2 class="text-2xl p-5">Under construction</h2>
-    <Image className="border-0 w-screen/2 h-auto hover:scale-105 transition-all duration-300"
+    <Image className="border-0 w-screen/2 hover:scale-105 transition-all duration-300"
            src="https://http.cat/204.jpg"/>
 </section>
 
