@@ -27,7 +27,7 @@
     });
 </script>
 
-<footer class="flex justify-evenly flex-row items-center mt-10 p-5 bg-blend-soft-light bg-gradient-to-t pt-10
+<footer class="flex justify-evenly flex-row items-center mt-10 p-9 bg-blend-soft-light bg-gradient-to-t pt-10
     from-blue-950 to-gray-950">
     <div class="flex flex-col items-center font-medium">
         <div class="flex flex-row items-center gap-2.5">

@@ -14,8 +14,8 @@
     }
 </script>
 
-<nav class="flex items-center border-0 mb-10 bg-blend-soft-light bg-gradient-to-t from-gray-950 to-blue-950">
-    <div class="flex flex-row items-center justify-evenly w-screen h-16" id="items">
+<nav class="flex border-0 mb-10 bg-blend-soft-light bg-gradient-to-t from-gray-950 to-blue-950">
+    <div class="flex flex-row items-center py-9 justify-evenly min-w-full h-16" id="items">
         <a class="text-white hover:text-gray-300 flex flex-row items-center gap-3" href="https://farmeurimmo.fr">
             <Image className="rounded-full border-0 w-14" src="https://cdn.farmeurimmo.fr/img/logo.jpg"/>
             Farmeurimmo

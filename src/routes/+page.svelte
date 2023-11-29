@@ -62,7 +62,7 @@
             typingText = typingText.slice(0, -1);
         }
 
-        setTimeout(typeWriter, index === 0 ? 100 : 175); // Adjust timing as needed
+        setTimeout(typeWriter, index === 0 ? 100 : 175);
     }
 
     onMount(() => {
@@ -76,7 +76,7 @@
 
 <body class="flex flex-col">
 <section class="justify-center items-center flex flex-col">
-    <h1 class="text-4xl h-12" id="iam">{@html typingText}</h1>
+    <h1 class="text-4xl h-12 whitespace-no-wrap overflow-x-auto" id="iam">{@html typingText}</h1>
     <div class="flex flex-row mt-20 justify-evenly gap-20 m-20" id="presentations">
         {#each presentations as presentation, index (presentation.title)}
             <div class="flex flex-col justify-center items-center bg-gray-800 rounded-t-3xl" id="card">
@@ -88,7 +88,7 @@
 </section>
 
 <section class="flex flex-col justify-center items-center">
-    <h2 class="text-2xl p-5">Under construction</h2>
+    <h2 class="text-2xl p-5 text-red-800 font-bold text-3xl">Under construction</h2>
     <Image className="border-0 w-screen/2 hover:scale-105 transition-all duration-300"
            src="https://http.cat/204.jpg"/>
 </section>
