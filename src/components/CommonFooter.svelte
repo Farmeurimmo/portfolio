@@ -28,7 +28,7 @@
 </script>
 
 <footer class="flex justify-evenly flex-row items-center mt-10 p-9 bg-blend-soft-light bg-gradient-to-t pt-10
-    from-blue-950 to-gray-950">
+    from-blue-950 to-gray-950 gap-5">
     <div class="flex flex-col items-center font-medium">
         <div class="flex flex-row items-center gap-2.5">
             <a href="https://farmeurimmo.fr" rel="noopener noreferrer" target="_blank">
@@ -36,6 +36,15 @@
             </a>
             © Farmeurimmo 2018 - {currentYear}
         </div>
+    </div>
+    <div class="flex flex-col items-center gap-2 text-sm">
+        <div>
+            <a class="text-orange-500" href="https://status.farmeurimmo.fr" rel="noopener noreferrer"
+               target="_blank">
+                Services Status
+            </a>
+        </div>
+        <Image className="rounded-full border-0" src="https://status.farmeurimmo.fr/api/badge/11/status"/>
     </div>
     <div class="flex flex-col items-center gap-2 text-sm">
         <div>

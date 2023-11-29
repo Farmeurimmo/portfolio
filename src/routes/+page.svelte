@@ -88,7 +88,7 @@
 </section>
 
 <section class="flex flex-col justify-center items-center">
-    <h2 class="text-2xl p-5 text-red-800 font-bold text-3xl">Under construction</h2>
+    <h2 class="text-4xl p-5 text-red-800 font-bold">Under construction</h2>
     <Image className="border-0 w-screen/2 hover:scale-105 transition-all duration-300"
            src="https://http.cat/204.jpg"/>
 </section>

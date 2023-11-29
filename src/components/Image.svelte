@@ -1,9 +1,9 @@
 {#if loaded}
     <img {src} class={className} alt="img"/>
 {:else if failed}
-    <img src="https://icon-library.com/images/not-found-icon/not-found-icon-20.jpg" alt="Not Found"/>
+    <img src="https://icon-library.com/images/not-found-icon/not-found-icon-20.jpg" class={className} alt="Not Found"/>
 {:else if loading}
-    <img src="https://c.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif" alt="Loading..."/>
+    <img src="https://c.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif" class={className} alt="Loading..."/>
 {/if}
 
 <script lang="ts">
