@@ -1,8 +1,5 @@
 {
   "app": {
-    "presentation": {
-      "title": "Salut le monde !"
-    },
     "date": {
       "hour": "heure",
       "minute": "minute",

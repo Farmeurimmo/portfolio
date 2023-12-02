@@ -7,10 +7,10 @@
 
     const endPoints = {
         "home": "/",
-        "dev": "/",
-        "sa": "/",
-        "about": "/",
-        "contact": "/",
+        "dev": "/disabled",
+        "sa": "/disabled",
+        "about": "/disabled",
+        "contact": "/disabled",
     }
 </script>
 
@@ -24,7 +24,14 @@
             {#if key === currentPage}
                 <a class="text-orange-400 font-bold hover:text-gray-300" href={value}>{$_("nav." + key)}</a>
             {:else}
-                <a class="text-white hover:text-gray-300" href={value}>{$_("nav." + key)}</a>
+                {#if value === "/disabled"}
+                    <div class="flex flex-row items-center gap-1">
+                        <span class="text-red-400">[WIP]</span>
+                        <span class="text-gray-300 line-through">{$_("nav." + key)}</span>
+                    </div>
+                {:else}
+                    <a class="text-white hover:text-gray-300" href={value}>{$_("nav." + key)}</a>
+                {/if}
             {/if}
         {/each}
         <LangSelector/>

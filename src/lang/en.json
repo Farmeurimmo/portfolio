@@ -1,8 +1,5 @@
 {
   "app": {
-    "presentation": {
-      "title": "Hello Worlda"
-    },
     "date": {
       "hour": "hour",
       "minute": "minute",
