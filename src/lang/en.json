@@ -47,7 +47,8 @@
       "message": "Your message",
       "required": "is required",
       "success": "Your message has been sent successfully.",
-      "error": "An error has occurred while sending your message."
+      "error": "An error has occurred while sending your message.",
+      "formSent": "Your message has been sent successfully."
     }
   }
 }

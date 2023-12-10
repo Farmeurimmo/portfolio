@@ -19,6 +19,8 @@
         }
     ]
 
+    let formSent = false;
+
     let name = '';
     let email = '';
     let message = '';
@@ -47,10 +49,10 @@
             body: formData
         }).then(response => {
             if (response.status === 200) {
-                alert($_('pages.contact.success'));
                 name = '';
                 email = '';
                 message = '';
+                formSent = true;
             } else {
                 alert($_('pages.contact.error'));
             }
@@ -77,24 +79,28 @@
         {/each}
     </div>
     <h2 class="text-4xl mt-20">{$_('pages.contact.or')}</h2>
-    <form class="flex flex-col justify-center items-center w-full mt-20 text-black">
-        <input bind:value={name} class="border-2 border-gray-900 rounded-3xl p-5 w-1/2 mt-5"
-               placeholder={$_('pages.contact.name')}
-               type="text"/>
-        <p class="text-red-500"
-           hidden={!name_invalid}>{$_('pages.contact.name') + ' ' + $_('pages.contact.required')}</p>
-        <input bind:value={email} class="border-2 border-gray-900 rounded-3xl p-5 w-1/2 mt-5"
-               placeholder={$_('pages.contact.email')}
-               type="email"/>
-        <p class="text-red-500"
-           hidden={!email_invalid}>{$_('pages.contact.email') + ' ' + $_('pages.contact.required')}</p>
-        <textarea bind:value={message} class="border-2 border-gray-900 rounded-3xl p-5 w-1/2 mt-5"
-                  placeholder={$_('pages.contact.message')}/>
-        <p class="text-red-500"
-           hidden={!message_invalid}>{$_('pages.contact.message') + ' ' + $_('pages.contact.required')}</p>
-        <button class="border-2 border-gray-900 rounded-3xl p-5 w-1/2 mt-5 text-white hover:bg-gray-950" id="card"
-                on:click={() => callDiscordWebhook()}>{$_('pages.contact.send')}</button>
-    </form>
+    {#if formSent}
+        <p class="text-4xl mt-20 text-green-600">{$_('pages.contact.formSent')}</p>
+    {:else }
+        <form class="flex flex-col justify-center items-center w-full mt-20 text-black">
+            <input bind:value={name} class="border-2 border-gray-900 rounded-3xl p-5 w-1/2 mt-5"
+                   placeholder={$_('pages.contact.name')}
+                   type="text"/>
+            <p class="text-red-500"
+               hidden={!name_invalid}>{$_('pages.contact.name') + ' ' + $_('pages.contact.required')}</p>
+            <input bind:value={email} class="border-2 border-gray-900 rounded-3xl p-5 w-1/2 mt-5"
+                   placeholder={$_('pages.contact.email')}
+                   type="email"/>
+            <p class="text-red-500"
+               hidden={!email_invalid}>{$_('pages.contact.email') + ' ' + $_('pages.contact.required')}</p>
+            <textarea bind:value={message} class="border-2 border-gray-900 rounded-3xl p-5 w-1/2 mt-5"
+                      placeholder={$_('pages.contact.message')}/>
+            <p class="text-red-500"
+               hidden={!message_invalid}>{$_('pages.contact.message') + ' ' + $_('pages.contact.required')}</p>
+            <button class="border-2 border-gray-900 rounded-3xl p-5 w-1/2 mt-5 text-white hover:bg-gray-950" id="card"
+                    on:click={() => callDiscordWebhook()}>{$_('pages.contact.send')}</button>
+        </form>
+    {/if}
 </section>
 </body>
 
