@@ -3,8 +3,8 @@
 {:else if failed}
     <img src="https://icon-library.com/images/not-found-icon/not-found-icon-20.jpg" class={className} alt="Not Found"/>
 {:else}
-    <div class="flex justify-center items-center m-8">
-        <div class="animate-spin rounded-full h-32 w-32 border-t-2 border-b-8 border-orange-500"></div>
+    <div class="flex justify-center items-center m-8 flex-grow">
+        <div class="animate-spin rounded-full h-10 w-10 border-t-2 border-b-4 border-orange-500"></div>
     </div>
 {/if}
 
