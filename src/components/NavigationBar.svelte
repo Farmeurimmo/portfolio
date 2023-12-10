@@ -10,7 +10,7 @@
         "dev": "/disabled",
         "sa": "/disabled",
         "about": "/disabled",
-        "contact": "/disabled",
+        "contact": "/contact",
     }
 </script>
 

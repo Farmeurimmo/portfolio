@@ -35,6 +35,19 @@
         "dev": "Developer",
         "sysadmin": "System Administrator"
       }
+    },
+    "contact": {
+      "title": "Contact me by",
+      "Email": "Email",
+      "Fiverr": "Fiverr",
+      "or": "or by filling the form below",
+      "send": "Send",
+      "name": "Name",
+      "email": "Email",
+      "message": "Your message",
+      "required": "is required",
+      "success": "Your message has been sent successfully.",
+      "error": "An error has occurred while sending your message."
     }
   }
 }

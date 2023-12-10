@@ -120,12 +120,4 @@
         animation: typing_cursor 1s steps(10) infinite;
     }
 
-    #card:hover {
-        transform: scale(1.05);
-    }
-
-    #card {
-        transition: all 0.2s ease-in-out;
-    }
-
 </style>
