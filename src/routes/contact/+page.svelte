@@ -75,11 +75,13 @@
     </div>
     <h2 class="text-4xl mt-20">{$_('pages.contact.or')}</h2>
     <form class="flex flex-col justify-center items-center w-full mt-20 text-black">
-        <input bind:value={name} class="border-2 border-gray-900 rounded-3xl p-5 w-1/2 mt-5" placeholder={$_('pages.contact.name')}
+        <input bind:value={name} class="border-2 border-gray-900 rounded-3xl p-5 w-1/2 mt-5"
+               placeholder={$_('pages.contact.name')}
                type="text"/>
         <p class="text-red-500"
            hidden={!name_invalid}>{$_('pages.contact.name') + ' ' + $_('pages.contact.required')}</p>
-        <input bind:value={email} class="border-2 border-gray-900 rounded-3xl p-5 w-1/2 mt-5" placeholder={$_('pages.contact.email')}
+        <input bind:value={email} class="border-2 border-gray-900 rounded-3xl p-5 w-1/2 mt-5"
+               placeholder={$_('pages.contact.email')}
                type="email"/>
         <p class="text-red-500"
            hidden={!email_invalid}>{$_('pages.contact.email') + ' ' + $_('pages.contact.required')}</p>
