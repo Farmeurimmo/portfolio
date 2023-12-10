@@ -48,6 +48,9 @@
         }).then(response => {
             if (response.status === 200) {
                 alert($_('pages.contact.success'));
+                name = '';
+                email = '';
+                message = '';
             } else {
                 alert($_('pages.contact.error'));
             }
