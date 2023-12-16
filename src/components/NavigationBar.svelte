@@ -9,7 +9,6 @@
         "home": "/",
         "dev": "/disabled",
         "sa": "/disabled",
-        "about": "/disabled",
         "contact": "/contact",
     }
 </script>
