@@ -45,7 +45,6 @@
                 {$_("footer.services.status")}
             </a>
         </div>
-        <Image className="rounded-full border-0 h-24" src="https://status.farmeurimmo.fr/api/badge/11/status"/>
     </div>
     <div class="flex flex-col items-center gap-2 text-sm">
         <div>
