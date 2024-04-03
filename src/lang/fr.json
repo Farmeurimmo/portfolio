@@ -1,0 +1,76 @@
+{
+  "app": {
+    "date": {
+      "hour": "heure",
+      "minute": "minute",
+      "second": "seconde",
+      "day": "jour",
+      "month": "mois",
+      "year": "année",
+      "ago": "il y a"
+    }
+  },
+  "nav": {
+    "home": "Accueil",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "footer": {
+    "services": {
+      "status": "Statut des services"
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Développeur & Administrateur système - Farmeurimmo",
+      "iam": "Développeur & Administrateur système",
+      "presentations": {
+        "line1": "Je suis polyvalent afin de répondre à vos attentes.",
+        "line2": "Construisez votre futur projet avec moi dès maintenant."
+      },
+      "scroll": "Faites défiler pour en savoir plus"
+    },
+    "about": {
+      "title": "À propos",
+      "description": "J'utilise Farmeurimmo comme pseudonyme sur internet. Je suis un\n        développeur Full Stack et un administrateur système français.\n        Je suis un peu polyglotte, je ne me limite pas à une seule technologie ou un seul langage de programmation.\n        <br><br><br>\n        Je suis un passionné d'informatique (hardware, software, réseau) et de nouvelles technologies en général.\n        Je possède moi-même plusieurs machines de le cloud (vps/dédiés) pour mes projets personnels et professionnels.\n        <br><br><br>\n        Je suis également pratiquant d'escalade (intérieur majoritairement) et de callisthénie."
+    },
+    "skills": {
+      "title": "Compétences",
+      "description": "x5 <p class=\"text-green-400 inline\">■</p> = niveau Expert, x1 <p class=\"text-green-400 inline\">\n        ■</p> = niveau Débutant"
+    },
+    "projects": {
+      "title": "Quelques uns de mes projets",
+      "description": "J’en ai beaucoup d’autres, mais je ne peux pas tous les énumérer ici. <br> Vous pouvez en trouver plus sur mon compte GitHub ou sur mon blog.",
+      "0": {
+        "title": "Nouveau site internet avec portfolio dans sa version 4 (Svelte, i18n, Vite, Tailwindcss)",
+        "description": "Dans cet article, je vais parler des motivations derrière cette nouvelle version, les choix technologiques (Svelte, i18n, Vite, Tailwindcss) que j'ai réalisé et et les fonctionnalités que j'ai ajouté (formulaire de contact, blog, support multilingue, etc...)."
+      },
+      "1": {
+        "title": "En rédaction",
+        "description": "En rédaction"
+      },
+      "2": {
+        "title": "En rédaction",
+        "description": "En rédaction"
+      }
+    },
+    "contact": {
+      "title": "Une question ? Convaincu ?",
+      "description": "Contactez-moi dès maintenant !",
+      "Email": "Email",
+      "send": "Envoyer",
+      "name": "Nom",
+      "email": "Email",
+      "message": "Votre message",
+      "required": "est requis",
+      "success": "Votre message a bien été envoyé !",
+      "error": "Une erreur est survenue lors de l'envoi de votre message.",
+      "formSent": "Votre message a bien été envoyé !"
+    },
+    "blog": {
+      "title": "Blog personnel",
+      "description": "Découvrez mes derniers articles et mes projets ici.",
+      "quicknote": "Tout est rédigé en anglais pour des raisons de simplicité et de compréhension. <br>Parce que l'Anglais est la langue la plus utilisée dans le monde de l'informatique."
+    }
+  }
+}

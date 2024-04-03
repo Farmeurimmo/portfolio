@@ -1,0 +1,76 @@
+{
+  "app": {
+    "date": {
+      "hour": "hour",
+      "minute": "minute",
+      "second": "second",
+      "day": "day",
+      "month": "month",
+      "year": "year",
+      "ago": "ago"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "footer": {
+    "services": {
+      "status": "Service status"
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Developer & System Administrator - Farmeurimmo",
+      "iam": "Developer & System Administrator",
+      "presentations": {
+        "line1": "I am versatile to meet your expectations.",
+        "line2": "Build your future project with me now."
+      },
+      "scroll": "Scroll to learn more"
+    },
+    "about": {
+      "title": "About",
+      "description": "I use Farmeurimmo as my pseudonym on the internet. I am a Full Stack developer and a French system administrator. I am a bit of a polyglot, I do not limit myself to a single technology or programming language. <br><br><br> I am passionate about computing (hardware, software, network) and new technologies in general. I own several cloud machines (vps/dedicated) for my personal and professional projects. <br><br><br> I also practice climbing (mostly indoor) and calisthenics."
+    },
+    "skills": {
+      "title": "Skills",
+      "description": "x5 <p class=\"text-green-400 inline\">■</p> = Expert level, x1 <p class=\"text-green-400 inline\">■</p> = Beginner level"
+    },
+    "projects": {
+      "title": "Some of my projects",
+      "description": "I have many more, but I can't list them all here. <br> You can find more on my GitHub account or in my blog.",
+      "0": {
+        "title": "New website with portfolio in his 4 version (Svelte, i18n, Vite, Tailwindcss)",
+        "description": "In this article I will talk about the motivations behind my new website in his 4 version, the tech choices (Svelte, i18n, Vite, Tailwindcss) I made and the features I added (contact form, blog, multi language, etc..)."
+      },
+      "1": {
+        "title": "In redaction",
+        "description": "In redaction"
+      },
+      "2": {
+        "title": "In redaction",
+        "description": "In redaction"
+      }
+    },
+    "contact": {
+      "title": "A question? Convinced?",
+      "description": "Contact me now!",
+      "Email": "Email",
+      "send": "Send",
+      "name": "Name",
+      "email": "Email",
+      "message": "Your message",
+      "required": "is required",
+      "success": "Your message has been sent successfully!",
+      "error": "An error occurred while sending your message.",
+      "formSent": "Your message has been sent successfully!"
+    },
+    "blog": {
+      "title": "Personal blog",
+      "description": "Discover my latest articles and my projects here.",
+      "quicknote": "Everything is written in English for simplicity and understanding. <br>Because English is the most used language in the computer world."
+    }
+  }
+}
