@@ -116,7 +116,7 @@
 						<span class="text-gray-300 line-through">{$_("nav." + key)}</span>
 					</div>
 				{:else}
-					<a class="text-white hover:text-gray-300" href={value}>{$_("nav." + key)}</a>
+					<a class="text-white font-semibold hover:text-amber-400" href={value}>{$_("nav." + key)}</a>
 				{/if}
 			{/if}
 		{/each}

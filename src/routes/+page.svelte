@@ -363,11 +363,16 @@
 </button>
 
 <section class="justify-center items-center flex flex-col min-h-screen gap-3 p-5" id="home">
-	<Image className="rounded-full border-0 w-24 h-24 mt-16" src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
-	<h1 class="text-6xl font-bold text-center justify-center mt-4">{$_('pages.home.iam')}</h1>
+	<div class="flex flex-row justify-center items-center gap-5 mt-20">
+		<Image className="rounded-full border-0 w-20 h-20" src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
+		<h1 class="text-6xl font-bold text-center justify-center">Farmeurimmo</h1>
+	</div>
+	<h1 class="text-4xl font-bold text-center justify-center mt-4">{$_('pages.home.iam')}</h1>
 	<p class="mt-20" />
-	<h2 class="text-4xl text-gray-200">{$_('pages.home.presentations.line1')}</h2>
-	<h2 class="text-4xl text-gray-200">{$_('pages.home.presentations.line2')}</h2>
+	<h2 class="text-2xl text-gray-200">{$_('pages.home.presentations.line1')}</h2>
+	<h2 class="text-2xl text-gray-200">{$_('pages.home.presentations.line2')}</h2>
+	<h2 class="text-2xl text-gray-200">{$_('pages.home.presentations.line3')}</h2>
+	<h2 class="text-2xl text-gray-200">{$_('pages.home.presentations.line4')}</h2>
 	<p class="mt-40" />
 	<div class="flex flex-col expand justify-center items-center gap-2 mt-auto mb-10">
 		<h3 class="text-3xl text-gray-200">{$_('pages.home.scroll')}</h3>
@@ -383,7 +388,7 @@
 		<h1 class="text-6xl font-bold">{$_('pages.about.title')}</h1>
 	</div>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	<p class="text-3xl justify-center text-left leading-8 mt-5 xl:w-2/3 w-4/5">{@html $_('pages.about.description')}</p>
+	<p class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 w-4/5 font-medium text-gray-300">{@html $_('pages.about.description')}</p>
 	<div class="flex expand border-2 border-white p-1 rounded-full mt-auto mb-10">
 		<a class="text-6xl font-bold text-gray-400 hover:text-gray-200" href="#skills">&darr;</a>
 	</div>
@@ -435,8 +440,8 @@
 	<h1 class="text-6xl font-bold mt-32 text-center">{$_('pages.projects.title')}</h1>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<h2 class="text-xl text-gray-200 text-center justify-center">{@html $_('pages.projects.description')}</h2>
-	<div class="flex flex-col xl:flex-row gap-10 items-center p-5 z-0">
-		<div class="card text-left justify-center p-5 xl:w-1/3 w-full">
+	<div class="flex flex-col xl:flex-row gap-10 items-start p-5 z-0">
+		<div class="card text-left justify-center p-5 xl:w-1/3 w-3/4">
 			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
 				 href="/blog/28-03-2024-new-website-portfolio-v4-edition" target="_blank">
@@ -445,37 +450,35 @@
 								 src="https://cdn.farmeurimmo.fr/img/blog/28-03-2024-new-website-portfolio-v4-edition.jpeg" />
 				</div>
 				<div class="py-3">
-					<p class="text-2xl font-bold">{$_('pages.projects.0.title')}</p>
-					<p class="text-lg mt-6">{$_('pages.projects.0.description')}</p>
+					<p class="text-2xl font-bold">New website with portfolio in his 4 version (Svelte, i18n, Vite,
+						Tailwindcss)</p>
+					<p class="text-lg mt-6">In this article I will talk about the motivations behind my new website in his 4
+						version, the tech choices (Svelte, i18n, Vite, Tailwindcss) I made and the features I added (contact form,
+						blog, multi language, etc..).</p>
 				</div>
 			</a>
 		</div>
-		<div class="card text-left justify-center p-5 xl:w-1/3 w-full">
+		<div class="card text-left justify-center p-5 xl:w-1/3 w-3/4">
 			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
-				 href="/blog/28-03-2024-new-website-portfolio-v4-edition" target="_blank">
+				 href="/blog/04-04-2024-dev-blog-1-build-a-skyblock-plugin" target="_blank">
 				<div class="flex flex-row gap-5 w-full">
 					<Image className="rounded-t-2xl w-full h-96"
-								 src="https://cdn.farmeurimmo.fr/img/blog/not-redacted.jpeg" />
+								 src="https://cdn.farmeurimmo.fr/img/blog/04-04-2024-dev-blog-1-build-a-skyblock-plugin.jpeg" />
 				</div>
 				<div class="py-3">
-					<p class="text-2xl font-bold">{$_('pages.projects.1.title')}</p>
-					<p class="text-lg mt-6">{$_('pages.projects.1.description')}</p>
+					<p class="text-2xl font-bold">Dev blog #1: Build a Skyblock plugin (part 1)</p>
+					<p class="text-lg mt-6">In this article I will talk about minecraft and how to build a
+						Skyblock plugin for a Spigot server. In this first part we will talk about what we
+						want to achieve and how we will do it.</p>
 				</div>
 			</a>
 		</div>
-		<div class="card text-left justify-center p-5 xl:w-1/3 w-full">
-			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
+		<div class="card text-left justify-center p-5">
+			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 text-xl rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
-				 href="/blog/28-03-2024-new-website-portfolio-v4-edition" target="_blank">
-				<div class="flex flex-row gap-5 w-full">
-					<Image className="rounded-t-2xl w-full h-96"
-								 src="https://cdn.farmeurimmo.fr/img/blog/not-redacted.jpeg" />
-				</div>
-				<div class="py-3">
-					<p class="text-2xl font-bold">{$_('pages.projects.2.title')}</p>
-					<p class="text-lg mt-6">{$_('pages.projects.2.description')}</p>
-				</div>
+				 href="/blog/">
+				Cliquez ici pour en découvrir d'autres &nearr;
 			</a>
 		</div>
 

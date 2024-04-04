@@ -25,8 +25,10 @@
       "title": "Développeur & Administrateur système - Farmeurimmo",
       "iam": "Développeur & Administrateur système",
       "presentations": {
-        "line1": "Je suis polyvalent afin de répondre à vos attentes.",
-        "line2": "Construisez votre futur projet avec moi dès maintenant."
+        "line1": "Investir dans le présent pour un avenir meilleur",
+        "line2": "Vous devenez confiant en construisant des choses",
+        "line3": "Peut-être pas le meilleur aujourd’hui, mais meilleur qu’hier",
+        "line4": "Continuer d'apprendre, grandir et s'améliorer telle est ma philosophie"
       },
       "scroll": "Faites défiler pour en savoir plus"
     },
@@ -40,19 +42,7 @@
     },
     "projects": {
       "title": "Quelques uns de mes projets",
-      "description": "J’en ai beaucoup d’autres, mais je ne peux pas tous les énumérer ici. <br> Vous pouvez en trouver plus sur mon compte GitHub ou sur mon blog.",
-      "0": {
-        "title": "Nouveau site internet avec portfolio dans sa version 4 (Svelte, i18n, Vite, Tailwindcss)",
-        "description": "Dans cet article, je vais parler des motivations derrière cette nouvelle version, les choix technologiques (Svelte, i18n, Vite, Tailwindcss) que j'ai réalisé et et les fonctionnalités que j'ai ajouté (formulaire de contact, blog, support multilingue, etc...)."
-      },
-      "1": {
-        "title": "En rédaction",
-        "description": "En rédaction"
-      },
-      "2": {
-        "title": "En rédaction",
-        "description": "En rédaction"
-      }
+      "description": "J’en ai beaucoup d’autres, mais je ne peux pas tous les énumérer ici. <br> Vous pouvez en trouver plus sur mon compte GitHub ou sur mon blog."
     },
     "contact": {
       "title": "Une question ? Convaincu ?",

@@ -25,8 +25,10 @@
       "title": "Developer & System Administrator - Farmeurimmo",
       "iam": "Developer & System Administrator",
       "presentations": {
-        "line1": "I am versatile to meet your expectations.",
-        "line2": "Build your future project with me now."
+        "line1": "Investing in present for a better future",
+        "line2": "You become confident by building things",
+        "line3": "Maybe not the best today, but better than yesterday",
+        "line4": "Continuing to learn, grow and improve is my philosophy"
       },
       "scroll": "Scroll to learn more"
     },
@@ -40,19 +42,7 @@
     },
     "projects": {
       "title": "Some of my projects",
-      "description": "I have many more, but I can't list them all here. <br> You can find more on my GitHub account or in my blog.",
-      "0": {
-        "title": "New website with portfolio in his 4 version (Svelte, i18n, Vite, Tailwindcss)",
-        "description": "In this article I will talk about the motivations behind my new website in his 4 version, the tech choices (Svelte, i18n, Vite, Tailwindcss) I made and the features I added (contact form, blog, multi language, etc..)."
-      },
-      "1": {
-        "title": "In redaction",
-        "description": "In redaction"
-      },
-      "2": {
-        "title": "In redaction",
-        "description": "In redaction"
-      }
+      "description": "I have many more, but I can't list them all here. <br> You can find more on my GitHub account or in my blog."
     },
     "contact": {
       "title": "A question? Convinced?",
