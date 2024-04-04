@@ -372,7 +372,7 @@
 	<div class="flex flex-col expand justify-center items-center gap-2 mt-auto mb-10">
 		<h3 class="text-3xl text-gray-200">{$_('pages.home.scroll')}</h3>
 		<a
-			class="flex border-2 border-white p-1 rounded-full w-16 text-6xl font-bold text-gray-400 hover:text-gray-200 outline-none"
+			class="flex justify-center border-2 border-white p-1 rounded-full w-16 text-6xl font-bold text-gray-400 hover:text-gray-200 outline-none"
 			href="#about">&darr;</a>
 	</div>
 </section>
