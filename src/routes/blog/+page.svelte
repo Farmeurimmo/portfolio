@@ -18,7 +18,7 @@
 
 <Background />
 
-<NavigationBar />
+<NavigationBar currentPage="blog" />
 
 <body class="flex flex-col min-h-screen">
 <section class="items-center flex flex-col min-h-screen gap-3 border-top">
