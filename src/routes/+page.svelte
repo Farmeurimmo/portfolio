@@ -178,7 +178,7 @@
 			} else {
 				scrollToTopButton.classList.remove('visible');
 				if (isMobile) return;
-				if (window.pageYOffset < 1) {
+				if (window.pageYOffset < 2) {
 					const presentation = document.getElementById('home');
 					if (presentation) {
 						goingToTop = true;
