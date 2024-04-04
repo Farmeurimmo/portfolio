@@ -26,6 +26,14 @@
 		if (data.message === 'post not found') {
 			window.location.href = '/404';
 		}
+
+		window.addEventListener('click', (event) => {
+			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+			// @ts-expect-error
+			if (event.target.id === 'scrollToTop') {
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+			}
+		});
 	});
 </script>
 
@@ -36,6 +44,18 @@
 <NavigationBar currentPage="blog" />
 
 <body class="flex flex-col min-h-screen p-4">
+
+<button class="visible text-4xl font-extrabold fixed bottom-8 right-8 bg-gray-800 text-white p-2 rounded-full z-40"
+				id="scrollToTop">&uarr;
+</button>
+
+<a class="fixed bottom-24 right-8 p-2 bg-bl rounded-full bg-gray-800 text-white" href="/blog">
+	<svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+		<path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h2a1 1 0 001-1V10m-6 0v4" stroke-linecap="round" stroke-linejoin="round"
+					stroke-width="2"></path>
+	</svg>
+</a>
+
 <section class="mx-auto lg:w-1/2 sm:w-full mt-6" id="header">
 	<div class="grid lg:grid-cols-2 gap-5">
 		<div class="flex flex-col justify-between gap-5">
@@ -49,7 +69,7 @@
 			</div>
 		</div>
 		<div>
-			<Image className="w-full mt-8" src="{post.img}" />
+			<Image className="w-full rounded-2xl" src="{post.img}" />
 		</div>
 	</div>
 	<div class="border-b-2 border-gray-500 my-4"></div>
@@ -59,6 +79,10 @@
 		<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 		<div>{@html post.content}</div>
 	</article>
+</section>
+<section class="mx-auto lg:w-1/2 sm:w-full mt-6" id="comments">
+	<div class="border-b-2 border-gray-500 my-4"></div>
+	<h2 class="text-xl">Published by Farmeurimmo</h2>
 </section>
 </body>
 
