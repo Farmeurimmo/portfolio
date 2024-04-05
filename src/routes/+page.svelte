@@ -491,7 +491,7 @@
 </section>
 
 <section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top" id="contact">
-	<h1 class="text-6xl font-bold text-center justify-center">{$_('pages.contact.title')}</h1>
+	<h1 class="text-6xl font-bold text-center justify-center mt-22">{$_('pages.contact.title')}</h1>
 	<h2 class="text-4xl text-gray-200 text-center justify-center">{$_('pages.contact.description')}</h2>
 	<p class="mt-10" />
 	{#if formSent}
