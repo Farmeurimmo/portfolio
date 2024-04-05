@@ -369,7 +369,7 @@
 	</div>
 	<h1 class="text-4xl font-bold text-center justify-center mt-4">{$_('pages.home.iam')}</h1>
 	<p class="mt-20" />
-	<ul class="text-left mx-5 list-disc list-inside gap-2">
+	<ul class="text-left mx-3 list-disc list-inside gap-2">
 		<li class="text-2xl text-gray-200">{$_('pages.home.presentations.line1')}</li>
 		<li class="text-2xl text-gray-200">{$_('pages.home.presentations.line2')}</li>
 		<li class="text-2xl text-gray-200">{$_('pages.home.presentations.line3')}</li>
@@ -390,7 +390,7 @@
 		<h1 class="text-6xl font-bold">{$_('pages.about.title')}</h1>
 	</div>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	<p class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 w-4/5 font-medium text-gray-300">{@html $_('pages.about.description')}</p>
+	<p class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium text-gray-300">{@html $_('pages.about.description')}</p>
 	<div class="flex expand border-2 border-white p-1 rounded-full mt-auto mb-10">
 		<a class="text-6xl font-bold text-gray-400 hover:text-gray-200" href="#skills">&darr;</a>
 	</div>
