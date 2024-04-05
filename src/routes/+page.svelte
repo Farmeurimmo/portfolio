@@ -367,7 +367,7 @@
 		<Image className="rounded-full border-0 w-20 h-20" src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
 		<h1 class="text-6xl font-bold text-center justify-center">Farmeurimmo</h1>
 	</div>
-	<h1 class="text-4xl font-bold text-center justify-center mt-4">{$_('pages.home.iam')}</h1>
+	<h2 class="text-4xl font-bold text-center justify-center mt-4">{$_('pages.home.iam')}</h2>
 	<p class="mt-20" />
 	<ul class="text-left mx-3 list-disc list-inside gap-2">
 		<li class="text-2xl text-gray-200">{$_('pages.home.presentations.line1')}</li>
@@ -380,24 +380,24 @@
 		<h3 class="text-3xl text-gray-200">{$_('pages.home.scroll')}</h3>
 		<a
 			class="flex justify-center border-2 border-white p-1 rounded-full w-16 text-6xl font-bold text-gray-400 hover:text-gray-200 outline-none"
-			href="#about">&darr;</a>
+			href="#about" title="gotoabout">&darr;</a>
 	</div>
 </section>
 
 <section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top" id="about">
 	<div class="flex flex-row mt-32 justify-center items-center gap-6">
 		<Image className="rounded-full border-0 w-16 h-16" src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
-		<h1 class="text-6xl font-bold">{$_('pages.about.title')}</h1>
+		<h2 class="text-6xl font-bold">{$_('pages.about.title')}</h2>
 	</div>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<p class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium text-gray-300">{@html $_('pages.about.description')}</p>
 	<div class="flex expand border-2 border-white p-1 rounded-full mt-auto mb-10">
-		<a class="text-6xl font-bold text-gray-400 hover:text-gray-200" href="#skills">&darr;</a>
+		<a class="text-6xl font-bold text-gray-400 hover:text-gray-200" href="#skills" title="gotoskills">&darr;</a>
 	</div>
 </section>
 
 <section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top" id="skills">
-	<h1 class="text-6xl font-bold mt-32">{$_('pages.skills.title')}</h1>
+	<h2 class="text-6xl font-bold mt-32">{$_('pages.skills.title')}</h2>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<h3 class="text-xl inline">{@html $_('pages.skills.description')}</h3>
 	<div class="grid grid-cols-3 sm:grid-cols-5 categories gap-2">
@@ -421,7 +421,7 @@
 	<div class="mt-3 skills gap-6 grid grid-cols-5 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 xl:grid-cols-14">
 		{#each filterSkills(selectedCategory) as skill}
 			<div class="card">
-				<a href={skill.href} target="_blank" class="flex flex-col items-center gap-2">
+				<a href={skill.href} target="_blank" class="flex flex-col items-center gap-2" title={skill.name}>
 					<Image src={`https://skillicons.dev/icons?i=${skill.name.toLowerCase()}`}
 								 className="w-16 h-16 rounded-full" />
 					<div class="flex flex-col items-center">
@@ -434,12 +434,12 @@
 	</div>
 	<p class="mt-10" />
 	<div class="flex expand border-2 border-white p-1 rounded-full mt-auto mb-10">
-		<a class="text-6xl font-bold text-gray-400 hover:text-gray-200" href="#projects">&darr;</a>
+		<a class="text-6xl font-bold text-gray-400 hover:text-gray-200" href="#projects" title="gotoprojects">&darr;</a>
 	</div>
 </section>
 
 <section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top" id="projects">
-	<h1 class="text-6xl font-bold mt-32 text-center">{$_('pages.projects.title')}</h1>
+	<h2 class="text-6xl font-bold mt-32 text-center">{$_('pages.projects.title')}</h2>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<h2 class="text-xl text-gray-200 text-center justify-center">{@html $_('pages.projects.description')}</h2>
 	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-2 items-start z-0 mt-4">
@@ -486,12 +486,12 @@
 	</div>
 	<p class="mt-10" />
 	<div class="flex expand border-2 border-white p-1 rounded-full mt-auto mb-10">
-		<a class="text-6xl font-bold text-gray-400 hover:text-gray-200" href="#contact">&darr;</a>
+		<a class="text-6xl font-bold text-gray-400 hover:text-gray-200" href="#contact" title="gotocontact">&darr;</a>
 	</div>
 </section>
 
 <section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top" id="contact">
-	<h1 class="text-6xl font-bold text-center justify-center mt-22">{$_('pages.contact.title')}</h1>
+	<h2 class="text-6xl font-bold text-center justify-center mt-22">{$_('pages.contact.title')}</h2>
 	<h2 class="text-4xl text-gray-200 text-center justify-center">{$_('pages.contact.description')}</h2>
 	<p class="mt-10" />
 	{#if formSent}
