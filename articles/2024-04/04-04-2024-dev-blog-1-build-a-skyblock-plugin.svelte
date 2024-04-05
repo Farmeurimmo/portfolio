@@ -20,7 +20,7 @@
 	This plugin is for Edmine Network, a Minecraft server that I'm working on. Here are some
 	considerations and requirements for the plugin (some features are missing):
 </p>
-<ul class="mt-5">
+<ul class="mt-5 space-y-2" style="list-style: disc inside;">
 	<li>Players should be able to create and manage their own islands.</li>
 	<li>Islands should have a border that prevents players from falling off.</li>
 	<li>Players should be able to invite others to their islands.</li>
@@ -39,7 +39,7 @@
 	Before I start coding, I need to think about the architecture of the plugin. Here are some
 	questions I need to answer (I didn't put all the questions):
 </p>
-<ul class="mt-5">
+<ul class="mt-5 space-y-2" style="list-style: disc inside;">
 	<li>How on earth a minecraft server in 1.20.4 will handle 50 players at the same time?</li>
 	<li>How will I store island data? In a database? In files?</li>
 	<li>If I have customs mobs and a lot a features, how will I handle the performance?</li>
@@ -48,7 +48,7 @@
 
 <h2 class="font-bold text-3xl mt-10">What architecture did I choose?</h2>
 <p class="mt-5">
-	I decided to use Java for a cross server architecture. For example, if I have 50 players on the server,
+	I decided to use a cross server architecture. For example, if I have 50 players on the server,
 	I will have 6 servers, one for the skyblock spawn (only one because spawns are not that heavy),
 	3 for the islands servers (because islands are heavy) and 2 for the dungeons servers (because combat may be heavy).
 	<br>
