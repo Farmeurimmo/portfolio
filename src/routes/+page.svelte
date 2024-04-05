@@ -442,7 +442,7 @@
 	<h1 class="text-6xl font-bold mt-32 text-center">{$_('pages.projects.title')}</h1>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<h2 class="text-xl text-gray-200 text-center justify-center">{@html $_('pages.projects.description')}</h2>
-	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 items-start z-0 mt-4">
+	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-2 items-start z-0 mt-4">
 		<div class="card text-left justify-center p-4 w-full">
 			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
