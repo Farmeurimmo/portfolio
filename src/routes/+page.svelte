@@ -357,22 +357,24 @@
 
 <NavigationBar />
 
-<body class="flex flex-col min-h-screen">
+<body class="flex flex-col min-h-screen px-4">
 <button class="visible text-4xl font-extrabold fixed bottom-8 right-8 bg-gray-800 text-white p-2 rounded-full z-40"
 				id="scrollToTop">&uarr;
 </button>
 
 <section class="justify-center items-center flex flex-col min-h-screen gap-3 p-5" id="home">
-	<div class="flex flex-row justify-center items-center gap-5 mt-20">
+	<div class="flex flex-col sm:flex-row justify-center items-center gap-5 mt-20">
 		<Image className="rounded-full border-0 w-20 h-20" src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
 		<h1 class="text-6xl font-bold text-center justify-center">Farmeurimmo</h1>
 	</div>
 	<h1 class="text-4xl font-bold text-center justify-center mt-4">{$_('pages.home.iam')}</h1>
 	<p class="mt-20" />
-	<h2 class="text-2xl text-gray-200">{$_('pages.home.presentations.line1')}</h2>
-	<h2 class="text-2xl text-gray-200">{$_('pages.home.presentations.line2')}</h2>
-	<h2 class="text-2xl text-gray-200">{$_('pages.home.presentations.line3')}</h2>
-	<h2 class="text-2xl text-gray-200">{$_('pages.home.presentations.line4')}</h2>
+	<ul class="text-left mx-5 list-disc list-inside gap-2">
+		<li class="text-2xl text-gray-200">{$_('pages.home.presentations.line1')}</li>
+		<li class="text-2xl text-gray-200">{$_('pages.home.presentations.line2')}</li>
+		<li class="text-2xl text-gray-200">{$_('pages.home.presentations.line3')}</li>
+		<li class="text-2xl text-gray-200 mt-4 list-none">{$_('pages.home.presentations.line4')}</li>
+	</ul>
 	<p class="mt-40" />
 	<div class="flex flex-col expand justify-center items-center gap-2 mt-auto mb-10">
 		<h3 class="text-3xl text-gray-200">{$_('pages.home.scroll')}</h3>
@@ -398,7 +400,7 @@
 	<h1 class="text-6xl font-bold mt-32">{$_('pages.skills.title')}</h1>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<h3 class="text-xl inline">{@html $_('pages.skills.description')}</h3>
-	<div class="flex flex-row categories gap-2">
+	<div class="grid grid-cols-3 sm:grid-cols-5 categories gap-2">
 		{#each categories as category}
 			<button class="border-1 border-gray-900 rounded-3xl p-3 mt-5 text-white bg-blue-900 opacity-85
             focus:outline-none focus:bg-blue-600 focus:scale-105 {(selectedCategory === category ? 'bg-blue-600' : '')}"
@@ -440,8 +442,8 @@
 	<h1 class="text-6xl font-bold mt-32 text-center">{$_('pages.projects.title')}</h1>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<h2 class="text-xl text-gray-200 text-center justify-center">{@html $_('pages.projects.description')}</h2>
-	<div class="flex flex-col xl:flex-row gap-10 items-start p-5 z-0">
-		<div class="card text-left justify-center p-5 xl:w-1/3 w-3/4">
+	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 items-start z-0 mt-4">
+		<div class="card text-left justify-center p-4 w-full">
 			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
 				 href="/blog/28-03-2024-new-website-portfolio-v4-edition" target="_blank">
@@ -458,7 +460,7 @@
 				</div>
 			</a>
 		</div>
-		<div class="card text-left justify-center p-5 xl:w-1/3 w-3/4">
+		<div class="card text-left justify-center p-4 w-full">
 			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
 				 href="/blog/04-04-2024-dev-blog-1-build-a-skyblock-plugin" target="_blank">
@@ -474,14 +476,13 @@
 				</div>
 			</a>
 		</div>
-		<div class="card text-left justify-center p-5">
-			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 text-xl rounded-2xl
+	</div>
+	<div class="card text-left justify-center p-10 w-full">
+		<a class="card text-center flex flex-col justify-center items-start p-4 bg-gray-900 text-xl rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
-				 href="/blog/">
-				Cliquez ici pour en découvrir d'autres &nearr;
-			</a>
-		</div>
-
+			 href="/blog/">
+			Cliquez ici pour en découvrir d'autres &nearr;
+		</a>
 	</div>
 	<p class="mt-10" />
 	<div class="flex expand border-2 border-white p-1 rounded-full mt-auto mb-10">
@@ -491,30 +492,31 @@
 
 <section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top" id="contact">
 	<h1 class="text-6xl font-bold text-center justify-center">{$_('pages.contact.title')}</h1>
-	<h2 class="text-4xl text-gray-200">{$_('pages.contact.description')}</h2>
+	<h2 class="text-4xl text-gray-200 text-center justify-center">{$_('pages.contact.description')}</h2>
 	<p class="mt-10" />
 	{#if formSent}
 		<p class="text-4xl mt-10 text-green-600">{$_('pages.contact.formSent')}</p>
 	{:else }
 		<form class="flex flex-col justify-center items-center w-full text-white">
 			<input bind:value={name}
-						 class="bg-gray-800 rounded-3xl p-5 w-1/2 hover:bg-gray-700 opacity-85 focus:outline-none focus:bg-gray-700"
+						 class="bg-gray-800 rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 hover:bg-gray-700 opacity-85 focus:outline-none focus:bg-gray-700"
 						 placeholder={$_('pages.contact.name')}
 						 type="text" />
 			<p class="text-red-500"
 				 hidden={!name_invalid}>{$_('pages.contact.name') + ' ' + $_('pages.contact.required')}</p>
 			<input bind:value={email}
-						 class="bg-gray-800 rounded-3xl p-5 w-1/2 mt-5 hover:bg-gray-700 opacity-85 focus:outline-none focus:bg-gray-700"
+						 class="bg-gray-800 rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 mt-5 hover:bg-gray-700 opacity-85 focus:outline-none focus:bg-gray-700"
 						 placeholder={$_('pages.contact.email')}
 						 type="email" />
 			<p class="text-red-500"
 				 hidden={!email_invalid}>{$_('pages.contact.email') + ' ' + $_('pages.contact.required')}</p>
 			<textarea bind:value={message}
-								class="bg-gray-800 rounded-3xl p-5 w-1/2 h-64 mt-5 hover:bg-gray-700 opacity-85 focus:outline-none focus:bg-gray-700"
+								class="bg-gray-800 rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 h-64 mt-5 hover:bg-gray-700 opacity-85 focus:outline-none focus:bg-gray-700"
 								placeholder={$_('pages.contact.message')} />
 			<p class="text-red-500"
 				 hidden={!message_invalid}>{$_('pages.contact.message') + ' ' + $_('pages.contact.required')}</p>
-			<button class="border-1 border-gray-900 rounded-3xl p-5 w-1/2 mt-5 text-white bg-blue-900 {buttonColor}
+			<button
+				class="border-1 border-gray-900 rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 mt-5 text-white bg-blue-900 {buttonColor}
             opacity-85 focus:outline-none focus:bg-blue-600 focus:scale-105"
 							id="card"
 							on:click={() => callDiscordWebhook()}>{buttonText}</button>

@@ -22,12 +22,12 @@
 
 <body class="flex flex-col min-h-screen">
 <section class="items-center flex flex-col min-h-screen gap-3 border-top">
-	<h1 class="text-6xl font-bold mt-8">{$_('pages.blog.title')}</h1>
+	<h1 class="text-6xl font-bold mt-8 text-center justify-center">{$_('pages.blog.title')}</h1>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<h2 class="text-xl text-gray-200 text-center justify-center">{@html $_('pages.blog.description')}</h2>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	<h3 class="text-sm">{@html $_('pages.blog.quicknote')}</h3>
-	<div class="p-14 justify-center items-center grid sm:grid-cols-2 xl:grid-cols-3 gap-5">
+	<h3 class="text-sm mx-4 text-left justify-center">{@html $_('pages.blog.quicknote')}</h3>
+	<div class="p-8 justify-center items-center grid md:grid-cols-2 xl:grid-cols-3 gap-10">
 		{#each posts as post}
 			<a href="/blog/{post.id}" class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800">

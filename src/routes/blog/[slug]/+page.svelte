@@ -55,7 +55,7 @@
 </a>
 
 <section class="mx-auto lg:w-1/2 sm:w-full mt-6" id="header">
-	<div class="grid lg:grid-cols-2 gap-5">
+	<div class="grid xl:grid-cols-2 gap-5">
 		<div class="flex flex-col justify-between gap-5">
 			<div>
 				<h1 class="text-4xl font-bold">{post.title}</h1>
