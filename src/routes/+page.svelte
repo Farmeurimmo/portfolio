@@ -123,7 +123,7 @@
 	let goingToTop = false;
 	let isMobile = false;
 
-	onMount(() => {
+	onMount(async () => {
 		let sections = document.querySelectorAll('section');
 
 		let observer = new IntersectionObserver((entries) => {
@@ -312,7 +312,7 @@
 			initSending = false;
 		}, 1_500);
 
-		setTimeout(() => {
+		setTimeout(async () => {
 			if (name_invalid) {
 				sending = false;
 				return;
@@ -365,9 +365,9 @@
 <section class="justify-center items-center flex flex-col min-h-screen gap-3 p-5" id="home">
 	<div class="flex flex-col sm:flex-row justify-center items-center gap-5 mt-20">
 		<Image className="rounded-full border-0 w-20 h-20" src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
-		<h1 class="text-6xl font-bold text-center justify-center">Farmeurimmo</h1>
+		<h1 class="text-5xl md:text-6xl font-bold text-center justify-center">Farmeurimmo</h1>
 	</div>
-	<h2 class="text-4xl font-bold text-center justify-center mt-4">{$_('pages.home.iam')}</h2>
+	<h2 class="text-3xl font-bold text-center justify-center mt-4">{$_('pages.home.iam')}</h2>
 	<p class="mt-20" />
 	<ul class="text-left mx-3 list-disc list-inside gap-2">
 		<li class="text-2xl text-gray-200">{$_('pages.home.presentations.line1')}</li>
@@ -446,7 +446,7 @@
 		<div class="card text-left justify-center p-4 w-full">
 			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
-				 href="/blog/28-03-2024-new-website-portfolio-v4-edition" target="_blank">
+				 href="/blog/28-03-2024-new-website-portfolio-v4-edition" target="_blank" title="Article of the 28-03-2024">
 				<div class="flex flex-row gap-5 w-full">
 					<Image className="rounded-t-2xl w-full h-96"
 								 src="https://cdn.farmeurimmo.fr/img/blog/28-03-2024-new-website-portfolio-v4-edition.jpeg" />
@@ -463,7 +463,7 @@
 		<div class="card text-left justify-center p-4 w-full">
 			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
-				 href="/blog/04-04-2024-dev-blog-1-build-a-skyblock-plugin" target="_blank">
+				 href="/blog/04-04-2024-dev-blog-1-build-a-skyblock-plugin" target="_blank" title="Article of the 04-04-2024">
 				<div class="flex flex-row gap-5 w-full">
 					<Image className="rounded-t-2xl w-full h-96"
 								 src="https://cdn.farmeurimmo.fr/img/blog/04-04-2024-dev-blog-1-build-a-skyblock-plugin.jpeg" />
@@ -480,7 +480,7 @@
 	<div class="card text-left justify-center p-10 w-full">
 		<a class="card text-center flex flex-col justify-center items-start p-4 bg-gray-900 text-xl rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
-			 href="/blog/">
+			 href="/blog/" title="All articles">
 			Cliquez ici pour en découvrir d'autres &nearr;
 		</a>
 	</div>

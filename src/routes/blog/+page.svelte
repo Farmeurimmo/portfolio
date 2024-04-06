@@ -9,7 +9,7 @@
 	export let data = {};
 	let posts = [{ title: '', snippet: '', id: '', img: '', views: 0 }]; // Default value to prevent errors
 
-	onMount(() => {
+	onMount(async () => {
 		posts = Object.values(data);
 	});
 </script>

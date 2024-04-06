@@ -109,7 +109,7 @@
 		</a>
 		{#each Object.entries(endPoints) as [key, value]}
 			{#if key === currentPage}
-				<a class="text-orange-400 font-bold hover:text-gray-300" href={value}>{$_("nav." + key)}</a>
+				<a class="text-orange-400 font-bold hover:text-gray-300" href={value} title={key}>{$_("nav." + key)}</a>
 			{:else}
 				{#if value === "/disabled"}
 					<div class="flex flex-row items-center gap-1">
