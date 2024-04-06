@@ -20,8 +20,12 @@
 		};
 	};
 
-	onMount(loadImage);
-	afterUpdate(loadImage);
+	onMount(async () => {
+		loadImage();
+	});
+	afterUpdate(async () => {
+		loadImage();
+	});
 </script>
 
 {#if loaded}

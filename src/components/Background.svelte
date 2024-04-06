@@ -128,12 +128,14 @@
 		}
 	}
 
-	onMount(() => {
-		generateParticles();
-		setInterval(() => {
-			globalAngle += Math.PI / 180 * (Math.random() > .5 ? 1 : -1);
-			opt.angle += Math.PI / 180 * (Math.random() > .5 ? 1 : -1);
-		}, 1);
+	onMount(async () => {
+		setTimeout(() => {
+			generateParticles();
+			setInterval(() => {
+				globalAngle += Math.PI / 180 * (Math.random() > .5 ? 1 : -1);
+				opt.angle += Math.PI / 180 * (Math.random() > .5 ? 1 : -1);
+			}, 1);
+		}, 2_000);
 		window.addEventListener('click', () => {
 			globalAngle = Math.random() * Math.PI * 2;
 		});
