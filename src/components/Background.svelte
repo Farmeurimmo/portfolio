@@ -129,13 +129,14 @@
 	}
 
 	onMount(async () => {
+		let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 		setTimeout(() => {
 			generateParticles();
 			setInterval(() => {
 				globalAngle += Math.PI / 180 * (Math.random() > .5 ? 1 : -1);
 				opt.angle += Math.PI / 180 * (Math.random() > .5 ? 1 : -1);
 			}, 1);
-		}, 2_000);
+		}, (isMobile ? 10_000 : 4_000));
 		window.addEventListener('click', () => {
 			globalAngle = Math.random() * Math.PI * 2;
 		});
