@@ -136,7 +136,7 @@
 				globalAngle += Math.PI / 180 * (Math.random() > .5 ? 1 : -1);
 				opt.angle += Math.PI / 180 * (Math.random() > .5 ? 1 : -1);
 			}, 1);
-		}, (isMobile ? 10_000 : 4_000));
+		}, (isMobile ? 12_000 : 8_000));
 		window.addEventListener('click', () => {
 			globalAngle = Math.random() * Math.PI * 2;
 		});
