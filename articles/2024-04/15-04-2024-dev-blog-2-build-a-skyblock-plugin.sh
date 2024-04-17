@@ -1,12 +1,12 @@
 #!/bin/bash
 
-id="04-04-2024-dev-blog-1-build-a-skyblock-plugin"
+id="15-04-2024-dev-blog-2-build-a-skyblock-plugin"
 file="$id.svelte"
-title="Dev blog #1: Build a Skyblock plugin (part 1): Introduction"
-snippet="In this article I will talk about minecraft and how to build a Skyblock plugin for a Spigot server. In this first part we will talk about what we want to achieve and how we will do it."
+title="Dev Blog #2: Build a Skyblock Plugin (part 2): Island System"
+snippet="In this article I continue to talk about the development of my skyblock plugin. This time I will talk about the island system in cross server with island repartition, loading and saving islands."
 img="https://cdn.farmeurimmo.fr/img/blog/$id.jpeg"
-published="04/04/2024 21h00"
-views=0
+published="16/04/2024 11h28"
+views=2
 
 # Read the content of the file
 content=$(cat << EOF

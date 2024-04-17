@@ -469,10 +469,25 @@
 								 src="https://cdn.farmeurimmo.fr/img/blog/04-04-2024-dev-blog-1-build-a-skyblock-plugin.jpeg" />
 				</div>
 				<div class="py-3">
-					<p class="text-2xl font-bold">Dev blog #1: Build a Skyblock plugin (part 1)</p>
+					<p class="text-2xl font-bold">Dev blog #1: Build a Skyblock plugin (part 1): Introduction</p>
 					<p class="text-lg mt-6">In this article I will talk about minecraft and how to build a
 						Skyblock plugin for a Spigot server. In this first part we will talk about what we
 						want to achieve and how we will do it.</p>
+				</div>
+			</a>
+		</div>
+		<div class="card text-left justify-center p-4 w-full">
+			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
+            transform transition duration-500 hover:scale-105 hover:bg-gray-800"
+				 href="/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin" target="_blank" title="Article of the 15-04-2024">
+				<div class="flex flex-row gap-5 w-full">
+					<Image className="rounded-t-2xl w-full h-96"
+								 src="https://cdn.farmeurimmo.fr/img/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin.jpeg" />
+				</div>
+				<div class="py-3">
+					<p class="text-2xl font-bold">Dev Blog #2: Build a Skyblock Plugin (part 2): Island System</p>
+					<p class="text-lg mt-6">In this article I continue to talk about the development of my skyblock plugin.
+						This time I will talk about the island system in cross server with island repartition, loading and saving islands.</p>
 				</div>
 			</a>
 		</div>
