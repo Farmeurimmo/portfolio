@@ -1,24 +1,21 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
-	onMount(() => {
-
-	});
+	import Background from '../components/Background.svelte';
 </script>
 
 <svelte:head>
 	<title>404 Page introuvable - Farmeurimmo</title>
 </svelte:head>
 
-<div class="flex flex-col gap-5 justify-center items-center h-screen">
-	<h1>404 - Page introuvable</h1>
-	<a href="/">Retour à l'accueil</a>
+<Background />
+
+<div class="flex flex-col gap-5 justify-center items-center text-left h-screen md:text-center">
+	<h1 class="text-4xl md:text-6xl">404 - Page introuvable</h1>
+	<a class="text-xs md:text-xl" href="/">Retour à l'accueil</a>
 </div>
 
 <style>
 
     h1 {
-        font-size: 6rem;
         color: black;
         font-family: 'Roboto', sans-serif;
         text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,

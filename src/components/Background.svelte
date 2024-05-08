@@ -129,18 +129,24 @@
 	}
 
 	onMount(async () => {
-		let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-		setTimeout(() => {
-			generateParticles();
-			setInterval(() => {
-				globalAngle += Math.PI / 180 * (Math.random() > .5 ? 1 : -1);
-				opt.angle += Math.PI / 180 * (Math.random() > .5 ? 1 : -1);
-			}, 1);
-		}, (isMobile ? 12_000 : 8_000));
+		let interval = setInterval(() => {
+			if (document.readyState === 'complete') {
+				start();
+				clearInterval(interval);
+			}
+		}, 1_000);
+	});
+
+	function start() {
+		generateParticles();
+		setInterval(() => {
+			globalAngle += Math.PI / 180 * (Math.random() > .5 ? 1 : -1);
+			opt.angle += Math.PI / 180 * (Math.random() > .5 ? 1 : -1);
+		}, 1);
 		window.addEventListener('click', () => {
 			globalAngle = Math.random() * Math.PI * 2;
 		});
-	});
+	}
 </script>
 
 <Canvas autoplay style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">

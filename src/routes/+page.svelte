@@ -390,7 +390,8 @@
 		<h2 class="text-6xl font-bold">{$_('pages.about.title')}</h2>
 	</div>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	<p class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium text-gray-300">{@html $_('pages.about.description')}</p>
+	<p
+		class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium text-gray-300">{@html $_('pages.about.description')}</p>
 	<div class="flex expand border-2 border-white p-1 rounded-full mt-auto mb-10">
 		<a class="text-6xl font-bold text-gray-400 hover:text-gray-200" href="#skills" title="gotoskills">&darr;</a>
 	</div>
@@ -487,7 +488,8 @@
 				<div class="py-3">
 					<p class="text-2xl font-bold">Dev Blog #2: Build a Skyblock Plugin (part 2): Island System</p>
 					<p class="text-lg mt-6">In this article I continue to talk about the development of my skyblock plugin.
-						This time I will talk about the island system in cross server with island repartition, loading and saving islands.</p>
+						This time I will talk about the island system in cross server with island repartition, loading and saving
+						islands.</p>
 				</div>
 			</a>
 		</div>
@@ -533,8 +535,8 @@
 			<button
 				class="border-1 border-gray-900 rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 mt-5 text-white bg-blue-900 {buttonColor}
             opacity-85 focus:outline-none focus:bg-blue-600 focus:scale-105"
-							id="card"
-							on:click={() => callDiscordWebhook()}>{buttonText}</button>
+				id="card"
+				on:click={() => callDiscordWebhook()}>{buttonText}</button>
 		</form>
 	{/if}
 </section>
