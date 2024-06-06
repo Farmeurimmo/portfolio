@@ -37,7 +37,9 @@
 	});
 </script>
 
-<title>{post.title}</title>
+<head>
+	<title>{post.title}</title>
+</head>
 
 <Background />
 

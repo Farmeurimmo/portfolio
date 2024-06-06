@@ -351,7 +351,10 @@
 	}
 </script>
 
-<title>{$_('pages.home.title')}</title>
+<head>
+	<title>{$_('pages.home.title')}</title>
+	<link href="https://farmeurimmo.fr" rel="canonical" />
+</head>
 
 <Background />
 

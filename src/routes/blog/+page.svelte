@@ -14,7 +14,9 @@
 	});
 </script>
 
-<title>{$_('pages.blog.title')}</title>
+<head>
+	<title>{$_('pages.blog.title')}</title>
+</head>
 
 <Background />
 
