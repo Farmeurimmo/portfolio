@@ -19,11 +19,9 @@
 		message: ''
 	};
 
-	onMount(() => {
-		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-		// @ts-expect-error
-		post = data;
+	$: post = data; // Make post a reactive statement
 
+	onMount(() => {
 		if (data.message === 'post not found') {
 			window.location.href = '/404';
 		}

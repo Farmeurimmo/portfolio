@@ -14,9 +14,9 @@
 	});
 </script>
 
-<head>
+<svelte:head>
 	<title>{$_('pages.blog.title')}</title>
-</head>
+</svelte:head>
 
 <Background />
 
