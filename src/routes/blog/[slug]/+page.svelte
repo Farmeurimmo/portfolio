@@ -46,6 +46,7 @@
 	<meta content="{post.title}" name="twitter:title" />
 	<meta content="{post.description}" name="twitter:description" />
 	<meta content="{post.img}" name="twitter:image" />
+	<link href="https://farmeurimmo.fr/blog/{post.id}" rel="canonical" />
 </svelte:head>
 
 <Background />

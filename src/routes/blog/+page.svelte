@@ -19,6 +19,7 @@
 	<meta content={$_('pages.blog.description')} name="description" />
 	<meta content={$_('pages.blog.title')} property="og:title" />
 	<meta content={$_('pages.blog.description')} property="og:description" />
+	<link href="https://farmeurimmo.fr/blog" rel="canonical" />
 </svelte:head>
 
 <Background />
