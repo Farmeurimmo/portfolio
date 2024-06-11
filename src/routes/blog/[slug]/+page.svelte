@@ -13,6 +13,7 @@
 		snippet: '...',
 		content: '...',
 		views: 0,
+		description: '...',
 		published: '...',
 		img: '...',
 		message: ''
@@ -39,6 +40,14 @@
 
 <head>
 	<title>{post.title}</title>
+	<meta content="{post.description}" name="description" />
+	<meta content="{post.title}" property="og:title" />
+	<meta content="{post.description}" property="og:description" />
+	<meta content="{post.img}" property="og:image" />
+	<meta content="summary_large_image" name="twitter:card" />
+	<meta content="{post.title}" name="twitter:title" />
+	<meta content="{post.description}" name="twitter:description" />
+	<meta content="{post.img}" name="twitter:image" />
 </head>
 
 <Background />
