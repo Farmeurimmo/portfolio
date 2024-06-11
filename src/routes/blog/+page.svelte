@@ -16,6 +16,9 @@
 
 <svelte:head>
 	<title>{$_('pages.blog.title')}</title>
+	<meta content={$_('pages.blog.description')} name="description" />
+	<meta content={$_('pages.blog.title')} property="og:title" />
+	<meta content={$_('pages.blog.description')} property="og:description" />
 </svelte:head>
 
 <Background />

@@ -351,10 +351,10 @@
 	}
 </script>
 
-<head>
+<svelte:head>
 	<title>{$_('pages.home.title')}</title>
 	<link href="https://farmeurimmo.fr" rel="canonical" />
-</head>
+</svelte:head>
 
 <Background />
 
@@ -368,9 +368,9 @@
 <section class="justify-center items-center flex flex-col min-h-screen gap-3 p-5" id="home">
 	<div class="flex flex-col sm:flex-row justify-center items-center gap-5 mt-20">
 		<Image className="rounded-full border-0 w-20 h-20" src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
-		<h1 class="text-5xl md:text-6xl font-bold text-center justify-center">Farmeurimmo</h1>
+		<h2 class="text-5xl md:text-6xl font-bold text-center justify-center">Farmeurimmo</h2>
 	</div>
-	<h2 class="text-3xl font-bold text-center justify-center mt-4">{$_('pages.home.iam')}</h2>
+	<h1 class="text-3xl font-bold text-center justify-center mt-4">{$_('pages.home.iam')}</h1>
 	<p class="mt-20" />
 	<ul class="text-left mx-3 list-disc list-inside gap-2">
 		<li class="text-2xl text-gray-200">{$_('pages.home.presentations.line1')}</li>

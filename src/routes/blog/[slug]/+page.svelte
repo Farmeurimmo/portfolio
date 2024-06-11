@@ -21,7 +21,7 @@
 
 	$: post = data; // Make post a reactive statement
 
-	onMount(() => {
+	onMount(async () => {
 		if (data.message === 'post not found') {
 			window.location.href = '/404';
 		}
@@ -69,7 +69,7 @@
 	<div class="grid xl:grid-cols-2 gap-5">
 		<div class="flex flex-col justify-between gap-5">
 			<div>
-				<h1 class="text-4xl font-bold">{post.title}</h1>
+				<h2 class="text-4xl font-bold">{post.title}</h2>
 				<p class="text-xl text-gray-200 mt-4">{post.snippet}</p>
 			</div>
 			<div class="mt-auto">
