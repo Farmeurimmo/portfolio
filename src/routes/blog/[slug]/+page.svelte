@@ -19,7 +19,7 @@
 		message: ''
 	};
 
-	onMount(async () => {
+	onMount(() => {
 		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 		// @ts-expect-error
 		post = data;
@@ -38,7 +38,7 @@
 	});
 </script>
 
-<head>
+<svelte:head>
 	<title>{post.title}</title>
 	<meta content="{post.description}" name="description" />
 	<meta content="{post.title}" property="og:title" />
@@ -48,7 +48,7 @@
 	<meta content="{post.title}" name="twitter:title" />
 	<meta content="{post.description}" name="twitter:description" />
 	<meta content="{post.img}" name="twitter:image" />
-</head>
+</svelte:head>
 
 <Background />
 
