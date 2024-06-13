@@ -8,7 +8,7 @@
 	export let data = {};
 
 	let post = {
-		id: '...',
+		id: '',
 		title: '...',
 		snippet: '...',
 		content: '...',
