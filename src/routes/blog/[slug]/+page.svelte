@@ -21,7 +21,7 @@
 
 	$: post = data; // Make post a reactive statement
 
-	onMount(async () => {
+	onMount(() => {
 		if (data.message === 'post not found') {
 			window.location.href = '/404';
 		}

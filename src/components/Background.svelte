@@ -131,7 +131,10 @@
 	onMount(async () => {
 		let interval = setInterval(() => {
 			if (document.readyState === 'complete') {
-				start();
+				let intervalStart = setInterval(() => {
+					start();
+					clearInterval(intervalStart);
+				}, 1_000);
 				clearInterval(interval);
 			}
 		}, 1_000);
