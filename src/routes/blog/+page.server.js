@@ -1,3 +1,5 @@
+export const prerender = true;
+
 export async function load({ fetch }) {
 	const url = 'https://api.farmeurimmo.fr/v1/blog';
 	const res = await fetch(url);
