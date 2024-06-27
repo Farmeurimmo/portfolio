@@ -42,7 +42,8 @@
     },
     "projects": {
       "title": "Some of my projects or articles",
-      "description": "I have many more, but I can't list them all here. <br> You can find more on my GitHub account or in my blog."
+      "description": "I have many more, but I can't list them all here. <br> You can find more on my GitHub account or in my blog.",
+      "more" : "Click here to discover more articles and projects"
     },
     "contact": {
       "title": "A question? Convinced?",

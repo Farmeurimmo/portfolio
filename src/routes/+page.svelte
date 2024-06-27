@@ -501,7 +501,7 @@
 		<a class="card text-center flex flex-col justify-center items-start p-4 bg-gray-900 text-xl rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
 			 href="/blog/" title="All articles">
-			Cliquez ici pour en découvrir d'autres &nearr;
+			{$_('pages.projects.more')} &nearr;
 		</a>
 	</div>
 	<p class="mt-10" />
