@@ -7,7 +7,7 @@ snippet="In this article I will talk about minecraft and how to build a Skyblock
 img="https://cdn.farmeurimmo.fr/img/blog/$id.jpeg"
 description="How to build a Skyblock plugin for a Spigot server. In this first part we will talk about what we want to achieve and how to handle cross server."
 published="04/04/2024 21h00"
-views=80
+views=129
 
 # Read the content of the file
 content=$(cat << EOF

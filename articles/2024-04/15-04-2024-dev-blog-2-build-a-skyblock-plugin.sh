@@ -7,7 +7,7 @@ snippet="In this article I continue to talk about the development of my skyblock
 img="https://cdn.farmeurimmo.fr/img/blog/$id.jpeg"
 description="In this article I continue to talk about the development of my skyblock plugin. This time I will talk about the island system in cross server with island repartition, loading and saving islands."
 published="16/04/2024 11h28"
-views=79
+views=110
 
 # Read the content of the file
 content=$(cat << EOF

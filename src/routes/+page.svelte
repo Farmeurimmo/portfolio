@@ -450,7 +450,7 @@
 		<div class="card text-left justify-center p-4 w-full">
 			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
-				 href="/blog/28-03-2024-new-website-portfolio-v4-edition" target="_blank" title="Article of the 28-03-2024">
+				 href="/blog/28-03-2024-new-website-portfolio-v4-edition" title="Article of the 28-03-2024">
 				<div class="flex flex-row gap-5 w-full">
 					<Image className="rounded-t-2xl w-full h-96"
 								 src="https://cdn.farmeurimmo.fr/img/blog/28-03-2024-new-website-portfolio-v4-edition.jpeg" />
@@ -467,7 +467,7 @@
 		<div class="card text-left justify-center p-4 w-full">
 			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
-				 href="/blog/04-04-2024-dev-blog-1-build-a-skyblock-plugin" target="_blank" title="Article of the 04-04-2024">
+				 href="/blog/04-04-2024-dev-blog-1-build-a-skyblock-plugin" title="Article of the 04-04-2024">
 				<div class="flex flex-row gap-5 w-full">
 					<Image className="rounded-t-2xl w-full h-96"
 								 src="https://cdn.farmeurimmo.fr/img/blog/04-04-2024-dev-blog-1-build-a-skyblock-plugin.jpeg" />
@@ -483,7 +483,7 @@
 		<div class="card text-left justify-center p-4 w-full">
 			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
-				 href="/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin" target="_blank" title="Article of the 15-04-2024">
+				 href="/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin" title="Article of the 15-04-2024">
 				<div class="flex flex-row gap-5 w-full">
 					<Image className="rounded-t-2xl w-full h-96"
 								 src="https://cdn.farmeurimmo.fr/img/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin.jpeg" />
