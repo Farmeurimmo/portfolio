@@ -7,10 +7,12 @@
 	import Image from '../../components/Image.svelte';
 
 	export let data = {};
-	let posts = [{ title: '', snippet: '', id: '', img: '', views: 0 }]; // Default value to prevent errors
+	let posts = [{ title: '', snippet: '', id: '', img: '', views: 0, date: '' }];
 
 	onMount(async () => {
 		posts = Object.values(data);
+		// Sort posts by date in descending order
+		posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 	});
 </script>
 

@@ -7,7 +7,8 @@ snippet="In this article I continue to talk about the development of my skyblock
 img="https://cdn.farmeurimmo.fr/img/blog/$id.jpeg"
 description="In this article I continue to talk about the development of my skyblock plugin. This time I will talk about the island system in cross server with island repartition, loading and saving islands."
 published="16/04/2024 11h28"
-views=110
+views=160
+date="2024-04-15"
 
 # Read the content of the file
 content=$(cat << EOF
@@ -28,6 +29,7 @@ json=$(jq -n \
           --arg published "$published" \
           --argjson views "$views" \
           --arg description "$description" \
-          '{id: $id, title: $title, snippet: $snippet, content: $content, img: $img, published: $published, views: $views, description: $description}')
+          --arg date "$date" \
+          '{id: $id, title: $title, snippet: $snippet, content: $content, img: $img, published: $published, views: $views, description: $description, date: $date}')
 
 sh ../publish.sh "$json" "$id"

@@ -7,7 +7,8 @@ snippet="In this article I continue to talk about the development of my skyblock
 img="https://cdn.farmeurimmo.fr/img/blog/$id.jpeg"
 description="In this article I continue to talk about the development of my skyblock plugin. This time I will talk about the inventory sync system between the player and the servers."
 published="18/07/2024 11h00"
-views=0
+views=5
+date="2024-07-18"
 
 # Read the content of the file
 content=$(cat << EOF
@@ -28,6 +29,7 @@ json=$(jq -n \
           --arg published "$published" \
           --argjson views "$views" \
           --arg description "$description" \
-          '{id: $id, title: $title, snippet: $snippet, content: $content, img: $img, published: $published, views: $views, description: $description}')
+          --arg date "$date" \
+          '{id: $id, title: $title, snippet: $snippet, content: $content, img: $img, published: $published, views: $views, description: $description, date: $date}')
 
 sh ../publish.sh "$json" "$id"
