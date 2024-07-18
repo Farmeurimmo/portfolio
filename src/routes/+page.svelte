@@ -496,6 +496,21 @@
 				</div>
 			</a>
 		</div>
+		<div class="card text-left justify-center p-4 w-full">
+			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
+            transform transition duration-500 hover:scale-105 hover:bg-gray-800"
+				 href="/blog/18-07-2024-dev-blog-3-build-a-skyblock-plugin" title="Article of the 18-07-2024">
+				<div class="flex flex-row gap-5 w-full">
+					<Image className="rounded-t-2xl w-full h-96"
+								 src="https://cdn.farmeurimmo.fr/img/blog/18-07-2024-dev-blog-3-build-a-skyblock-plugin.jpeg" />
+				</div>
+				<div class="py-3">
+					<p class="text-2xl font-bold">Dev Blog #3: Build a Skyblock Plugin (part 3): Inventory Sync System</p>
+					<p class="text-lg mt-6">In this article I continue to talk about the development of my skyblock plugin.
+						This time I will talk about the inventory sync system between the player and the servers.</p>
+				</div>
+			</a>
+		</div>
 	</div>
 	<div class="card text-left justify-center p-10 w-full">
 		<a class="card text-center flex flex-col justify-center items-start p-4 bg-gray-900 text-xl rounded-2xl
