@@ -53,7 +53,7 @@
 							const href = e.target.getAttribute('href');
 							if (href && href.includes('#')) {
 								e.preventDefault();
-								window.open(href, '_blank');
+								window.open(href, '_self');
 								return;
 							}
 						}
