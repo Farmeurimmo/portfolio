@@ -6,8 +6,8 @@ export async function load({ params }) {
 	const data = await response.json();
 
 	if (data) {
-		return data;
+		return { post: data };
 	}
 
-	error(404, 'Not found');
+	throw error(404, 'Not found');
 }
