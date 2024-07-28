@@ -3,17 +3,10 @@
 	import CommonFooter from '../../components/CommonFooter.svelte';
 	import NavigationBar from '../../components/NavigationBar.svelte';
 	import Background from '../../components/Background.svelte';
-	import { onMount } from 'svelte';
 	import Image from '../../components/Image.svelte';
 
 	export let data = {};
-	let posts = [{ title: '', snippet: '', id: '', img: '', views: 0, date: '' }];
-
-	onMount(async () => {
-		posts = Object.values(data);
-		// Sort posts by date in descending order
-		posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-	});
+	let posts = Array.isArray(data.posts) ? data.posts : [];
 </script>
 
 <svelte:head>
@@ -38,7 +31,7 @@
 	<div class="p-6 justify-center items-center grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10">
 		{#each posts as post}
 			<a href="/blog/{post.id}" class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
-            transform transition duration-500 hover:scale-105 hover:bg-gray-800" title={post.title}>
+     transform transition duration-500 hover:scale-105 hover:bg-gray-800" title={post.title}>
 				<Image src={post.img} className="rounded-t-2xl mt-0 p-0 h-96 w-fit" />
 				<div class="py-3">
 					<h2 class="text-3xl font-bold">{post.title}</h2>

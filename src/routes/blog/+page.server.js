@@ -1,16 +1,16 @@
+import { error } from '@sveltejs/kit';
+
 export const prerender = true;
 
+/** @type {import('./$types').PageServerLoad} */
 export async function load({ fetch }) {
-	const url = 'https://api.farmeurimmo.fr/v1/blog';
-	const res = await fetch(url);
-	if (res.ok) {
-		const data = await res.json();
-		if (data) {
-			return data;
-		}
+	const response = await fetch('https://api.farmeurimmo.fr/v1/blog');
+	const data = await response.json();
+
+	if (data) {
+		let posts = Object.values(data);
+		posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+		return { posts };
 	}
-	return {
-		status: res.status,
-		error: new Error(`Could not load ${url}`)
-	};
+	throw error(404, 'Not found');
 }
