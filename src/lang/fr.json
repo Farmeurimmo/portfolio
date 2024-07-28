@@ -67,7 +67,20 @@
     },
     "projects": {
       "title": "Mes projets",
-      "description": "Découvrez mes projets actuels et passés ici."
+      "description": "Découvrez mes projets actuels et passés ici.",
+      "reapersanction": {
+        "title": "Reaper Sanction",
+        "description": "Reaper Sanction est un plugin minecraft qui inclus un système de sanction intégré et de guis pour sanctionner les joueurs du serveur. Les guis sont configurables et les sanctions sont personnalisables.",
+        "good_points": [
+          "Plugin de sanction orienté gui pour les serveurs minecraft java",
+          "Compatible Spigot, Paper, BungeeCord, Velocity",
+          "De la 1.8 aux dernières versions du jeux.",
+          "Supporte MYSQL, YAML",
+          "Messages modifiables",
+          "Sanctions personnalisables",
+          "Guis personnalisables"
+        ]
+      }
     }
   }
 }
