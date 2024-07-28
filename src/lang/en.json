@@ -13,7 +13,8 @@
   "nav": {
     "home": "Home",
     "blog": "Blog",
-    "contact": "Contact"
+    "contact": "Contact",
+    "projects": "Projects"
   },
   "footer": {
     "services": {
