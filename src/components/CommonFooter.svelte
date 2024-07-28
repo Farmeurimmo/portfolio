@@ -29,7 +29,7 @@
 	});
 </script>
 
-<footer class="flex justify-evenly flex-row items-center mt-20 p-5 gap-5 border-top">
+<footer class="flex justify-evenly flex-row items-center mt-20 p-5 gap-5 border-top w-full">
 	<div class="flex flex-col items-center font-medium">
 		<div class="flex flex-row items-center gap-2.5">
 			<a href="https://farmeurimmo.fr" rel="noopener noreferrer" target="_blank" title="Farmeurimmo">

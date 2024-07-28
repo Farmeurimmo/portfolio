@@ -37,8 +37,10 @@
     "@vercel/speed-insights": "^1.0.10",
     "flowbite-svelte": "^0.44.24",
     "flowbite-svelte-icons": "^0.4.5",
+    "highlight.js": "^11.10.0",
     "p5": "^1.9.2",
     "svelte-canvas": "^1.1.1",
+    "svelte-highlight": "^7.7.0",
     "svelte-i18n": "^4.0.0",
     "vercel": "^32.7.2"
   }

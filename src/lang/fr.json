@@ -79,7 +79,11 @@
           "Messages modifiables",
           "Sanctions personnalisables",
           "Guis personnalisables"
-        ]
+        ],
+        "links": "Liens",
+        "demo": "Le plugin en quelques images",
+        "indev": "En développement",
+        "wikititle": "Wiki"
       }
     }
   }
