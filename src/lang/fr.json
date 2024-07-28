@@ -30,7 +30,13 @@
         "line3": "Peut-être pas le meilleur aujourd’hui, mais meilleur qu’hier",
         "line4": "Continuer d'apprendre, grandir et s'améliorer telle est ma philosophie"
       },
-      "scroll": "Faites défiler pour en savoir plus"
+      "scroll": "Faites défiler pour en savoir plus",
+      "projects": {
+        "title": "Quelques uns de mes projets ou articles",
+        "description": "J’en ai beaucoup d’autres, mais je ne peux pas tous les énumérer ici. <br> Vous pouvez en trouver plus sur mon compte GitHub ou sur mon blog.",
+        "more_blog": "Plus d'articles",
+        "more_projects": "Plus de projets"
+      }
     },
     "about": {
       "title": "À propos",
@@ -39,11 +45,6 @@
     "skills": {
       "title": "Compétences",
       "description": "x5 <p class=\"text-green-400 inline\">■</p> = niveau Expert, x1 <p class=\"text-green-400 inline\">\n        ■</p> = niveau Débutant"
-    },
-    "projects": {
-      "title": "Quelques uns de mes projets ou articles",
-      "description": "J’en ai beaucoup d’autres, mais je ne peux pas tous les énumérer ici. <br> Vous pouvez en trouver plus sur mon compte GitHub ou sur mon blog.",
-      "more": "Cliquez ici pour en découvrir d'autres"
     },
     "contact": {
       "title": "Une question ? Convaincu ?",

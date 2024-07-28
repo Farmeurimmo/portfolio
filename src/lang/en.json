@@ -30,7 +30,13 @@
         "line3": "Maybe not the best today, but better than yesterday",
         "line4": "Continuing to learn, grow and improve is my philosophy"
       },
-      "scroll": "Scroll to learn more"
+      "scroll": "Scroll to learn more",
+      "projects": {
+        "title": "Some of my projects or articles",
+        "description": "I have many more, but I can't list them all here. <br> You can find more on my GitHub account or in my blog.",
+        "more_blog": "More articles",
+        "more_projects": "More projects"
+      }
     },
     "about": {
       "title": "About",
@@ -39,11 +45,6 @@
     "skills": {
       "title": "Skills",
       "description": "x5 <p class=\"text-green-400 inline\">■</p> = Expert level, x1 <p class=\"text-green-400 inline\">■</p> = Beginner level"
-    },
-    "projects": {
-      "title": "Some of my projects or articles",
-      "description": "I have many more, but I can't list them all here. <br> You can find more on my GitHub account or in my blog.",
-      "more": "Click here to discover more articles and projects"
     },
     "contact": {
       "title": "A question? Convinced?",

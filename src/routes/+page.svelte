@@ -443,80 +443,77 @@
 </section>
 
 <section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top" id="projects">
-	<h2 class="text-6xl font-bold mt-32 text-center">{$_('pages.projects.title')}</h2>
+	<h2 class="text-6xl font-bold mt-32 text-center">{$_('pages.home.projects.title')}</h2>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	<h2 class="text-xl text-gray-200 text-center justify-center">{@html $_('pages.projects.description')}</h2>
-	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-2 items-start z-0 mt-4">
-		<div class="card text-left justify-center p-4 w-full">
-			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
-            transform transition duration-500 hover:scale-105 hover:bg-gray-800"
-				 href="/blog/28-03-2024-new-website-portfolio-v4-edition" title="Article of the 28-03-2024">
-				<div class="flex flex-row gap-5 w-full">
-					<Image className="rounded-t-2xl w-full h-96"
-								 src="https://cdn.farmeurimmo.fr/img/blog/28-03-2024-new-website-portfolio-v4-edition.jpeg" />
-				</div>
-				<div class="py-3">
-					<p class="text-2xl font-bold">New website with portfolio in his 4 version (Svelte, i18n, Vite,
-						Tailwindcss)</p>
-					<p class="text-lg mt-6">In this article I will talk about the motivations behind my new website in his 4
-						version, the tech choices (Svelte, i18n, Vite, Tailwindcss) I made and the features I added (contact form,
-						blog, multi language, etc..).</p>
-				</div>
-			</a>
-		</div>
-		<div class="card text-left justify-center p-4 w-full">
-			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
-            transform transition duration-500 hover:scale-105 hover:bg-gray-800"
-				 href="/blog/04-04-2024-dev-blog-1-build-a-skyblock-plugin" title="Article of the 04-04-2024">
-				<div class="flex flex-row gap-5 w-full">
-					<Image className="rounded-t-2xl w-full h-96"
-								 src="https://cdn.farmeurimmo.fr/img/blog/04-04-2024-dev-blog-1-build-a-skyblock-plugin.jpeg" />
-				</div>
-				<div class="py-3">
-					<p class="text-2xl font-bold">Dev blog #1: Build a Skyblock plugin (part 1): Introduction</p>
-					<p class="text-lg mt-6">In this article I will talk about minecraft and how to build a
-						Skyblock plugin for a Spigot server. In this first part we will talk about what we
-						want to achieve and how we will do it.</p>
-				</div>
-			</a>
-		</div>
-		<div class="card text-left justify-center p-4 w-full">
-			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
-            transform transition duration-500 hover:scale-105 hover:bg-gray-800"
-				 href="/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin" title="Article of the 15-04-2024">
-				<div class="flex flex-row gap-5 w-full">
-					<Image className="rounded-t-2xl w-full h-96"
-								 src="https://cdn.farmeurimmo.fr/img/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin.jpeg" />
-				</div>
-				<div class="py-3">
-					<p class="text-2xl font-bold">Dev Blog #2: Build a Skyblock Plugin (part 2): Island System</p>
-					<p class="text-lg mt-6">In this article I continue to talk about the development of my skyblock plugin.
-						This time I will talk about the island system in cross server with island repartition, loading and saving
-						islands.</p>
-				</div>
-			</a>
-		</div>
-		<div class="card text-left justify-center p-4 w-full">
-			<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
-            transform transition duration-500 hover:scale-105 hover:bg-gray-800"
-				 href="/blog/18-07-2024-dev-blog-3-build-a-skyblock-plugin" title="Article of the 18-07-2024">
-				<div class="flex flex-row gap-5 w-full">
-					<Image className="rounded-t-2xl w-full h-96"
-								 src="https://cdn.farmeurimmo.fr/img/blog/18-07-2024-dev-blog-3-build-a-skyblock-plugin.jpeg" />
-				</div>
-				<div class="py-3">
-					<p class="text-2xl font-bold">Dev Blog #3: Build a Skyblock Plugin (part 3): Inventory Sync System</p>
-					<p class="text-lg mt-6">In this article I continue to talk about the development of my skyblock plugin.
-						This time I will talk about the inventory sync system between the player and the servers.</p>
-				</div>
-			</a>
-		</div>
+	<h2 class="text-xl text-gray-200 text-center justify-center">{@html $_('pages.home.projects.description')}</h2>
+	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 items-start z-0 mt-6">
+		<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
+            transform transition duration-500 hover:scale-105 hover:bg-gray-800 min-h-full"
+			 href="/blog/28-03-2024-new-website-portfolio-v4-edition" title="Article of the 28-03-2024">
+			<div class="flex flex-row gap-5 w-full">
+				<Image className="rounded-t-2xl w-full h-96"
+							 src="https://cdn.farmeurimmo.fr/img/blog/28-03-2024-new-website-portfolio-v4-edition.jpeg" />
+			</div>
+			<div class="py-3">
+				<p class="text-2xl font-bold">New website with portfolio in his 4 version (Svelte, i18n, Vite,
+					Tailwindcss)</p>
+				<p class="text-lg mt-6">In this article I will talk about the motivations behind my new website in his 4
+					version, the tech choices (Svelte, i18n, Vite, Tailwindcss) I made and the features I added (contact form,
+					blog, multi language, etc..).</p>
+			</div>
+		</a>
+		<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
+            transform transition duration-500 hover:scale-105 hover:bg-gray-800 min-h-full"
+			 href="/blog/04-04-2024-dev-blog-1-build-a-skyblock-plugin" title="Article of the 04-04-2024">
+			<div class="flex flex-row gap-5 w-full">
+				<Image className="rounded-t-2xl w-full h-96"
+							 src="https://cdn.farmeurimmo.fr/img/blog/04-04-2024-dev-blog-1-build-a-skyblock-plugin.jpeg" />
+			</div>
+			<div class="py-3">
+				<p class="text-2xl font-bold">Dev blog #1: Build a Skyblock plugin (part 1): Introduction</p>
+				<p class="text-lg mt-6">In this article I will talk about minecraft and how to build a
+					Skyblock plugin for a Spigot server. In this first part we will talk about what we
+					want to achieve and how we will do it.</p>
+			</div>
+		</a>
+		<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
+            transform transition duration-500 hover:scale-105 hover:bg-gray-800 min-h-full"
+			 href="/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin" title="Article of the 15-04-2024">
+			<div class="flex flex-row gap-5 w-full">
+				<Image className="rounded-t-2xl w-full h-96"
+							 src="https://cdn.farmeurimmo.fr/img/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin.jpeg" />
+			</div>
+			<div class="py-3">
+				<p class="text-2xl font-bold">Dev Blog #2: Build a Skyblock Plugin (part 2): Island System</p>
+				<p class="text-lg mt-6">In this article I continue to talk about the development of my skyblock plugin.
+					This time I will talk about the island system in cross server with island repartition, loading and saving
+					islands.</p>
+			</div>
+		</a>
+		<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
+            transform transition duration-500 hover:scale-105 hover:bg-gray-800 min-h-full"
+			 href="/blog/18-07-2024-dev-blog-3-build-a-skyblock-plugin" title="Article of the 18-07-2024">
+			<div class="flex flex-row gap-5 w-full">
+				<Image className="rounded-t-2xl w-full h-96"
+							 src="https://cdn.farmeurimmo.fr/img/blog/18-07-2024-dev-blog-3-build-a-skyblock-plugin.jpeg" />
+			</div>
+			<div class="py-3">
+				<p class="text-2xl font-bold">Dev Blog #3: Build a Skyblock Plugin (part 3): Inventory Sync System</p>
+				<p class="text-lg mt-6">In this article I continue to talk about the development of my skyblock plugin.
+					This time I will talk about the inventory sync system between the player and the servers.</p>
+			</div>
+		</a>
 	</div>
-	<div class="card text-left justify-center p-10 w-full">
-		<a class="card text-center flex flex-col justify-center items-start p-4 bg-gray-900 text-xl rounded-2xl
+	<div class="flex flex-row gap-10 text-left justify-center p-10">
+		<a class="text-center flex flex-col justify-center items-start p-4 bg-gray-900 text-xl rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
 			 href="/blog/" title="All articles">
-			{$_('pages.projects.more')} &nearr;
+			{$_('pages.home.projects.more_blog')} &nearr;
+		</a>
+		<a class="text-center flex flex-col justify-center items-start p-4 bg-gray-900 text-xl rounded-2xl
+            transform transition duration-500 hover:scale-105 hover:bg-gray-800"
+			 href="/projects/" title="All projects">
+			{$_('pages.home.projects.more_projects')} &nearr;
 		</a>
 	</div>
 	<p class="mt-10" />
