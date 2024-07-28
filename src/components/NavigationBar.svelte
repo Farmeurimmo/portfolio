@@ -9,8 +9,8 @@
 	const endPoints = {
 		'home': '/#home',
 		'contact': '/#contact',
-		'blog': '/blog',
-		'projects': '/disabled'
+		'projects': '/disabled',
+		'blog': '/blog'
 	};
 
 	let scrollY = 0;

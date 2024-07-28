@@ -1,17 +1,23 @@
 <script lang="ts">
 	import Background from '../components/Background.svelte';
+	import NavigationBar from '../components/NavigationBar.svelte';
+	import CommonFooter from '../components/CommonFooter.svelte';
 </script>
 
 <svelte:head>
 	<title>404 Page introuvable - Farmeurimmo</title>
 </svelte:head>
 
+<NavigationBar />
+
 <Background />
 
-<div class="flex flex-col gap-5 justify-center items-center text-left h-screen md:text-center">
+<div class="flex flex-col gap-8 justify-center items-center text-left min-h-screen md:text-center">
 	<h1 class="text-4xl md:text-6xl">404 - Page introuvable</h1>
 	<a class="text-xs md:text-xl" href="/">Retour à l'accueil</a>
 </div>
+
+<CommonFooter />
 
 <style>
 

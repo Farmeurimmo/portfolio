@@ -64,6 +64,10 @@
       "title": "Personal blog",
       "description": "Discover my latest articles and my projects here.",
       "quicknote": "Everything is written in English for simplicity and understanding. <br>Because English is the most used language in the computer world."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Discover my past and current projects here."
     }
   }
 }

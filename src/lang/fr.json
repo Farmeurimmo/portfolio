@@ -64,6 +64,10 @@
       "title": "Blog personnel",
       "description": "Découvrez mes derniers articles et mes projets ici.",
       "quicknote": "Tout est rédigé en anglais pour des raisons de simplicité et de compréhension. <br>Parce que l'Anglais est la langue la plus utilisée dans le monde de l'informatique."
+    },
+    "projects": {
+      "title": "Mes projets",
+      "description": "Découvrez mes projets actuels et passés ici."
     }
   }
 }
