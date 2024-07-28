@@ -447,7 +447,7 @@
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<h2 class="text-xl text-gray-200 text-center justify-center">{@html $_('pages.home.projects.description')}</h2>
 	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 items-start z-0 mt-6">
-		<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
+		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800 min-h-full"
 			 href="/blog/28-03-2024-new-website-portfolio-v4-edition" title="Article of the 28-03-2024">
 			<div class="flex flex-row gap-5 w-full">
@@ -462,7 +462,7 @@
 					blog, multi language, etc..).</p>
 			</div>
 		</a>
-		<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
+		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800 min-h-full"
 			 href="/blog/04-04-2024-dev-blog-1-build-a-skyblock-plugin" title="Article of the 04-04-2024">
 			<div class="flex flex-row gap-5 w-full">
@@ -476,7 +476,7 @@
 					want to achieve and how we will do it.</p>
 			</div>
 		</a>
-		<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
+		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800 min-h-full"
 			 href="/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin" title="Article of the 15-04-2024">
 			<div class="flex flex-row gap-5 w-full">
@@ -490,7 +490,7 @@
 					islands.</p>
 			</div>
 		</a>
-		<a class="flex flex-col justify-center items-start p-5 bg-gray-900 rounded-2xl
+		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800 min-h-full"
 			 href="/blog/18-07-2024-dev-blog-3-build-a-skyblock-plugin" title="Article of the 18-07-2024">
 			<div class="flex flex-row gap-5 w-full">
@@ -505,12 +505,12 @@
 		</a>
 	</div>
 	<div class="flex flex-row gap-10 text-left justify-center p-10">
-		<a class="text-center flex flex-col justify-center items-start p-4 bg-gray-900 text-xl rounded-2xl
+		<a class="text-center flex flex-col justify-center items-start p-6 bg-gray-900 text-xl rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
 			 href="/blog/" title="All articles">
 			{$_('pages.home.projects.more_blog')} &nearr;
 		</a>
-		<a class="text-center flex flex-col justify-center items-start p-4 bg-gray-900 text-xl rounded-2xl
+		<a class="text-center flex flex-col justify-center items-start p-6 bg-gray-900 text-xl rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
 			 href="/projects/" title="All projects">
 			{$_('pages.home.projects.more_projects')} &nearr;
