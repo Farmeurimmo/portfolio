@@ -83,7 +83,89 @@
         "links": "Liens",
         "demo": "Le plugin en quelques images",
         "indev": "En développement",
-        "wikititle": "Wiki"
+        "indev_things": [
+          "Meilleur système de report (récupération, vues etc..)",
+          "API pour les développeurs"
+        ],
+        "wikititle": "Wiki",
+        "wiki": {
+          "install": "Installation",
+          "install_instructions": [
+            "Télécharger la dernière version du plugin",
+            "Déposer le fichier dans le dossier plugins de votre serveur",
+            "Redémarrer le serveur",
+            "Configurer le plugin via les fichiers de configuration si besoin"
+          ],
+          "commands": "Commandes",
+          "optional": "() = optionnel, [] = requis",
+          "commands_table": {
+            "row_head": {
+              "command": "Commande",
+              "usage": "Utilisation",
+              "permission": "Permission",
+              "description": "Description"
+            },
+            "row_rs": {
+              "usage": "/rs [joueur]",
+              "description": "Ouvre le menu de sanction pour le joueur"
+            },
+            "row_ban": {
+              "usage": "/ban [joueur] (raison)",
+              "description": "Bannir un joueur de manière définitive"
+            },
+            "row_tempban": {
+              "usage": "/tempban [joueur] [temps avec sec/min/hour/day/year] (raison)",
+              "description": "Bannir un joueur temporairement"
+            },
+            "row_unban": {
+              "usage": "/unban [joueur]",
+              "description": "Débannir un joueur"
+            },
+            "row_kick": {
+              "usage": "/kick [joueur] (raison)",
+              "description": "Expulser un joueur du serveur"
+            },
+            "row_mute": {
+              "usage": "/mute [joueur] (raison)",
+              "description": "Muter un joueur"
+            },
+            "row_tempmute": {
+              "usage": "/tempmute [joueur] [temps avec sec/min/hour/day/year] (raison)",
+              "description": "Muter un joueur temporairement"
+            },
+            "row_unmute": {
+              "usage": "/unmute [joueur]",
+              "description": "Démuter un joueur"
+            },
+            "row_banip": {
+              "usage": "/banip [ip ou joueur] (raison)",
+              "description": "Bannir une ip ou un joueur"
+            },
+            "row_report": {
+              "usage": "/report [joueur]",
+              "description": "Ouvre le menu de report configuré avec vos raisons"
+            },
+            "row_history": {
+              "usage": "/history [joueur]",
+              "description": "Ouvre le menu de l'historique des sanctions du joueur"
+            },
+            "row_rsadmin": {
+              "usage": "/rsadmin [rl/reload/infos/migratedb]",
+              "description": "Recharge les configs, récupère les informations du plugin, avoir les informations pour migrer vers MYSQL."
+            },
+            "row_vanish": {
+              "usage": "/vanish",
+              "description": "Active / Déactive le vanish"
+            }
+          },
+          "custom_guis": "Guis personnalisés",
+          "custom_guis_description": "Voir ci-dessous la liste des menus personnalisables avec leurs noms exact dans la config.",
+          "how_guis_works": "Fonctionnement du fichier des GUIs et des messages",
+          "how_guis_works_description": "La config est rouge au démarrage du serveur et lorsque vous utilisez la commande /rsadmin rl. Vous pouvez éditer la config et utiliser la commande pour la recharger. La config peut ne pas ordonner les GUIs dans le même ordre que vous souhaitez. Vous pouvez changer l'ordre des GUIs, cela n'affectera pas le plugin.",
+          "location": "Emplacement",
+          "location_inventories": "Le fichier des inventaires est situé dans: plugins/ReaperSanction/Inventories.yml",
+          "location_messages": "Le fichier des messages est situé dans: plugins/ReaperSanction/Messages.yml"
+        }
       }
     }
   }
