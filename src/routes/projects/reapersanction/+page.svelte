@@ -11,10 +11,12 @@
 	let good_points = $_('pages.projects.reapersanction.good_points');
 	let indev_things = $_('pages.projects.reapersanction.indev_things');
 	let install_intructions = $_('pages.projects.reapersanction.wiki.install_instructions');
+	let code = $_('pages.projects.reapersanction.wiki.code');
 
 	$: good_points = $_('pages.projects.reapersanction.good_points');
 	$: indev_things = $_('pages.projects.reapersanction.indev_things');
 	$: install_intructions = $_('pages.projects.reapersanction.wiki.install_instructions');
+	$: code = $_('pages.projects.reapersanction.wiki.code');
 
 	const links = [
 		{
@@ -40,34 +42,6 @@
 	];
 
 	const demo_images = [];
-
-	const code = `MAIN: # <-- This is the main gui
-  name: §4ReaperSanction # <-- The name of the gui
-  size: 27 # <-- The size of the gui (9, 18, 27, 36, 45, 54)
-  # Slots start at 0 and end at size - 1,
-  # If you place an item in a slot outside of the gui size, it can cause errors
-  isFill: true
-  # If isFill is true, the gui will be filled with a glass pane
-  # The option to customize the glass pane will be added in the future
-  items: # <-- The items of the gui
-    '8': # <-- The slot of the item
-      type: ANVIL # <-- The type of the item
-      amount: 1 # <-- The amount of the item
-      display: §6What§cEver§1You§bWant # <-- The display name of the item
-      lore: # <-- The lore of the item
-        '0': Hi # <-- The line of the lore, you have to start at 0, incrementing by 1 and write like it is
-        '1': Custom lore
-        '2': With custom actions
-      actions: # <-- The actions of the item
-        '0': EXT->SAY HELLO %player%  # <- Similar to lore, you have to start at 0, incrementing by 1
-        # More explaination about how and what is available below.
-    '16': # Here is another item
-      type: PAPER
-      amount: 1
-      display: §cEnd
-      actions:
-        '0': INT->GUI->END->%player%`;
-
 </script>
 
 <svelte:head>
