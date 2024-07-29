@@ -45,6 +45,7 @@
 	<meta content="{post.description}" name="twitter:description" />
 	<meta content="{post.img}" name="twitter:image" />
 	<link href="https://farmeurimmo.fr/blog/{post.id}" rel="canonical" />
+	<meta content="Développeur, Administrateur Système, Minecraft, Farmeurimmo" name="keywords">
 </svelte:head>
 
 <Background />

@@ -354,6 +354,21 @@
 <svelte:head>
 	<title>{$_('pages.home.title')}</title>
 	<link href="https://farmeurimmo.fr" rel="canonical" />
+	<meta
+		content="Farmeurimmo, Développeur Full Stack et Administrateur système depuis 2018. Polyglotte, passionné par l'informatique et les réseaux."
+		name="description" />
+	<meta content="Développeur, Administrateur Système, Minecraft, Farmeurimmo" name="keywords">
+	<meta content="Farmeurimmo - Développeur et Administrateur système" property="og:title" />
+	<meta
+		content="Farmeurimmo, Développeur Full Stack et Administrateur système depuis 2018. Polyglotte, passionné par l'informatique et les réseaux."
+		property="og:description" />
+	<meta content="https://cdn.farmeurimmo.fr/img/logo.jpg" property="og:image" />
+	<meta content="https://farmeurimmo.fr" property="og:url" />
+	<meta content="https://farmeurimmo.fr" name="twitter:site" />
+	<meta content="Farmeurimmo - Développeur et Administrateur système" name="twitter:title" />
+	<meta
+		content="Farmeurimmo, Développeur Full Stack et Administrateur système depuis 2018. Polyglotte, passionné par l'informatique et les réseaux."
+		name="twitter:description" />
 </svelte:head>
 
 <Background />

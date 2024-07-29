@@ -62,6 +62,11 @@
 	<meta content="https://cdn.farmeurimmo.fr/img/projects/reapersanction.png" property="og:image" />
 	<meta content="https://farmeurimmo.fr/projects/reapersanction" property="og:url" />
 	<meta content="website" property="og:type" />
+	<meta content="Développeur, Administrateur Système, Minecraft, Farmeurimmo" name="keywords">
+	<meta content="https://farmeurimmo.fr/projects/reapersanction" property="og:url" />
+	<meta content="https://farmeurimmo.fr/projects/reapersanction" name="twitter:site" />
+	<meta content="{$_('pages.projects.reapersanction.title')}" name="twitter:title" />
+	<meta content="{$_('pages.projects.reapersanction.description')}" name="twitter:description" />
 	{@html ashes}
 </svelte:head>
 

@@ -21,6 +21,16 @@
 	<title>{$_('pages.projects.title')}</title>
 	<link href="https://farmeurimmo.fr/projects" rel="canonical" />
 	<meta content="{$_('pages.projects.description')}" name="description" />
+	<meta content="Développeur, Administrateur Système, Minecraft, Farmeurimmo, Projects" name="keywords">
+	<meta content="{$_('pages.projects.title')}" property="og:title" />
+	<meta content="{$_('pages.projects.description')}" property="og:description" />
+	<meta content="https://cdn.farmeurimmo.fr/img/logo.jpg" property="og:image" />
+	<meta content="https://farmeurimmo.fr/projects" property="og:url" />
+	<meta content="https://farmeurimmo.fr/projects" name="twitter:site" />
+	<meta content="{$_('pages.projects.title')}" name="twitter:title" />
+	<meta
+		content="{$_('pages.projects.description')}"
+		name="twitter:description" />
 </svelte:head>
 
 <Background />

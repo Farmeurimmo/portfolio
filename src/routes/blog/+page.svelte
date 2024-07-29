@@ -15,6 +15,12 @@
 	<meta content={$_('pages.blog.title')} property="og:title" />
 	<meta content={$_('pages.blog.description')} property="og:description" />
 	<link href="https://farmeurimmo.fr/blog" rel="canonical" />
+	<meta content="Développeur, Administrateur Système, Minecraft, Farmeurimmo" name="keywords">
+	<meta content="https://cdn.farmeurimmo.fr/img/logo.jpg" property="og:image" />
+	<meta content="https://farmeurimmo.fr/blog" property="og:url" />
+	<meta content="https://farmeurimmo.fr/blog" name="twitter:site" />
+	<meta content="{$_('pages.blog.title')}" name="twitter:title" />
+	<meta content="{$_('pages.blog.description')}" name="twitter:description" />
 </svelte:head>
 
 <Background />
