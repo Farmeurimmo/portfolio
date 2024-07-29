@@ -57,6 +57,11 @@
 	<title>{$_('pages.projects.reapersanction.title')}</title>
 	<link href="https://farmeurimmo.fr/projects/reapersanction" rel="canonical" />
 	<meta content="{$_('pages.projects.reapersanction.description')}" name="description" />
+	<meta content="{$_('pages.projects.reapersanction.title')}" property="og:title" />
+	<meta content="{$_('pages.projects.reapersanction.description')}" property="og:description" />
+	<meta content="https://cdn.farmeurimmo.fr/img/projects/reapersanction.png" property="og:image" />
+	<meta content="https://farmeurimmo.fr/projects/reapersanction" property="og:url" />
+	<meta content="website" property="og:type" />
 	{@html ashes}
 </svelte:head>
 
