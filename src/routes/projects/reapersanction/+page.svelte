@@ -244,7 +244,8 @@
 				</ul>
 			</div>
 			<div class="mt-6" />
-			<h3 class="text-2xl font-bold sm:text-3xl md:text-4xl">{$_('pages.projects.reapersanction.wiki.how_guis_works')}</h3>
+			<h3
+				class="text-2xl font-bold sm:text-3xl md:text-4xl">{$_('pages.projects.reapersanction.wiki.how_guis_works')}</h3>
 			<p class="text-left text-xl">{$_('pages.projects.reapersanction.wiki.how_guis_works_description')}
 			</p>
 			<div class="mt-6" />
@@ -252,108 +253,123 @@
 			<p class="text-left text-xl">{$_('pages.projects.reapersanction.wiki.location_inventories')}</p>
 			<p class="text-left text-xl">{$_('pages.projects.reapersanction.wiki.location_messages')}</p>
 			<div class="mt-6" />
-			<h4 class="text-2xl font-bold sm:text-3xl md:text-4xl">GUI config</h4>
+			<h4 class="text-2xl font-bold sm:text-3xl md:text-4xl">{$_('pages.projects.reapersanction.wiki.gui_config')}</h4>
 			<div class="overflow-x-scroll">
 				<Highlight class="text-left w-screen" code="{code}" language={yaml} />
 			</div>
 			<div class="mt-6" />
-			<h4 class="text-2xl font-bold sm:text-3xl md:text-4xl">Actions</h4>
-			<h5 class="text-2xl font-bold">EXT actions</h5>
-			<p class="text-left text-xl">The EXT actions will sudo the player to execute the command.
-				For example if we have "EXT{"->"}SAY HELLO %player%", the player will execute :
-				"/say HELLO %player%". %player% represent the player name.
-			</p>
+			<h4
+				class="text-2xl font-bold sm:text-3xl md:text-4xl">{$_('pages.projects.reapersanction.wiki.actions_title')}</h4>
+			<h5 class="text-2xl font-bold">{$_('pages.projects.reapersanction.wiki.ext_title')}</h5>
+			<p class="text-left text-xl">{$_('pages.projects.reapersanction.wiki.ext_actions_description')}</p>
 			<div class="mt-6" />
-			<h5 class="text-2xl font-bold">INT actions</h5>
-			<p class="text-xl">The INT actions will transfer instructions to the plugin.
-				For example if we have "INT{"->"}TEMPBAN{"->"}%player%{"->"}7day{"->"}Fly", the plugin will
-				tempban the player for 7 days for "Fly".
-			</p>
-			<p class="text-xl">The INT actions are have optional arguments. For example we can remove
-				the reason of the action. If we have "INT{"->"}TEMPBAN{"->"}%player%{"->"}7day", the plugin
-				will tempban the player for 7 days with the default reason.
-			</p>
+			<h5 class="text-2xl font-bold">{$_('pages.projects.reapersanction.wiki.int_title')}</h5>
+			<p class="text-xl">{$_('pages.projects.reapersanction.wiki.int_actions_description')}</p>
+			<p class="text-xl">{$_('pages.projects.reapersanction.wiki.int_actions_optional')}</p>
 			<div class="mt-6" />
-			<h5 class="text-2xl font-bold">INT actions ENDPOINTS</h5>
-			<p class="text-xl">The INT actions ENDPOINTS are the possible actions that the plugin can
-				do. The list of the possible actions is below.
-			</p>
+			<h5 class="text-2xl font-bold">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.title')}</h5>
+			<p class="text-xl">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.description')}</p>
 			<p class="text-left text-xl">{$_('pages.projects.reapersanction.wiki.optional')}</p>
 			<table class="w-full text-lg">
 				<thead>
 				<tr>
-					<th class="px-4 py-2">Name</th>
-					<th class="px-4 py-2">Arguments</th>
-					<th class="px-4 py-2">Description</th>
+					<th class="px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_head.name')}</th>
+					<th class="px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_head.arguments')}</th>
+					<th
+						class="px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_head.description')}</th>
 				</tr>
 				</thead>
 				<tbody>
 				<tr>
 					<td class="border px-4 py-2">TEMPBAN</td>
-					<td class="border px-4 py-2">{"->"}%PLAYER%{"->"}duration({"->"}reason)</td>
-					<td class="border px-4 py-2">Tempban a player</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_tempban.arguments')}</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_tempban.description')}</td>
 				</tr>
 				<tr>
 					<td class="border px-4 py-2">BAN</td>
-					<td class="border px-4 py-2">{"->"}%PLAYER%({"->"}reason)</td>
-					<td class="border px-4 py-2">Ban a player</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_ban.arguments')}</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_ban.description')}</td>
 				</tr>
 				<tr>
 					<td class="border px-4 py-2">TEMPMUTE</td>
-					<td class="border px-4 py-2">{"->"}%PLAYER%{"->"}duration({"->"}reason)</td>
-					<td class="border px-4 py-2">Tempmute a player</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_tempmute.arguments')}</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_tempmute.description')}</td>
 				</tr>
 				<tr>
 					<td class="border px-4 py-2">BAN_IP</td>
-					<td class="border px-4 py-2">{"->"}%PLAYER%({"->"}reason)</td>
-					<td class="border px-4 py-2">Ban the IP of a player</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_banip.arguments')}</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_banip.description')}</td>
 				</tr>
 				<tr>
 					<td class="border px-4 py-2">KICK</td>
-					<td class="border px-4 py-2">{"->"}%PLAYER%({"->"}reason)</td>
-					<td class="border px-4 py-2">Kick a player</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_kick.arguments')}</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_kick.description')}</td>
 				</tr>
 				<tr>
 					<td class="border px-4 py-2">MUTE</td>
-					<td class="border px-4 py-2">{"->"}%PLAYER%({"->"}reason)</td>
-					<td class="border px-4 py-2">Mute a player</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_mute.arguments')}</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_mute.description')}</td>
 				</tr>
 				<tr>
 					<td class="border px-4 py-2">UNMUTE</td>
-					<td class="border px-4 py-2">{"->"}%PLAYER%</td>
-					<td class="border px-4 py-2">Unmute a player</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_unmute.arguments')}</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_unmute.description')}</td>
 				</tr>
 				<tr>
 					<td class="border px-4 py-2">UNBAN</td>
-					<td class="border px-4 py-2">{"->"}%PLAYER%</td>
-					<td class="border px-4 py-2">Unban a player</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_unban.arguments')}</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_unban.description')}</td>
 				</tr>
 				<tr>
 					<td class="border px-4 py-2">UNBAN_IP</td>
-					<td class="border px-4 py-2">{"->"}%PLAYER%</td>
-					<td class="border px-4 py-2">Unban the IP of a player</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_unbanip.arguments')}</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_unbanip.description')}</td>
 				</tr>
 				<tr>
 					<td class="border px-4 py-2">GUI</td>
-					<td class="border px-4 py-2">{"->"}%GUI%{"->"}%PLAYER%</td>
-					<td class="border px-4 py-2">Open a GUI to a player /!\ not supported by the history
-						gui
-					</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_gui.arguments')}</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_gui.description')}</td>
 				</tr>
 				<tr>
 					<td class="border px-4 py-2">GUI_DYN</td>
-					<td class="border px-4 py-2">{"->"}%GUI%{"->"}%PLAYER%</td>
-					<td class="border px-4 py-2">Open a GUI (Made for the history GUI)</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_gui_dyn.arguments')}</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_gui_dyn.description')}</td>
 				</tr>
 				<tr>
 					<td class="border px-4 py-2">CLOSE</td>
-					<td class="border px-4 py-2">{"->"}%PLAYER%</td>
-					<td class="border px-4 py-2">Close the GUI of the player</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_close.arguments')}</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_close.description')}</td>
 				</tr>
 				<tr>
 					<td class="border px-4 py-2">REPORT</td>
-					<td class="border px-4 py-2">{"->"}%REASON%{"->"}%PLAYER%</td>
-					<td class="border px-4 py-2">Report a player</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_report.arguments')}</td>
+					<td
+						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_report.description')}</td>
 				</tr>
 				</tbody>
 			</table>

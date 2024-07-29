@@ -164,7 +164,75 @@
           "how_guis_works_description": "La config est rouge au démarrage du serveur et lorsque vous utilisez la commande /rsadmin rl. Vous pouvez éditer la config et utiliser la commande pour la recharger. La config peut ne pas ordonner les GUIs dans le même ordre que vous souhaitez. Vous pouvez changer l'ordre des GUIs, cela n'affectera pas le plugin.",
           "location": "Emplacement",
           "location_inventories": "Le fichier des inventaires est situé dans: plugins/ReaperSanction/Inventories.yml",
-          "location_messages": "Le fichier des messages est situé dans: plugins/ReaperSanction/Messages.yml"
+          "location_messages": "Le fichier des messages est situé dans: plugins/ReaperSanction/Messages.yml",
+          "gui_config": "Personalisation des GUIs",
+          "actions_title": "Actions",
+          "ext_title": "Options EXT",
+          "int_title": "Options INT",
+          "ext_actions_description": "Les actions EXT utiliseront vont forcer le joueur à exécuter la commande. Par exemple, si nous avons \"EXT->SAY HELLO %player%\", le joueur exécutera : \"/say HELLO %player%\". %player% représente le nom du joueur.",
+          "int_actions_description": "Les actions INT transmettront des instructions au plugin. Par exemple, si nous avons \"INT->TEMPBAN->%player%->7day->Fly\", le plugin bannira temporairement le joueur pendant 7 jours pour \"Fly\".",
+          "int_actions_optional": "Les actions INT peuvent avoir des arguments optionnels. Par exemple, nous pouvons supprimer la raison de l'action. Si nous avons \"INT->TEMPBAN->%player%->7day\", le plugin bannira temporairement le joueur pendant 7 jours avec la raison par défaut.",
+          "int_actions_endpoints": {
+            "title": "Options des actions INT",
+            "description": "Les options INT sont les actions possibles que le plugin peut effectuer sans exécuter de commande. La liste des actions possibles est ci-dessous.",
+            "row_head": {
+              "name": "Nom",
+              "arguments": "Arguments",
+              "description": "Description"
+            },
+            "row_tempban": {
+              "arguments": "->%PLAYER%->duration(->raison)",
+              "description": "Bannir temporairement un joueur"
+            },
+            "row_ban": {
+              "arguments": "->%PLAYER%(->raison)",
+              "description": "Bannir un joueur"
+            },
+            "row_kick": {
+              "arguments": "->%PLAYER%(->raison)",
+              "description": "Expulser un joueur"
+            },
+            "row_mute": {
+              "arguments": "->%PLAYER%(->raison)",
+              "description": "Muter un joueur"
+            },
+            "row_tempmute": {
+              "arguments": "->%PLAYER%->duration(->raison)",
+              "description": "Muter temporairement un joueur"
+            },
+            "row_unban": {
+              "arguments": "->%PLAYER%",
+              "description": "Débannir un joueur"
+            },
+            "row_unmute": {
+              "arguments": "->%PLAYER%",
+              "description": "Démuter un joueur"
+            },
+            "row_banip": {
+              "arguments": "->%PLAYER%(->raison)",
+              "description": "Bannir une ip ou un joueur"
+            },
+            "row_unbanip": {
+              "arguments": "->%PLAYER%",
+              "description": "Débannir une ip ou un joueur"
+            },
+            "row_gui": {
+              "arguments": "->%GUI%->%PLAYER%",
+              "description": "Ouvrir un GUI (Non supporté par l'historique des sanctions, voir GUI_DYN)"
+            },
+            "row_gui_dyn": {
+              "arguments": "->%GUI%->%PLAYER%",
+              "description": "Ouvrir un GUI dynamique (Il a été fait pour ouvrir le GUI d'historique des sanctions)"
+            },
+            "row_close": {
+              "arguments": "->%PLAYER%",
+              "description": "Fermer le GUI"
+            },
+            "row_report": {
+              "arguments": "->%REASON%->%PLAYER%",
+              "description": "Reporter un joueur"
+            }
+          }
         }
       }
     }
