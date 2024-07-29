@@ -12,6 +12,10 @@
 	let indev_things = $_('pages.projects.reapersanction.indev_things');
 	let install_intructions = $_('pages.projects.reapersanction.wiki.install_instructions');
 
+	$: good_points = $_('pages.projects.reapersanction.good_points');
+	$: indev_things = $_('pages.projects.reapersanction.indev_things');
+	$: install_intructions = $_('pages.projects.reapersanction.wiki.install_instructions');
+
 	const links = [
 		{
 			name: 'Download',
