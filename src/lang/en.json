@@ -62,7 +62,7 @@
     },
     "blog": {
       "title": "Personal blog | Articles",
-      "description": "Discover my latest articles about tech and projects. I try to write articles that are as clear and understandable as possible. So I won't use too much technical jargon.",
+      "description": "Discover my latest articles about tech and projects. I try to write articles that are as clear and understandable. So I won't use too much technical jargon.",
       "quicknote": "Everything is written in English for simplicity and understanding. <br>Because English is the most used language in the computer world."
     },
     "projects": {
@@ -70,7 +70,7 @@
       "description": "Discover my past and current projects here. They are all open source and available on my GitHub account. You may find more projects on my GitHub account.",
       "reapersanction": {
         "title": "ReaperSanction, Sanction plugin via editable GUIs",
-        "description": "ReaperSanction is a minecraft plugin that includes an integrated sanction system and guis to sanction server players. The guis are configurable and sanctions are customizable. It also contains a vanish, a sanction history system and much more.",
+        "description": "ReaperSanction is a minecraft plugin that includes an integrated sanction system and guis to sanction server players. The guis are configurable and sanctions are customizable.",
         "good_points": [
           "GUI-oriented sanction plugin for Java Minecraft servers",
           "Compatible with Spigot, Paper, BungeeCord, Velocity",
@@ -166,7 +166,7 @@
           "location_inventories": "The inventories file is located in: plugins/ReaperSanction/Inventories.yml",
           "location_messages": "The messages file is located in: plugins/ReaperSanction/Messages.yml",
           "gui_config": "GUI Customization",
-          "code": "MAIN: # <-- This is the main gui\n  name: §4ReaperSanction # <-- The name of the gui\n  size: 27 # <-- The size of the gui (9, 18, 27, 36, 45, 54)\n  # Slots start at 0 and end at size - 1,\n  # If you place an item in a slot outside of the gui size, it can cause errors\n  isFill: true\n  # If isFill is true, the gui will be filled with a glass pane\n  # The option to customize the glass pane will be added in the future\n  items: # <-- The items of the gui\n    '8': # <-- The slot of the item\n      type: ANVIL # <-- The type of the item\n      amount: 1 # <-- The amount of the item\n      display: §6What§cEver§1You§bWant # <-- The display name of the item\n      lore: # <-- The lore of the item\n        '0': Hi # <-- The line of the lore, you have to start at 0, incrementing by 1 and write like it is\n        '1': Custom lore\n        '2': With custom actions\n      actions: # <-- The actions of the item\n        '0': EXT->SAY HELLO %player%  # <- Similar to lore, you have to start at 0, incrementing by 1\n        # More explaination about how and what is available below.\n    '16': # Here is another item\n      type: PAPER\n      amount: 1\n      display: §cEnd\n      actions:\n        '0': INT->GUI->END->%player%",
+          "code": "MAIN: # <-- This is the main gui\n  name: §4ReaperSanction # <-- The name of the gui\n  size: 27 # <-- The size of the gui (9, 18, 27, 36, 45, 54)\n  # Slots start at 0 and end at size - 1,\n  # If you place an item in a slot outside of the gui size, it can cause errors\n  isFill: true\n  # If isFill is true, the gui will be filled with a glass pane\n  # The option to customize the glass pane will be added in the future\n  items: # <-- The items of the gui\n    '8': # <-- The slot of the item\n      type: ANVIL # <-- The type of the item\n      amount: 1 # <-- The amount of the item\n      display: §6What§cEver§1You§bWant # <-- The display name of the item\n      lore: # <-- The lore of the item\n        '0': Hi # <-- The line of the lore, you have to start at 0, incrementing by 1 and write like it is\n        '1': Custom lore\n        '2': With custom actions\n      actions: # <-- The actions of the item\n        '0': EXT->SAY HELLO %player%  # <- Similar to lore, you have to start at 0, incrementing by 1\n        # More explanation about how and what is available below.\n    '16': # Here is another item\n      type: PAPER\n      amount: 1\n      display: §cEnd\n      actions:\n        '0': INT->GUI->END->%player%",
           "actions_title": "Actions",
           "ext_title": "EXT Options",
           "int_title": "INT Options",
