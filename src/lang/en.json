@@ -61,16 +61,16 @@
       "formSent": "Your message has been sent successfully!"
     },
     "blog": {
-      "title": "Personal blog",
-      "description": "Discover my latest articles and my projects here.",
+      "title": "Personal blog | Articles",
+      "description": "Discover my latest articles about tech and projects. I try to write articles that are as clear and understandable as possible. So I won't use too much technical jargon.",
       "quicknote": "Everything is written in English for simplicity and understanding. <br>Because English is the most used language in the computer world."
     },
     "projects": {
-      "title": "Projects",
-      "description": "Discover my past and current projects here.",
+      "title": "Projects | Farmeurimmo",
+      "description": "Discover my past and current projects here. They are all open source and available on my GitHub account. You may find more projects on my GitHub account.",
       "reapersanction": {
-        "title": "Reaper Sanction",
-        "description": "Reaper Sanction is a Minecraft plugin that includes a built-in sanction system and GUIs to punish server players. The GUIs are configurable and the sanctions are customizable.",
+        "title": "ReaperSanction, Sanction plugin via editable GUIs",
+        "description": "ReaperSanction is a minecraft plugin that includes an integrated sanction system and guis to sanction server players. The guis are configurable and sanctions are customizable. It also contains a vanish, a sanction history system and much more.",
         "good_points": [
           "GUI-oriented sanction plugin for Java Minecraft servers",
           "Compatible with Spigot, Paper, BungeeCord, Velocity",
