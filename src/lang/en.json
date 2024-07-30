@@ -70,7 +70,7 @@
       "description": "Discover my past and current projects here. They are all open source and available on my GitHub account. You may find more projects on my GitHub account.",
       "reapersanction": {
         "title": "ReaperSanction, Sanction plugin via editable GUIs",
-        "description": "ReaperSanction is a minecraft plugin that includes an integrated sanction system and guis to sanction server players. The guis are configurable and sanctions are customizable.",
+        "description": "ReaperSanction is a Minecraft plugin providing a comprehensive sanction system with customizable GUIs for efficient player management.",
         "good_points": [
           "GUI-oriented sanction plugin for Java Minecraft servers",
           "Compatible with Spigot, Paper, BungeeCord, Velocity",

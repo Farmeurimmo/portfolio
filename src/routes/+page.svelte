@@ -511,8 +511,8 @@
 			</div>
 			<div class="py-3">
 				<p class="text-2xl font-bold">Build a Skyblock Plugin (part 3): Inventory Sync System</p>
-				<p class="text-lg mt-6">This article focuses on the inventory synchronization system within
-					the Skyblock plugin, detailing the mechanics of managing player inventories across multiple servers.</p>
+				<p class="text-lg mt-6">This article explores the Skyblock plugin's inventory synchronization
+					system, detailing how player inventories are managed across servers.</p>
 			</div>
 		</a>
 	</div>
