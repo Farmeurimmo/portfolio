@@ -485,7 +485,7 @@
 			</div>
 			<div class="py-3">
 				<p class="text-2xl font-bold">Build a Skyblock plugin (part 1): Introduction</p>
-				<p class="text-lg mt-6">his article outlines the development of a Minecraft Skyblock plugin
+				<p class="text-lg mt-6">This article outlines the development of a Minecraft Skyblock plugin
 					for Spigot servers, starting with project goals and context.</p>
 			</div>
 		</a>
