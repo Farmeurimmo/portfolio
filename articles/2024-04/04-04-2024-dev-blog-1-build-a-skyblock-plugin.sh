@@ -2,12 +2,12 @@
 
 id="04-04-2024-dev-blog-1-build-a-skyblock-plugin"
 file="$id.svelte"
-title="Dev blog #1: Build a Skyblock plugin (part 1): Introduction"
-snippet="In this article I will talk about minecraft and how to build a Skyblock plugin for a Spigot server. In this first part we will talk about what we want to achieve and how we will do it."
+title="Build a Skyblock plugin (part 1): Introduction"
+snippet="This article outlines the development of a Minecraft Skyblock plugin for Spigot servers, starting with project goals and context."
 img="https://cdn.farmeurimmo.fr/img/blog/$id.jpeg"
-description="How to build a Skyblock plugin for a Spigot server. In this first part we will talk about what we want to achieve and how to handle cross server."
+description="his article outlines the development of a Minecraft Skyblock plugin for Spigot servers, starting with project goals and context."
 published="04/04/2024 21h00"
-views=180
+views=386
 date="2024-04-04"
 
 # Read the content of the file

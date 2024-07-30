@@ -3,11 +3,11 @@
 id="28-03-2024-new-website-portfolio-v4-edition"
 file="$id.svelte"
 title="New website with portfolio in his 4 version"
-snippet="In this article I will talk about the motivations behind my new website in his 4 version, the tech choices (Svelte+Vite+Tailwindcss) I made and the features I added (contact form, blog, multi language, etc..)."
+snippet="This article explores the motivations, tech stack (Svelte, Vite, Tailwind CSS), and features (contact form, blog, multilingual) of my fourth website."
 img="https://cdn.farmeurimmo.fr/img/blog/$id.jpeg"
 published="28/03/2024 21h00"
-description="In this article I will talk about the motivations behind my new website in his 4 version, the tech choices (Svelte+Vite+Tailwindcss) I made and the features I added (contact form, blog, multi language, etc..)."
-views=170
+description="This article explores the motivations, tech stack (Svelte, Vite, Tailwind CSS), and features (contact form, blog, multilingual) of my fourth website."
+views=275
 date="2024-03-28"
 
 # Read the content of the file

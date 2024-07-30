@@ -2,12 +2,12 @@
 
 id="18-07-2024-dev-blog-3-build-a-skyblock-plugin"
 file="$id.svelte"
-title="Dev Blog #3: Build a Skyblock Plugin (part 3): Inventory Sync System"
-snippet="In this article I continue to talk about the development of my skyblock plugin. This time I will talk about the inventory sync system between the player and the servers."
+title="Build a Skyblock Plugin (part 3): Inventory Sync System"
+snippet="This article focuses on the inventory synchronization system within the Skyblock plugin, detailing the mechanics of managing player inventories across multiple servers."
 img="https://cdn.farmeurimmo.fr/img/blog/$id.jpeg"
-description="In this article I continue to talk about the development of my skyblock plugin. This time I will talk about the inventory sync system between the player and the servers."
+description="This article focuses on the inventory synchronization system within the Skyblock plugin, detailing the mechanics of managing player inventories across multiple servers."
 published="18/07/2024 11h00"
-views=5
+views=97
 date="2024-07-18"
 
 # Read the content of the file

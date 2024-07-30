@@ -472,9 +472,8 @@
 			<div class="py-3">
 				<p class="text-2xl font-bold">New website with portfolio in his 4 version (Svelte, i18n, Vite,
 					Tailwindcss)</p>
-				<p class="text-lg mt-6">In this article I will talk about the motivations behind my new website in his 4
-					version, the tech choices (Svelte, i18n, Vite, Tailwindcss) I made and the features I added (contact form,
-					blog, multi language, etc..).</p>
+				<p class="text-lg mt-6">This article explores the motivations, tech stack (Svelte, Vite, Tailwind CSS), and
+					features (contact form, blog, multilingual) of my fourth website.</p>
 			</div>
 		</a>
 		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
@@ -485,10 +484,9 @@
 							 src="https://cdn.farmeurimmo.fr/img/blog/04-04-2024-dev-blog-1-build-a-skyblock-plugin.jpeg" />
 			</div>
 			<div class="py-3">
-				<p class="text-2xl font-bold">Dev blog #1: Build a Skyblock plugin (part 1): Introduction</p>
-				<p class="text-lg mt-6">In this article I will talk about minecraft and how to build a
-					Skyblock plugin for a Spigot server. In this first part we will talk about what we
-					want to achieve and how we will do it.</p>
+				<p class="text-2xl font-bold">Build a Skyblock plugin (part 1): Introduction</p>
+				<p class="text-lg mt-6">his article outlines the development of a Minecraft Skyblock plugin
+					for Spigot servers, starting with project goals and context.</p>
 			</div>
 		</a>
 		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
@@ -499,10 +497,9 @@
 							 src="https://cdn.farmeurimmo.fr/img/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin.jpeg" />
 			</div>
 			<div class="py-3">
-				<p class="text-2xl font-bold">Dev Blog #2: Build a Skyblock Plugin (part 2): Island System</p>
-				<p class="text-lg mt-6">In this article I continue to talk about the development of my skyblock plugin.
-					This time I will talk about the island system in cross server with island repartition, loading and saving
-					islands.</p>
+				<p class="text-2xl font-bold">Build a Skyblock Plugin (part 2): Island System</p>
+				<p class="text-lg mt-6">This article delves into the Skyblock plugin's island system,
+					focusing on cross-server compatibility, island distribution, and data management.</p>
 			</div>
 		</a>
 		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
@@ -513,9 +510,9 @@
 							 src="https://cdn.farmeurimmo.fr/img/blog/18-07-2024-dev-blog-3-build-a-skyblock-plugin.jpeg" />
 			</div>
 			<div class="py-3">
-				<p class="text-2xl font-bold">Dev Blog #3: Build a Skyblock Plugin (part 3): Inventory Sync System</p>
-				<p class="text-lg mt-6">In this article I continue to talk about the development of my skyblock plugin.
-					This time I will talk about the inventory sync system between the player and the servers.</p>
+				<p class="text-2xl font-bold">Build a Skyblock Plugin (part 3): Inventory Sync System</p>
+				<p class="text-lg mt-6">This article focuses on the inventory synchronization system within
+					the Skyblock plugin, detailing the mechanics of managing player inventories across multiple servers.</p>
 			</div>
 		</a>
 	</div>

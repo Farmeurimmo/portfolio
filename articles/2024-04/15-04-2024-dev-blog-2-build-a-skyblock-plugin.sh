@@ -2,12 +2,12 @@
 
 id="15-04-2024-dev-blog-2-build-a-skyblock-plugin"
 file="$id.svelte"
-title="Dev Blog #2: Build a Skyblock Plugin (part 2): Island System"
-snippet="In this article I continue to talk about the development of my skyblock plugin. This time I will talk about the island system in cross server with island repartition, loading and saving islands."
+title="Build a Skyblock Plugin (part 2): Island System"
+snippet="This article delves into the Skyblock plugin's island system, focusing on cross-server compatibility, island distribution, and data management."
 img="https://cdn.farmeurimmo.fr/img/blog/$id.jpeg"
-description="In this article I continue to talk about the development of my skyblock plugin. This time I will talk about the island system in cross server with island repartition, loading and saving islands."
+description="This article delves into the Skyblock plugin's island system, focusing on cross-server compatibility, island distribution, and data management."
 published="16/04/2024 11h28"
-views=160
+views=345
 date="2024-04-15"
 
 # Read the content of the file
