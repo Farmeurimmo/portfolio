@@ -85,7 +85,9 @@
         "indev": "In development",
         "indev_things": [
           "Better report system (recovery, views, etc.)",
-          "API for developers"
+          "Vanish rework",
+          "API for developers",
+          "Staff mod"
         ],
         "wikititle": "Wiki",
         "wiki": {

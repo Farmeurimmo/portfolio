@@ -85,7 +85,9 @@
         "indev": "En développement",
         "indev_things": [
           "Meilleur système de report (récupération, vues etc..)",
-          "API pour les développeurs"
+          "Refonte du système de vanish",
+          "API pour les développeurs",
+          "Mod de modération"
         ],
         "wikititle": "Wiki",
         "wiki": {
