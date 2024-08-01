@@ -7,7 +7,7 @@ snippet="This article explores the motivations, tech stack (Svelte, Vite, Tailwi
 img="https://cdn.farmeurimmo.fr/img/blog/$id.jpeg"
 published="28/03/2024 21h00"
 description="This article explores the motivations, tech stack (Svelte, Vite, Tailwind CSS), and features (contact form, blog, multilingual) of my fourth website."
-views=275
+views=279
 date="2024-03-28"
 
 # Read the content of the file
