@@ -94,9 +94,10 @@
           "install": "Installation",
           "install_instructions": [
             "Télécharger la dernière version du plugin",
-            "Déposer le fichier dans le dossier plugins de votre serveur",
-            "Redémarrer le serveur",
-            "Configurer le plugin via les fichiers de configuration si besoin"
+            "Déposer le fichier dans le dossier plugins de vos serveurs (proxy et spigot)",
+            "Redémarrer les serveurs",
+            "Configurer le plugin via les fichiers de configuration si besoin",
+            "Attention, les guis doivent être configurés sur les serveurs spigot."
           ],
           "commands": "Commandes",
           "optional": "() = optionnel, [] = requis",

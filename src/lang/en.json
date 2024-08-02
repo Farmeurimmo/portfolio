@@ -94,9 +94,10 @@
           "install": "Installation",
           "install_instructions": [
             "Download the latest version of the plugin",
-            "Place the file in the plugins folder of your server",
-            "Restart the server",
-            "Configure the plugin via the configuration files if needed"
+            "Place the file in the plugins folders of your servers",
+            "Restart the servers",
+            "Configure the plugin via the configuration files if needed",
+            "Be careful, the guis must be configured on spigot servers."
           ],
           "commands": "Commands",
           "optional": "() = optional, [] = required",
