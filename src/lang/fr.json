@@ -66,6 +66,20 @@
       "quicknote": "Tout est rédigé en anglais pour des raisons de simplicité et de compréhension. <br>Parce que l'Anglais est la langue la plus utilisée dans le monde de l'informatique."
     },
     "projects": {
+      "projects": [
+        {
+          "id": "reapersanction",
+          "title": "Reaper Sanction",
+          "description": "Reaper Sanction est un plugin minecraft qui inclus un système de sanction intégré et de guis pour sanctionner les joueurs du serveur. Les guis sont configurables et les sanctions sont personnalisables.",
+          "tags": [
+            "Spigot",
+            "Java",
+            "Minecraft",
+            "Plugin"
+          ],
+          "img": "https://cdn.farmeurimmo.fr/img/projects/89580.png"
+        }
+      ],
       "title": "Mes projets | Farmeurimmo",
       "description": "Découvrez mes projets actuels et passés ici. Ils sont tous open-source et disponibles sur mon compte GitHub. Vous pouvez également en trouver plus sur mon compte GitHub.",
       "reapersanction": {

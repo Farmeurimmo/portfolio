@@ -66,6 +66,20 @@
       "quicknote": "Everything is written in English for simplicity and understanding. <br>Because English is the most used language in the computer world."
     },
     "projects": {
+      "projects": [
+        {
+          "id": "reapersanction",
+          "title": "Reaper Sanction",
+          "description": "Reaper Sanction is a Minecraft plugin that integrates a built-in sanction system and customizable GUIs for punishing server players. The GUIs are configurable and the sanctions are customizable.",
+          "tags": [
+            "Spigot",
+            "Java",
+            "Minecraft",
+            "Plugin"
+          ],
+          "img": "https://cdn.farmeurimmo.fr/img/projects/89580.png"
+        }
+      ],
       "title": "Projects | Farmeurimmo",
       "description": "Discover my past and current projects here. They are all open source and available on my GitHub account. You may find more projects on my GitHub account.",
       "reapersanction": {

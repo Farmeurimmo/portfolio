@@ -24,18 +24,22 @@
 	<br>
 	What happens if a player buy an item on server 1 and another one on server 2 while the seller is removing the item?
 	<br><br>
-	For storage, I used Redis for caching and MySQL for persistent storage. I reused my class of the Inventory Sync System to store the items in the database.
+	For storage, I used Redis for caching and MySQL for persistent storage. I reused my class of the Inventory Sync System
+	to store the items in the database.
 </p>
 
 <h3 class="font-bold text-xl mt-5">The solution</h3>
 <p>
 	As always, my solution is to use a pubs/subs system with Redis.
 	<br><br>
-	When a player puts an item on the auction house, the plugin will send a message to the Redis channel to notify all the servers that an item has been put on the auction house.
+	When a player puts an item on the auction house, the plugin will send a message to the Redis channel to notify all the
+	servers that an item has been put on the auction house.
 	<br>
-	When a player buys an item, the plugin will send a message to the Redis channel with the current timestamp and the item id.
+	When a player buys an item, the plugin will send a message to the Redis channel with the current timestamp and the
+	item id.
 	<br><br>
-	With my transactional system, I can ensure that the item is not bought twice because the timestamp is unique and if the timestamp of
+	With my transactional system, I can ensure that the item is not bought twice because the timestamp is unique and if
+	the timestamp of
 	another attempt is lower than the current one, the transaction will be canceled for the highest timestamp.
 	The player with the lower timestamp always wins :D.
 	<br><br>

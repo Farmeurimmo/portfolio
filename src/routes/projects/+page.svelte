@@ -1,20 +1,17 @@
 <script>
-	import { _ } from 'svelte-i18n';
+	import { _, locale } from 'svelte-i18n';
 	import NavigationBar from '../../components/NavigationBar.svelte';
 	import Background from '../../components/Background.svelte';
 	import CommonFooter from '../../components/CommonFooter.svelte';
 	import Image from '../../components/Image.svelte';
 
-	const projects = [
-		{
-			id: 'reapersanction',
-			title: 'Reaper Sanction',
-			description: 'Reaper Sanction est un plugin minecraft qui inclus un système de sanction intégré et de guis pour ' +
-				'sanctionner les joueurs du serveur. Les guis sont configurables et les sanctions sont personnalisables.',
-			tags: ['Spigot', 'Java', 'Minecraft', 'Plugin'],
-			img: 'https://cdn.farmeurimmo.fr/img/projects/89580.png'
-		}
-	];
+	let projects = $_(`pages.projects.projects`, { returnObjects: true });
+
+	$: {
+		locale.subscribe(() => {
+			projects = $_('pages.projects.projects', { returnObjects: true });
+		});
+	}
 </script>
 
 <svelte:head>
