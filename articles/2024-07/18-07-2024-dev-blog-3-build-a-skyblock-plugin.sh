@@ -5,9 +5,8 @@ file="$id.svelte"
 title="Build a Skyblock Plugin (part 3): Inventory Sync System"
 snippet="This article explores the Skyblock plugin's inventory synchronization system, detailing how player inventories are managed across servers."
 img="https://cdn.farmeurimmo.fr/img/blog/$id.jpeg"
-description="This article explores the Skyblock plugin's inventory synchronization system, detailing how player inventories are managed across servers."
 published="18/07/2024 11h00"
-views=97
+views=110
 date="2024-07-18"
 
 # Read the content of the file
@@ -28,8 +27,7 @@ json=$(jq -n \
           --arg img "$img" \
           --arg published "$published" \
           --argjson views "$views" \
-          --arg description "$description" \
           --arg date "$date" \
-          '{id: $id, title: $title, snippet: $snippet, content: $content, img: $img, published: $published, views: $views, description: $description, date: $date}')
+          '{id: $id, title: $title, snippet: $snippet, content: $content, img: $img, published: $published, views: $views, date: $date}')
 
 sh ../publish.sh "$json" "$id"

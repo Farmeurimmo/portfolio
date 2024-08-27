@@ -5,9 +5,8 @@ file="$id.svelte"
 title="Build a Skyblock plugin (part 1): Introduction"
 snippet="This article outlines the development of a Minecraft Skyblock plugin for Spigot servers, starting with project goals and context."
 img="https://cdn.farmeurimmo.fr/img/blog/$id.jpeg"
-description="This article outlines the development of a Minecraft Skyblock plugin for Spigot servers, starting with project goals and context."
 published="04/04/2024 21h00"
-views=386
+views=400
 date="2024-04-04"
 
 # Read the content of the file
@@ -28,8 +27,7 @@ json=$(jq -n \
           --arg img "$img" \
           --arg published "$published" \
           --argjson views "$views" \
-          --arg description "$description" \
           --arg date "$date" \
-          '{id: $id, title: $title, snippet: $snippet, content: $content, img: $img, published: $published, views: $views, description: $description, date: $date}')
+          '{id: $id, title: $title, snippet: $snippet, content: $content, img: $img, published: $published, views: $views, date: $date}')
 
 sh ../publish.sh "$json" "$id"

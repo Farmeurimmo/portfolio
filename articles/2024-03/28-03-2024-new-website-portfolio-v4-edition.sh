@@ -6,8 +6,7 @@ title="New website with portfolio in his 4 version"
 snippet="This article explores the motivations, tech stack (Svelte, Vite, Tailwind CSS), and features (contact form, blog, multilingual) of my fourth website."
 img="https://cdn.farmeurimmo.fr/img/blog/$id.jpeg"
 published="28/03/2024 21h00"
-description="This article explores the motivations, tech stack (Svelte, Vite, Tailwind CSS), and features (contact form, blog, multilingual) of my fourth website."
-views=279
+views=280
 date="2024-03-28"
 
 # Read the content of the file
@@ -28,8 +27,7 @@ json=$(jq -n \
           --arg img "$img" \
           --arg published "$published" \
           --argjson views "$views" \
-          --arg description "$description" \
           --arg date "$date" \
-          '{id: $id, title: $title, snippet: $snippet, content: $content, img: $img, published: $published, views: $views, description: $description, date: $date}')
+          '{id: $id, title: $title, snippet: $snippet, content: $content, img: $img, published: $published, views: $views, date: $date}')
 
 sh ../publish.sh "$json" "$id"

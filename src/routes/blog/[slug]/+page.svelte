@@ -36,13 +36,13 @@
 
 <svelte:head>
 	<title>{post.title}</title>
-	<meta content="{post.description}" name="description" />
+	<meta content="{post.snippet}" name="description" />
 	<meta content="{post.title}" property="og:title" />
-	<meta content="{post.description}" property="og:description" />
+	<meta content="{post.snippet}" property="og:description" />
 	<meta content="{post.img}" property="og:image" />
 	<meta content="summary_large_image" name="twitter:card" />
 	<meta content="{post.title}" name="twitter:title" />
-	<meta content="{post.description}" name="twitter:description" />
+	<meta content="{post.snippet}" name="twitter:description" />
 	<meta content="{post.img}" name="twitter:image" />
 	<link href="https://farmeurimmo.fr/blog/{post.id}" rel="canonical" />
 	<meta content="Développeur, Administrateur Système, Minecraft, Farmeurimmo" name="keywords">
