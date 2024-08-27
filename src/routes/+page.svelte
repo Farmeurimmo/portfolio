@@ -470,10 +470,15 @@
 							 src="https://cdn.farmeurimmo.fr/img/projects/89580.png" />
 			</div>
 			<div class="py-3">
-				<p class="text-2xl font-bold">Reaper Sanction</p>
+				<p class="text-2xl font-bold">Reaper Sanction (Minecraft plugin)</p>
 				<p class="text-lg mt-6">Reaper Sanction is a Minecraft plugin that simplifies server management.
 					Its integrated sanction system and customizable GUIs make it easy to handle player misconduct.
 					Tailor sanctions to fit your server's rules and enforce them efficiently with user-friendly interfaces.</p>
+				<div class="flex flex-row gap-2 mt-2">
+					{#each ["Plugin", "Spigot", "Java", "Minecraft"] as tag}
+						<span class="bg-blue-900 text-gray-200 p-2 rounded-md">{tag}</span>
+					{/each}
+				</div>
 			</div>
 		</a>
 		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
@@ -487,6 +492,11 @@
 				<p class="text-2xl font-bold">Build a Skyblock Plugin (part 4): Cross server auction house</p>
 				<p class="text-lg mt-6">This article explores the Skyblock plugin's auction system,
 					detailing how players can sell and buy items across servers.</p>
+				<div class="flex flex-row gap-2 mt-2">
+					{#each ["Article", "Skyblock", "Minecraft", "Auctions"] as tag}
+						<span class="bg-blue-900 text-gray-200 p-2 rounded-md">{tag}</span>
+					{/each}
+				</div>
 			</div>
 		</a>
 		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
@@ -500,6 +510,11 @@
 				<p class="text-2xl font-bold">Build a Skyblock Plugin (part 3): Inventory Sync System</p>
 				<p class="text-lg mt-6">This article explores the Skyblock plugin's inventory synchronization
 					system, detailing how player inventories are managed across servers.</p>
+				<div class="flex flex-row gap-2 mt-2">
+					{#each ["Article", "Skyblock", "Minecraft", "Inventory Sync"] as tag}
+						<span class="bg-blue-900 text-gray-200 p-2 rounded-md">{tag}</span>
+					{/each}
+				</div>
 			</div>
 		</a>
 		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
@@ -513,6 +528,11 @@
 				<p class="text-2xl font-bold">Build a Skyblock Plugin (part 2): Island System</p>
 				<p class="text-lg mt-6">This article delves into the Skyblock plugin's island system,
 					focusing on cross-server compatibility, island distribution, and data management.</p>
+				<div class="flex flex-row gap-2 mt-2">
+					{#each ["Article", "Skyblock", "Minecraft", "Islands"] as tag}
+						<span class="bg-blue-900 text-gray-200 p-2 rounded-md">{tag}</span>
+					{/each}
+				</div>
 			</div>
 		</a>
 	</div>
