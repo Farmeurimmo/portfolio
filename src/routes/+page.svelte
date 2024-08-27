@@ -464,42 +464,29 @@
 	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 items-start z-0 mt-6">
 		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800 min-h-full"
-			 href="/blog/28-03-2024-new-website-portfolio-v4-edition" title="Article of the 28-03-2024">
+			 href="/projects/reapersanction" title="ReaperSanction">
 			<div class="flex flex-row gap-5 w-full">
 				<Image className="rounded-t-2xl w-full h-96"
-							 src="https://cdn.farmeurimmo.fr/img/blog/28-03-2024-new-website-portfolio-v4-edition.jpeg" />
+							 src="https://cdn.farmeurimmo.fr/img/projects/89580.png" />
 			</div>
 			<div class="py-3">
-				<p class="text-2xl font-bold">New website with portfolio in his 4 version (Svelte, i18n, Vite,
-					Tailwindcss)</p>
-				<p class="text-lg mt-6">This article explores the motivations, tech stack (Svelte, Vite, Tailwind CSS), and
-					features (contact form, blog, multilingual) of my fourth website.</p>
+				<p class="text-2xl font-bold">Reaper Sanction</p>
+				<p class="text-lg mt-6">Reaper Sanction is a Minecraft plugin that simplifies server management.
+					Its integrated sanction system and customizable GUIs make it easy to handle player misconduct.
+					Tailor sanctions to fit your server's rules and enforce them efficiently with user-friendly interfaces.</p>
 			</div>
 		</a>
 		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800 min-h-full"
-			 href="/blog/04-04-2024-dev-blog-1-build-a-skyblock-plugin" title="Article of the 04-04-2024">
+			 href="/blog/27-08-2024-dev-blog-4-build-a-skyblock-plugin" title="Article of the 27-08-2024">
 			<div class="flex flex-row gap-5 w-full">
 				<Image className="rounded-t-2xl w-full h-96"
-							 src="https://cdn.farmeurimmo.fr/img/blog/04-04-2024-dev-blog-1-build-a-skyblock-plugin.jpeg" />
+							 src="https://cdn.farmeurimmo.fr/img/blog/27-08-2024-dev-blog-4-build-a-skyblock-plugin.jpeg" />
 			</div>
 			<div class="py-3">
-				<p class="text-2xl font-bold">Build a Skyblock plugin (part 1): Introduction</p>
-				<p class="text-lg mt-6">This article outlines the development of a Minecraft Skyblock plugin
-					for Spigot servers, starting with project goals and context.</p>
-			</div>
-		</a>
-		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
-            transform transition duration-500 hover:scale-105 hover:bg-gray-800 min-h-full"
-			 href="/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin" title="Article of the 15-04-2024">
-			<div class="flex flex-row gap-5 w-full">
-				<Image className="rounded-t-2xl w-full h-96"
-							 src="https://cdn.farmeurimmo.fr/img/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin.jpeg" />
-			</div>
-			<div class="py-3">
-				<p class="text-2xl font-bold">Build a Skyblock Plugin (part 2): Island System</p>
-				<p class="text-lg mt-6">This article delves into the Skyblock plugin's island system,
-					focusing on cross-server compatibility, island distribution, and data management.</p>
+				<p class="text-2xl font-bold">Build a Skyblock Plugin (part 4): Cross server auction house</p>
+				<p class="text-lg mt-6">This article explores the Skyblock plugin's auction system,
+					detailing how players can sell and buy items across servers.</p>
 			</div>
 		</a>
 		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
@@ -513,6 +500,19 @@
 				<p class="text-2xl font-bold">Build a Skyblock Plugin (part 3): Inventory Sync System</p>
 				<p class="text-lg mt-6">This article explores the Skyblock plugin's inventory synchronization
 					system, detailing how player inventories are managed across servers.</p>
+			</div>
+		</a>
+		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
+            transform transition duration-500 hover:scale-105 hover:bg-gray-800 min-h-full"
+			 href="/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin" title="Article of the 15-04-2024">
+			<div class="flex flex-row gap-5 w-full">
+				<Image className="rounded-t-2xl w-full h-96"
+							 src="https://cdn.farmeurimmo.fr/img/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin.jpeg" />
+			</div>
+			<div class="py-3">
+				<p class="text-2xl font-bold">Build a Skyblock Plugin (part 2): Island System</p>
+				<p class="text-lg mt-6">This article delves into the Skyblock plugin's island system,
+					focusing on cross-server compatibility, island distribution, and data management.</p>
 			</div>
 		</a>
 	</div>
