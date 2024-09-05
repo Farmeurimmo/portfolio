@@ -42,7 +42,12 @@
 		}
 	];
 
-	const demo_images = [];
+	const demo_images = [
+		'https://cdn.farmeurimmo.fr/img/projects/rs1.png',
+		'https://cdn.farmeurimmo.fr/img/projects/rs2.png',
+		'https://cdn.farmeurimmo.fr/img/projects/rs3.png',
+		'https://cdn.farmeurimmo.fr/img/projects/rs4.png'
+	];
 
 	onMount(() => {
 		window.addEventListener('click', (event) => {
@@ -87,8 +92,8 @@
 </a>
 <section class="items-center flex flex-col min-h-screen gap-5 border-top" id="scrollToTop">
 	<div class=" w-5/6 lg:3/4">
-		<h1 class="text-6xl mt-8 font-bold">{$_('pages.projects.reapersanction.title')}</h1>
-		<p class="text-2xl">{$_('pages.projects.reapersanction.description')}</p>
+		<h1 class="text-5xl mt-8 font-bold">{$_('pages.projects.reapersanction.title')}</h1>
+		<p class="text-2xl mt-2">{$_('pages.projects.reapersanction.description')}</p>
 		<ul class="list-disc list-inside text-xl mt-8">
 			{#each good_points as point}
 				<li>{point}</li>
