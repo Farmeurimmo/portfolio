@@ -33,21 +33,15 @@
 		{ name: 'Tailwind', href: 'https://en.wikipedia.org/wiki/Tailwind_CSS', level: 5, category: 'Frameworks' },
 		{ name: 'Idea', href: 'https://en.wikipedia.org/wiki/IntelliJ_IDEA', level: 5, category: 'Tools' },
 		{ name: 'Pycharm', href: 'https://en.wikipedia.org/wiki/PyCharm', level: 5, category: 'Tools' },
-		{ name: 'Webstorm', href: 'https://en.wikipedia.org/wiki/WebStorm', level: 5, category: 'Tools' },
-		{ name: 'Phpstorm', href: 'https://en.wikipedia.org/wiki/PhpStorm', level: 5, category: 'Tools' },
-		{ name: 'Spring', href: 'https://en.wikipedia.org/wiki/Spring_Framework', level: 5, category: 'Frameworks' },
 		{ name: 'GitHub', href: 'https://en.wikipedia.org/wiki/GitHub', level: 5, category: 'Tools' },
 		{ name: 'Pnpm', href: 'https://pnpm.io', level: 5, category: 'Tools' },
-		{ name: 'Npm', href: 'https://en.wikipedia.org/wiki/Npm_(software)', level: 5, category: 'Tools' },
-		{ name: 'Linux', href: 'https://en.wikipedia.org/wiki/Linux', level: 5, category: 'Tools' },
 		{ name: 'Windows', href: 'https://en.wikipedia.org/wiki/Microsoft_Windows', level: 5, category: 'Tools' },
-		{ name: 'Maven', href: 'https://en.wikipedia.org/wiki/Apache_Maven', level: 5, category: 'Tools' },
 		{ name: 'Gradle', href: 'https://en.wikipedia.org/wiki/Gradle', level: 5, category: 'Tools' },
 		{ name: 'Md', href: 'https://en.wikipedia.org/wiki/Markdown', level: 5, category: 'Tools' },
 		{ name: 'Git', href: 'https://en.wikipedia.org/wiki/Git', level: 5, category: 'Tools' },
 		{ name: 'Redis', href: 'https://en.wikipedia.org/wiki/Redis', level: 5, category: 'Databases' },
 		{ name: 'Bash', href: 'https://en.wikipedia.org/wiki/Bash_(Unix_shell)', level: 5, category: 'Tools' },
-		{ name: 'RabbitMQ', href: 'https://en.wikipedia.org/wiki/RabbitMQ', level: 4, category: 'Tools' },
+		{ name: 'Maven', href: 'https://en.wikipedia.org/wiki/Apache_Maven', level: 4, category: 'Tools' },
 		{ name: 'MongoDB', href: 'https://en.wikipedia.org/wiki/MongoDB', level: 4, category: 'Databases' },
 		{ name: 'MYSQL', href: 'https://en.wikipedia.org/wiki/MySQL', level: 4, category: 'Databases' },
 		{ name: 'Arduino', href: 'https://en.wikipedia.org/wiki/Arduino', level: 4, category: 'Tools' },
@@ -67,7 +61,7 @@
 			level: 3,
 			category: 'Programming Languages'
 		},
-		{ name: 'Vue', href: 'https://en.wikipedia.org/wiki/Vue.js', level: 3, category: 'Frameworks' },
+		{ name: 'Spring', href: 'https://en.wikipedia.org/wiki/Spring_Framework', level: 3, category: 'Frameworks' },
 		{
 			name: 'React',
 			href: 'https://en.wikipedia.org/wiki/React_(JavaScript_library)',
@@ -75,13 +69,14 @@
 			category: 'Frameworks'
 		},
 		{ name: 'Vite', href: 'https://en.wikipedia.org/wiki/Vite', level: 3, category: 'Tools' },
-		{ name: 'Kubernetes', href: 'https://en.wikipedia.org/wiki/Kubernetes', level: 3, category: 'Tools' },
 		{
 			name: 'Workers',
 			href: 'https://en.wikipedia.org/wiki/Cloudflare#Cloudflare_Workers',
 			level: 3,
 			category: 'Tools'
 		},
+		{ name: 'Vue', href: 'https://en.wikipedia.org/wiki/Vue.js', level: 2, category: 'Frameworks' },
+		{ name: 'RabbitMQ', href: 'https://en.wikipedia.org/wiki/RabbitMQ', level: 2, category: 'Tools' },
 		{ name: 'Yarn', href: 'https://en.wikipedia.org/wiki/Yarn_(package_manager)', level: 2, category: 'Tools' },
 		{ name: 'PHP', href: 'https://en.wikipedia.org/wiki/PHP', level: 1, category: 'Programming Languages' },
 		{
