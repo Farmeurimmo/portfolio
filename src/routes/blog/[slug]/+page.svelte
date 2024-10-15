@@ -52,7 +52,7 @@
 
 <NavigationBar currentPage="blog" />
 
-<body class="flex flex-col min-h-fit px-4">
+<body class="flex flex-col min-h-fit">
 <button class="visible text-4xl font-extrabold fixed bottom-8 right-8 bg-gray-800 text-white p-2 rounded-full z-40"
 				id="scrollToTop">&uarr;
 </button>

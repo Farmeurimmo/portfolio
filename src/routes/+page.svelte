@@ -370,37 +370,15 @@
 
 <NavigationBar />
 
-<body class="flex flex-col min-h-screen px-4">
+<body class="flex flex-col min-h-screen">
 <button class="visible text-4xl font-extrabold fixed bottom-8 right-8 bg-gray-800 text-white p-2 rounded-full z-40"
 				id="scrollToTop">&uarr;
 </button>
 
 <section class="justify-center items-center flex flex-col min-h-screen gap-3 p-5" id="home">
-	<div class="flex flex-col sm:flex-row justify-center items-center gap-5 mt-20">
-		<Image className="rounded-full border-0 w-20 h-20" src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
-		<h2 class="text-5xl md:text-6xl font-bold text-center justify-center">Farmeurimmo</h2>
-	</div>
-	<h1 class="text-3xl font-bold text-center justify-center mt-4">{$_('pages.home.iam')}</h1>
-	<p class="mt-20" />
-	<ul class="text-left mx-3 list-disc list-inside gap-2">
-		<li class="text-2xl text-gray-200">{$_('pages.home.presentations.line1')}</li>
-		<li class="text-2xl text-gray-200">{$_('pages.home.presentations.line2')}</li>
-		<li class="text-2xl text-gray-200">{$_('pages.home.presentations.line3')}</li>
-		<li class="text-2xl text-gray-200 mt-4 list-none">{$_('pages.home.presentations.line4')}</li>
-	</ul>
-	<p class="mt-40" />
-	<div class="flex flex-col expand justify-center items-center gap-2 mt-auto mb-10">
-		<h3 class="text-3xl text-gray-200">{$_('pages.home.scroll')}</h3>
-		<a
-			class="flex justify-center border-2 border-white p-1 rounded-full w-16 text-6xl font-bold text-gray-400 hover:text-gray-200 outline-none"
-			href="#about" title="gotoabout">&darr;</a>
-	</div>
-</section>
-
-<section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top" id="about">
-	<div class="flex flex-row mt-32 justify-center items-center gap-6">
+	<div class="flex flex-row flex-wrap mt-32 justify-center items-center gap-6">
 		<Image className="rounded-full border-0 w-16 h-16" src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
-		<h2 class="text-6xl font-bold">{$_('pages.about.title')}</h2>
+		<h2 class="text-5xl md:text-6xl font-bold text-center justify-center">Farmeurimmo</h2>
 	</div>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<p

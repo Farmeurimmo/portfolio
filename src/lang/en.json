@@ -24,13 +24,6 @@
   "pages": {
     "home": {
       "title": "Developer & System Administrator - Farmeurimmo",
-      "iam": "Developer & System Administrator",
-      "presentations": {
-        "line1": "Investing in present for a better future",
-        "line2": "You become confident by building things",
-        "line3": "Maybe not the best today, but better than yesterday",
-        "line4": "Continuing to learn, grow and improve is my philosophy"
-      },
       "scroll": "Scroll to learn more",
       "projects": {
         "title": "Some of my projects or articles",
@@ -41,7 +34,7 @@
     },
     "about": {
       "title": "About",
-      "description": "I use Farmeurimmo as my pseudonym on the internet. I am a Full Stack developer and a French system administrator. I am a bit of a polyglot, I do not limit myself to a single technology or programming language. <br><br><br> I am passionate about computing (hardware, software, network) and new technologies in general. I own several cloud machines (vps/dedicated) for my personal and professional projects. <br><br><br> I also practice climbing (mostly indoor) and calisthenics."
+      "description": "I am a Full Stack developer and a French system administrator. I am a bit of a polyglot, I do not limit myself to a single technology or programming language. <br><br><br> I am passionate about computing (hardware, software, network) and new technologies in general. I own several cloud machines (vps/dedicated) for my personal and professional projects. <br><br><br> I also practice climbing (mostly indoor) and calisthenics."
     },
     "skills": {
       "title": "Skills",

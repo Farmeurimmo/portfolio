@@ -79,7 +79,7 @@
 
 <NavigationBar />
 
-<body class="flex flex-col items-center min-h-screen px-4">
+<body class="flex flex-col items-center min-h-screen">
 <button class="visible text-4xl font-extrabold fixed bottom-8 right-8 bg-gray-800 text-white p-2 rounded-full z-40"
 				id="scrollToTop">&uarr;
 </button>
@@ -90,7 +90,8 @@
 			stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 	</svg>
 </a>
-<section class="items-center flex flex-col min-h-screen gap-5 border-top" id="scrollToTop">
+
+<section class="items-center flex flex-col min-h-screen gap-5 border-top w-full" id="scrollToTop">
 	<div class=" w-5/6 lg:3/4">
 		<h1 class="text-5xl mt-8 font-bold">{$_('pages.projects.reapersanction.title')}</h1>
 		<p class="text-2xl mt-2">{$_('pages.projects.reapersanction.description')}</p>
@@ -100,7 +101,7 @@
 			{/each}
 		</ul>
 		<h2 class="text-4xl mt-8 font-bold">{$_('pages.projects.reapersanction.links')}</h2>
-		<div class="p-6 items-start grid grid-cols-4 md:flex lg:flex-row gap-10">
+		<div class="p-6 items-start flex flex-wrap gap-10">
 			{#each links as link}
 				<a href="{link.href}" class="p-5 bg-gray-900 rounded-2xl transform transition duration-500
 			hover:scale-105 hover:bg-gray-800 w-fit h-fit" title={link.name}>
@@ -139,108 +140,115 @@
 			<h2
 				class="text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl">{$_('pages.projects.reapersanction.wiki.commands')}</h2>
 			<p class="text-xl">{$_('pages.projects.reapersanction.wiki.optional')}</p>
-			<table class="w-full text-lg" id="table">
-				<thead>
-				<tr>
-					<th class="px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_head.command')}</th>
-					<th class="px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_head.usage')}</th>
-					<th class="px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_head.permission')}</th>
-					<th class="px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_head.description')}</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td class="border px-4 py-2">/rs</td>
-					<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_rs.usage')}</td>
-					<td class="border px-4 py-2">reapersanction</td>
-					<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_rs.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">/ban</td>
-					<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_ban.usage')}</td>
-					<td class="border px-4 py-2">reapersanction.ban</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_ban.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">/tempban</td>
-					<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_tempban.usage')}</td>
-					<td class="border px-4 py-2">reapersanction.tempban</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_tempban.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">/unban</td>
-					<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_unban.usage')}</td>
-					<td class="border px-4 py-2">reapersanction.unban</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_unban.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">/kick</td>
-					<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_kick.usage')}</td>
-					<td class="border px-4 py-2">reapersanction.kick</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_kick.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">/mute</td>
-					<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_mute.usage')}</td>
-					<td class="border px-4 py-2">reapersanction.mute</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_mute.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">/tempmute</td>
-					<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_tempmute.usage')}</td>
-					<td class="border px-4 py-2">reapersanction.tempmute</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_tempmute.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">/unmute</td>
-					<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_unmute.usage')}</td>
-					<td class="border px-4 py-2">reapersanction.unmute</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_unmute.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">/ban-ip</td>
-					<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_banip.usage')}
-					<td class="border px-4 py-2">reapersanction.banip</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_banip.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">/vanish</td>
-					<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_vanish.usage')}</td>
-					<td class="border px-4 py-2">reapersanction.vanish</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_vanish.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">/report</td>
-					<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_report.usage')}</td>
-					<td class="border px-4 py-2"></td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_report.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">/history</td>
-					<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_history.usage')}</td>
-					<td class="border px-4 py-2">reapersanction.history</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_history.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">/rsadmin</td>
-					<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_rsadmin.usage')}</td>
-					<td class="border px-4 py-2">reapersanction.admin</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_rsadmin.description')}</td>
-				</tr>
-				</tbody>
-			</table>
+			<div class="overflow-x-scroll">
+				<table class="w-full text-lg" id="table">
+					<thead>
+					<tr>
+						<th class="px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_head.command')}</th>
+						<th class="px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_head.usage')}</th>
+						<th class="px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_head.permission')}</th>
+						<th class="px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_head.description')}</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="border px-4 py-2">/rs</td>
+						<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_rs.usage')}</td>
+						<td class="border px-4 py-2">reapersanction</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_rs.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">/ban</td>
+						<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_ban.usage')}</td>
+						<td class="border px-4 py-2">reapersanction.ban</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_ban.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">/tempban</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_tempban.usage')}</td>
+						<td class="border px-4 py-2">reapersanction.tempban</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_tempban.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">/unban</td>
+						<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_unban.usage')}</td>
+						<td class="border px-4 py-2">reapersanction.unban</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_unban.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">/kick</td>
+						<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_kick.usage')}</td>
+						<td class="border px-4 py-2">reapersanction.kick</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_kick.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">/mute</td>
+						<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_mute.usage')}</td>
+						<td class="border px-4 py-2">reapersanction.mute</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_mute.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">/tempmute</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_tempmute.usage')}</td>
+						<td class="border px-4 py-2">reapersanction.tempmute</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_tempmute.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">/unmute</td>
+						<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_unmute.usage')}</td>
+						<td class="border px-4 py-2">reapersanction.unmute</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_unmute.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">/ban-ip</td>
+						<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_banip.usage')}
+						<td class="border px-4 py-2">reapersanction.banip</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_banip.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">/vanish</td>
+						<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_vanish.usage')}</td>
+						<td class="border px-4 py-2">reapersanction.vanish</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_vanish.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">/report</td>
+						<td class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_report.usage')}</td>
+						<td class="border px-4 py-2"></td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_report.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">/history</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_history.usage')}</td>
+						<td class="border px-4 py-2">reapersanction.history</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_history.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">/rsadmin</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_rsadmin.usage')}</td>
+						<td class="border px-4 py-2">reapersanction.admin</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.commands_table.row_rsadmin.description')}</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
 			<div class="mt-6" />
 			<h2 class="text-2xl font-bold sm:text-3xl md:text-4xl">{$_('pages.projects.reapersanction.wiki.custom_guis')}</h2>
 			<p class="text-xl">{$_('pages.projects.reapersanction.wiki.custom_guis_description')}</p>
@@ -267,7 +275,7 @@
 			<div class="mt-6" />
 			<h4 class="text-2xl font-bold sm:text-3xl md:text-4xl">{$_('pages.projects.reapersanction.wiki.gui_config')}</h4>
 			<div class="overflow-x-scroll">
-				<Highlight class="text-left w-screen" code="{code}" language={yaml} />
+				<Highlight class="text-left w-full" code="{code}" language={yaml} />
 			</div>
 			<div class="mt-6" />
 			<h4
@@ -282,112 +290,116 @@
 			<h5 class="text-2xl font-bold">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.title')}</h5>
 			<p class="text-xl">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.description')}</p>
 			<p class="text-left text-xl">{$_('pages.projects.reapersanction.wiki.optional')}</p>
-			<table class="w-full text-lg">
-				<thead>
-				<tr>
-					<th class="px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_head.name')}</th>
-					<th class="px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_head.arguments')}</th>
-					<th
-						class="px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_head.description')}</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td class="border px-4 py-2">TEMPBAN</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_tempban.arguments')}</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_tempban.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">BAN</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_ban.arguments')}</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_ban.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">TEMPMUTE</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_tempmute.arguments')}</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_tempmute.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">BAN_IP</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_banip.arguments')}</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_banip.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">KICK</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_kick.arguments')}</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_kick.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">MUTE</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_mute.arguments')}</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_mute.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">UNMUTE</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_unmute.arguments')}</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_unmute.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">UNBAN</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_unban.arguments')}</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_unban.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">UNBAN_IP</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_unbanip.arguments')}</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_unbanip.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">GUI</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_gui.arguments')}</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_gui.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">GUI_DYN</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_gui_dyn.arguments')}</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_gui_dyn.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">CLOSE</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_close.arguments')}</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_close.description')}</td>
-				</tr>
-				<tr>
-					<td class="border px-4 py-2">REPORT</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_report.arguments')}</td>
-					<td
-						class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_report.description')}</td>
-				</tr>
-				</tbody>
-			</table>
+			<div class="overflow-x-scroll">
+				<table class="w-full text-lg">
+					<thead>
+					<tr>
+						<th class="px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_head.name')}</th>
+						<th
+							class="px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_head.arguments')}</th>
+						<th
+							class="px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_head.description')}</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="border px-4 py-2">TEMPBAN</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_tempban.arguments')}</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_tempban.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">BAN</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_ban.arguments')}</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_ban.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">TEMPMUTE</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_tempmute.arguments')}</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_tempmute.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">BAN_IP</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_banip.arguments')}</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_banip.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">KICK</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_kick.arguments')}</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_kick.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">MUTE</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_mute.arguments')}</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_mute.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">UNMUTE</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_unmute.arguments')}</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_unmute.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">UNBAN</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_unban.arguments')}</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_unban.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">UNBAN_IP</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_unbanip.arguments')}</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_unbanip.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">GUI</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_gui.arguments')}</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_gui.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">GUI_DYN</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_gui_dyn.arguments')}</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_gui_dyn.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">CLOSE</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_close.arguments')}</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_close.description')}</td>
+					</tr>
+					<tr>
+						<td class="border px-4 py-2">REPORT</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_report.arguments')}</td>
+						<td
+							class="border px-4 py-2">{$_('pages.projects.reapersanction.wiki.int_actions_endpoints.row_report.description')}</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
 </section>
-</body>
 
 <CommonFooter />
+
+</body>
