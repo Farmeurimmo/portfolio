@@ -54,6 +54,7 @@
 				</div>
 			</a>
 		{/each}
+	</div>
 </section>
 </body>
 

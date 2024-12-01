@@ -37,6 +37,12 @@
 			</a>
 			© Farmeurimmo 2018 - {currentYear}
 		</div>
+		<div>
+			<a class="text-orange-500" href="/legals" rel="noopener noreferrer"
+				 target="_blank" title="Legals">
+				{$_("footer.legals")}
+			</a>
+		</div>
 	</div>
 	<div class="flex flex-col items-center gap-2 text-sm">
 		<a class="text-orange-500" href="https://github.com/Farmeurimmo" rel="noopener noreferrer"
@@ -59,8 +65,6 @@
 				{$_("footer.services.status")}
 			</a>
 		</div>
-	</div>
-	<div class="flex flex-col items-center gap-2 text-sm">
 		<div>
 			<a class="text-orange-500" href="https://github.com/Farmeurimmo/portfolio" rel="noopener noreferrer"
 				 target="_blank" title="Github Portfolio">

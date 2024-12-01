@@ -19,7 +19,8 @@
   "footer": {
     "services": {
       "status": "Statut des services"
-    }
+    },
+    "legals": "Mentions légales"
   },
   "pages": {
     "home": {
@@ -57,6 +58,16 @@
       "title": "Blog personnel | Articles",
       "description": "Découvrez mes derniers articles sur la tech et les projets. J’essaie d’écrire des articles aussi clairs et compréhensibles. Je ne vais donc pas utiliser trop de jargon technique.",
       "quicknote": "Tout est rédigé en anglais pour des raisons de simplicité et de compréhension. <br>Parce que l'Anglais est la langue la plus utilisée dans le monde de l'informatique."
+    },
+    "legals": {
+      "title": "Mentions légales",
+      "description": "Mentions légales du site farmeurimmo.fr",
+      "host": "Hébergeur",
+      "privacy": "Email pour la vie privée",
+      "denomination": "Dénomination sociale",
+      "pseudo": "Pseudonyme",
+      "contact": "Contact",
+      "maintainer": "Mainteneur du site et propriétaire"
     },
     "projects": {
       "projects": [

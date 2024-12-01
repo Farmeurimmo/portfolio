@@ -19,7 +19,8 @@
   "footer": {
     "services": {
       "status": "Service status"
-    }
+    },
+    "legals": "Legal notices"
   },
   "pages": {
     "home": {
@@ -57,6 +58,16 @@
       "title": "Personal blog | Articles",
       "description": "Discover my latest articles about tech and projects. I try to write articles that are as clear and understandable. So I won't use too much technical jargon.",
       "quicknote": "Everything is written in English for simplicity and understanding. <br>Because English is the most used language in the computer world."
+    },
+    "legals": {
+      "title": "Legal notices",
+      "description": "Legal notices of the site farmeurimmo.fr",
+      "host": "Host",
+      "privacy": "Email for privacy",
+      "denomination": "Legal name",
+      "pseudo": "Pseudo",
+      "contact": "Contact",
+      "maintainer": "Maintainer and owner"
     },
     "projects": {
       "projects": [
