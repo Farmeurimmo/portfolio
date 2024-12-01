@@ -434,7 +434,7 @@
 	<h2 class="text-6xl font-bold mt-32 text-center">{$_('pages.home.projects.title')}</h2>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<h2 class="text-xl text-gray-200 text-center justify-center">{@html $_('pages.home.projects.description')}</h2>
-	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 items-start z-0 mt-6">
+	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 items-start z-0 mt-6">
 		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800 min-h-full"
 			 href="/projects/reapersanction" title="ReaperSanction">
@@ -509,7 +509,7 @@
 			</div>
 		</a>
 	</div>
-	<div class="flex flex-row gap-10 text-left justify-center p-10">
+	<div class="flex flex-row gap-4 text-left justify-center p-10">
 		<a class="text-center flex flex-col justify-center items-start p-6 bg-gray-900 text-xl rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
 			 href="/blog/" title="All articles">
