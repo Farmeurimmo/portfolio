@@ -20,6 +20,11 @@
         <priority>0.90</priority>
     </url>
     <url>
+        <loc>https://farmeurimmo.fr/legals</loc>
+        <lastmod>2024-12-01T10:00:00+00:00</lastmod>
+        <priority>0.50</priority>
+    </url>
+    <url>
         <loc>https://farmeurimmo.fr/projects/reapersanction</loc>
         <lastmod>2024-10-15T10:00:00+00:00</lastmod>
         <priority>0.60</priority>
