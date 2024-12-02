@@ -77,14 +77,7 @@
 		},
 		{ name: 'Vue', href: 'https://en.wikipedia.org/wiki/Vue.js', level: 2, category: 'Frameworks' },
 		{ name: 'RabbitMQ', href: 'https://en.wikipedia.org/wiki/RabbitMQ', level: 2, category: 'Tools' },
-		{ name: 'Yarn', href: 'https://en.wikipedia.org/wiki/Yarn_(package_manager)', level: 2, category: 'Tools' },
-		{ name: 'PHP', href: 'https://en.wikipedia.org/wiki/PHP', level: 1, category: 'Programming Languages' },
-		{
-			name: 'Rust',
-			href: 'https://en.wikipedia.org/wiki/Rust_(programming_language)',
-			level: 1,
-			category: 'Programming Languages'
-		}
+		{ name: 'Yarn', href: 'https://en.wikipedia.org/wiki/Yarn_(package_manager)', level: 2, category: 'Tools' }
 	];
 
 	let categories = ['All', 'Programming Languages', 'Frameworks', 'Databases', 'Tools'];
@@ -375,14 +368,18 @@
 				id="scrollToTop">&uarr;
 </button>
 
-<section class="justify-center items-center flex flex-col min-h-screen gap-3 p-5" id="home">
+<section class="justify-center items-center flex flex-col min-h-screen gap-6 p-6" id="home">
 	<div class="flex flex-row flex-wrap mt-32 justify-center items-center gap-6">
 		<Image className="rounded-full border-0 w-16 h-16" src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
 		<h2 class="text-5xl md:text-6xl font-bold text-center justify-center">Farmeurimmo</h2>
 	</div>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<p
-		class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium text-gray-300">{@html $_('pages.about.description')}</p>
+		class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium text-gray-300">{$_('pages.about.description_1')}</p>
+	<p
+		class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium text-gray-300">{$_('pages.about.description_2')}</p>
+	<p
+		class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium text-gray-300">{$_('pages.about.description_3')}</p>
 	<div class="flex expand border-2 border-white p-1 rounded-full mt-auto mb-10">
 		<a class="text-6xl font-bold text-gray-400 hover:text-gray-200" href="#skills" title="gotoskills">&darr;</a>
 	</div>
@@ -390,8 +387,7 @@
 
 <section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top" id="skills">
 	<h2 class="text-6xl font-bold mt-32">{$_('pages.skills.title')}</h2>
-	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	<h3 class="text-xl inline">{@html $_('pages.skills.description')}</h3>
+	<h3 class="text-xl inline">{$_('pages.skills.description')}</h3>
 	<div class="grid grid-cols-3 sm:grid-cols-5 categories gap-2">
 		{#each categories as category}
 			<button class="border-1 border-gray-900 rounded-3xl p-3 mt-5 text-white bg-blue-900 opacity-85
@@ -430,7 +426,7 @@
 	</div>
 </section>
 
-<section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top" id="projects">
+<section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top p-8" id="projects">
 	<h2 class="text-6xl font-bold mt-32 text-center">{$_('pages.home.projects.title')}</h2>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<h2 class="text-xl text-gray-200 text-center justify-center">{@html $_('pages.home.projects.description')}</h2>
@@ -509,7 +505,7 @@
 			</div>
 		</a>
 	</div>
-	<div class="flex flex-row gap-4 text-left justify-center p-10">
+	<div class="flex flex-row gap-3 text-left justify-center p-10">
 		<a class="text-center flex flex-col justify-center items-start p-6 bg-gray-900 text-xl rounded-2xl
             transform transition duration-500 hover:scale-105 hover:bg-gray-800"
 			 href="/blog/" title="All articles">

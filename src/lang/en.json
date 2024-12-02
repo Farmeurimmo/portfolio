@@ -35,11 +35,13 @@
     },
     "about": {
       "title": "About",
-      "description": "I am a Full Stack developer and a French system administrator. I am a bit of a polyglot, I do not limit myself to a single technology or programming language. <br><br><br> I am passionate about computing (hardware, software, network) and new technologies in general. I own several cloud machines (vps/dedicated) for my personal and professional projects. <br><br><br> I also practice climbing (mostly indoor) and calisthenics."
+      "description_1": "I'm aspiring to become a Full Stack developer and system administrator, passionate about the diversity of technologies. As a polyglot, I do not limit myself to a single language or tool, and I enjoy exploring new solutions for every technical challenge.",
+      "description_2": "I am passionate about computing in all its forms, whether it's hardware, software, or networking. I manage several cloud machines (VPS/dedicated) for my personal and professional projects, allowing me to experiment and innovate continuously.",
+      "description_3": "Outside of computing, I practice indoor climbing and calisthenics, physical activities that promote my balance and physical condition."
     },
     "skills": {
       "title": "Skills",
-      "description": "x5 <p class=\"text-green-400 inline\">■</p> = Expert level, x1 <p class=\"text-green-400 inline\">■</p> = Beginner level"
+      "description": "Language, tools and technology proficiency gauge."
     },
     "contact": {
       "title": "A question? Convinced?",

@@ -35,11 +35,13 @@
     },
     "about": {
       "title": "À propos",
-      "description": "Je suis un développeur Full Stack et un administrateur système français. Je suis un peu polyglotte, je ne me limite pas à une seule technologie ou un seul langage de programmation. <br><br><br> Je suis un passionné d'informatique (hardware, software, réseau) et de nouvelles technologies en général. Je possède moi-même plusieurs machines dans le cloud (vps/dédiés) pour mes projets personnels et professionnels. <br><br><br> Je suis également pratiquant d'escalade (intérieur majoritairement) et de callisthénie."
+      "description_1": "J’aspire à devenir un développeur Full Stack et administrateur système, passionné par la diversité des technologies. Polyglotte, je ne me limite pas à un seul langage ou outil, et j'aime explorer de nouvelles solutions pour chaque défi technique.",
+      "description_2": "L'informatique me passionne sous toutes ses formes, qu'il s'agisse de hardware, de software ou de réseau. Je gère plusieurs machines cloud (VPS/dédiées) pour mes projets personnels et professionnels, me permettant ainsi d'expérimenter et d'innover en permanence.",
+      "description_3": "En dehors de l'informatique, je pratique l'escalade en salle et la callisthénie, des activités physiques qui favorisent mon équilibre et ma condition physique."
     },
     "skills": {
       "title": "Compétences",
-      "description": "x5 <p class=\"text-green-400 inline\">■</p> = niveau Expert, x1 <p class=\"text-green-400 inline\"> ■</p> = niveau Débutant"
+      "description": "Jauge de maîtrise des langages, outils et technologies."
     },
     "contact": {
       "title": "Une question ? Convaincu ?",
