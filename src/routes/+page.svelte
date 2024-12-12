@@ -374,7 +374,6 @@
 					 src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
 		<h2 class="text-5xl md:text-6xl font-bold text-center justify-center">Farmeurimmo</h2>
 	</div>
-	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<p
 		class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium text-gray-300">{$_('pages.about.description_1')}</p>
 	<p
