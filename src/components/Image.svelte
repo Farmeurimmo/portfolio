@@ -29,7 +29,7 @@
 </script>
 
 {#if loaded}
-	<img {src} class={className} alt="img" />
+	<img {src} class={className} alt="img" loading="lazy"/>
 {:else if failed}
 	<img src="https://icon-library.com/images/not-found-icon/not-found-icon-20.jpg" class={className} alt="Not Found" />
 {:else}
