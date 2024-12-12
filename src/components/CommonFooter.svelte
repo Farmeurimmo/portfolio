@@ -5,14 +5,16 @@
 
 	let commitHash = '';
 	let lastCommit = {};
+	let currentYear = new Date().getFullYear();
 
 	async function getLastCommit() {
 		const response = await fetch('https://api.github.com/repos/Farmeurimmo/portfolio/commits');
 		const json = await response.json();
-		return json[0];
+		lastCommit = json[0];
+		applyCommitHash();
 	}
 
-	async function applyCommitHash() {
+	function applyCommitHash() {
 		if (lastCommit !== undefined) {
 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			//@ts-expect-error
@@ -20,12 +22,8 @@
 		}
 	}
 
-	let currentYear = new Date().getFullYear();
-
-	onMount(async () => {
-		lastCommit = await getLastCommit();
-
-		await applyCommitHash();
+	onMount(() => {
+		getLastCommit();
 	});
 </script>
 
