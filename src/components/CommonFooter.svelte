@@ -33,7 +33,7 @@
 	<div class="flex flex-col items-center font-medium">
 		<div class="flex flex-row items-center gap-2.5">
 			<a href="https://farmeurimmo.fr" rel="noopener noreferrer" target="_blank" title="Farmeurimmo">
-				<Image className="rounded-full border-0" classNameParent="w-12" src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
+				<Image className="rounded-full border-0 w-12" src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
 			</a>
 			© Farmeurimmo 2018 - {currentYear}
 		</div>
