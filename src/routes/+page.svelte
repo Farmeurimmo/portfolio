@@ -370,8 +370,7 @@
 
 <section class="justify-center items-center flex flex-col min-h-screen gap-6 p-6" id="home">
 	<div class="flex flex-row flex-wrap mt-32 justify-center items-center gap-6">
-		<Image className="rounded-full border-0 w-16 h-16" classNameParent="rounded-full border-0 w-16 h-16"
-					 src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
+		<Image className="rounded-full border-0 w-16 h-16" src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
 		<h2 class="text-5xl md:text-6xl font-bold text-center justify-center">Farmeurimmo</h2>
 	</div>
 	<p
