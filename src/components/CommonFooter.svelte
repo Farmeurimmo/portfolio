@@ -74,8 +74,8 @@
 				{commitHash}
 			</a>
 		</div>
-		<img alt="Last commit"
-				 src="https://img.shields.io/github/last-commit/Farmeurimmo/portfolio?style=flat-square" />
+		<Image alt="Last commit"
+					 src="https://img.shields.io/github/last-commit/Farmeurimmo/portfolio?style=flat-square" />
 	</div>
 </footer>
 
