@@ -23,7 +23,11 @@
 	}
 
 	onMount(() => {
-		//getLastCommit();
+		if ('requestIdleCallback' in window) {
+			requestIdleCallback(getLastCommit);
+		} else {
+			setTimeout(getLastCommit, 5_000); // Fallback for browsers that do not support requestIdleCallback
+		}
 	});
 </script>
 
