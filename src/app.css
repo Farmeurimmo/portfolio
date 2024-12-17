@@ -50,9 +50,3 @@ html {
         transform: translateX(0);
     }
 }
-
-@media screen and (min-width: 980px) {
-    body {
-        animation: bio 0.9s ease-in-out;
-    }
-}
