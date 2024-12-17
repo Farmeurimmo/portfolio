@@ -23,7 +23,7 @@
 	}
 
 	onMount(() => {
-		getLastCommit();
+		//getLastCommit();
 	});
 </script>
 
