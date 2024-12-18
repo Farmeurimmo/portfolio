@@ -20,31 +20,18 @@
 		};
 	};
 
-	const scheduleImageLoad = () => {
-		if ('requestIdleCallback' in window) {
-			requestIdleCallback(() => {
-				loadImage();
-			});
-		} else {
-			setTimeout(loadImage, 5_000);
-		}
-	};
-
-	onMount(() => {
-		scheduleImageLoad();
+	onMount(async () => {
+		loadImage();
 	});
-
-	afterUpdate(() => {
-		scheduleImageLoad();
+	afterUpdate(async () => {
+		loadImage();
 	});
 </script>
 
 {#if loaded}
 	<img {src} class={className} alt="img" loading="lazy" />
 {:else if failed}
-	<div class="flex justify-center items-center m-8 flex-grow">
-		<img src="https://icon-library.com/images/not-found-icon/not-found-icon-20.jpg" class={className} alt="Not Found" />
-	</div>
+	<img src="https://icon-library.com/images/not-found-icon/not-found-icon-20.jpg" class={className} alt="Not Found" />
 {:else}
 	<div class="flex justify-center items-center m-8 flex-grow">
 		<div class="animate-spin rounded-full h-10 w-10 border-t-2 border-b-4 border-orange-500"></div>
