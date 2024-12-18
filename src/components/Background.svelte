@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Canvas, Layer } from 'svelte-canvas';
 	import { onMount } from 'svelte';
+	import { currentThemeSetting, getTheme } from '../stores/themeStore';
 
 	let particles: Particle[] = [];
 
@@ -109,7 +110,7 @@
 	}
 
 	const render = ({ context, width, height }: { context: CanvasRenderingContext2D, width: number, height: number }) => {
-		context.fillStyle = 'black';
+		context.fillStyle = theme === 'dark' ? 'black' : '#e6e6e6';
 		context.fillRect(0, 0, width, height);
 
 		for (let i = 0; i < particles.length; i++) {
@@ -128,17 +129,26 @@
 		}
 	}
 
+	let pageLoaded = false;
+
 	onMount(async () => {
-		let interval = setInterval(() => {
-			if (document.readyState === 'complete') {
-				let intervalStart = setInterval(() => {
+		if ('requestIdleCallback' in window) {
+			requestIdleCallback(() => {
+				pageLoaded = true;
+				setTimeout(() => {
 					start();
-					clearInterval(intervalStart);
-				}, 1_000);
-				clearInterval(interval);
-			}
-		}, 1_000);
+				}, 5_000);
+			});
+		} else {
+			setTimeout(start, 15_000); // Fallback for browsers that do not support requestIdleCallback
+		}
+
+		currentThemeSetting.subscribe(value => {
+			theme = value;
+		});
 	});
+
+	let theme = getTheme();
 
 	function start() {
 		generateParticles();
@@ -152,6 +162,8 @@
 	}
 </script>
 
-<Canvas autoplay style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+{#if pageLoaded}
+<Canvas autoplay style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;" {theme}>
 	<Layer {render} />
 </Canvas>
+{/if}

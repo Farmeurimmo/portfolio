@@ -20,35 +20,25 @@
 <CommonFooter />
 
 <style>
-
-    h1 {
-        color: black;
-        font-family: 'Roboto', sans-serif;
-        text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
-        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
-    }
-
     a {
         margin-top: 1rem;
         padding: 1rem;
         font-size: 2rem;
-        background: #000000;
         border-radius: 16px;
-        color: #ffffff;
-        text-decoration: none;
         transition: 0.5s;
         animation: pulseShadow 1s infinite;
+				color: black;
+				background-color: white;
     }
 
     a:hover {
-        background: #ffffff;
-        color: #000000;
+        background: #939393;
         animation: pulseShadowWhite 1s infinite;
     }
 
     @keyframes pulseShadow {
         0% {
-            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.9);
+            box-shadow: 0 0 0 0 var(--color-bg-hover);
             transform: scale(1);
         }
         50% {
@@ -62,7 +52,7 @@
 
     @keyframes pulseShadowWhite {
         0% {
-            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 0 0 var(--color-bg-hover);
             transform: scale(1);
         }
         50% {

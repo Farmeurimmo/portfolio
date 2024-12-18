@@ -36,16 +36,16 @@
 
 <body class="flex flex-col min-h-screen">
 <section class="items-center flex flex-col min-h-screen gap-3 border-top">
-	<h1 class="text-6xl mt-8">{$_('pages.projects.title')}</h1>
+	<h1 class="text-6xl mt-8 font-bold">{$_('pages.projects.title').replace(" | Farmeurimmo", "")}</h1>
 	<p class="text-2xl">{$_('pages.projects.description')}</p>
 	<div class="p-6 justify-center items-start grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10">
 		{#each projects as project}
-			<a href="/projects/{project.id}" class="flex flex-col p-5 bg-gray-900 rounded-2xl
-     transform transition duration-500 hover:scale-105 hover:bg-gray-800 min-h-full" title={project.title}>
+			<a href="/projects/{project.id}" class="flex flex-col p-5 container rounded-2xl
+     transform transition duration-500 hover:scale-105 min-h-full" title={project.title}>
 				<Image src={project.img} className="rounded-t-2xl mt-0 p-0 h-96 w-full" />
 				<div class="py-3">
-					<h2 class="text-3xl font-bold">{project.title}</h2>
-					<p class="text-gray-400 mt-5">{project.description}</p>
+					<h2 class="text-3xl special font-bold">{project.title}</h2>
+					<p class="special mt-5">{project.description}</p>
 				</div>
 				<div class="flex flex-row gap-2">
 					{#each project.tags as tag}

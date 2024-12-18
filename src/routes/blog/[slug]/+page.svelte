@@ -69,11 +69,11 @@
 		<div class="flex flex-col justify-between gap-5">
 			<div>
 				<h2 class="text-4xl font-bold">{post.title}</h2>
-				<p class="text-xl text-gray-200 mt-4">{post.snippet}</p>
+				<p class="text-xl  mt-4">{post.snippet}</p>
 			</div>
 			<div class="mt-auto">
-				<p class="text-lg text-gray-300">{post.views} &#x1F441;</p>
-				<p class="text-lg text-gray-300">Published: {post.published}</p>
+				<p class="text-lg">{post.views} &#x1F441;</p>
+				<p class="text-lg">Published: {post.published}</p>
 			</div>
 		</div>
 		<div>

@@ -3,6 +3,7 @@
 	import LangSelector from './LangSelector.svelte';
 	import { _ } from 'svelte-i18n';
 	import { onMount } from 'svelte';
+	import ThemeButton from './ThemeButton.svelte';
 
 	export let currentPage = 'home';
 
@@ -105,28 +106,31 @@
 	});
 </script>
 
-<nav class="flex border-0 {navBorder} {isMobile} top-0 z-50 bg-black w-full">
+<nav class="flex border-0 {navBorder} {isMobile} top-0 z-50  w-full">
 	<div class="flex flex-row items-center justify-evenly min-w-full h-12" id="items">
-		<a class="text-white hover:text-gray-300 flex flex-row items-center gap-3" href="https://farmeurimmo.fr"
+		<a class="special flex flex-row items-center gap-3 font-bold" href="https://farmeurimmo.fr"
 			 title="Farmeurimmo - Accueil">
 			<Image className="rounded-full border-0 w-8" src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
 			Farmeurimmo
 		</a>
 		{#each Object.entries(endPoints) as [key, value]}
 			{#if key === currentPage}
-				<a class="text-orange-400 font-bold hover:text-gray-300" href={value} title={key}>{$_("nav." + key)}</a>
+				<a class="text-orange-500 font-bold hover:text-blue-400" href={value} title={key}>{$_("nav." + key)}</a>
 			{:else}
 				{#if value === "/disabled"}
 					<div class="flex flex-row items-center gap-1">
-						<span class="text-red-400">[WIP]</span>
+						<span class="text-red-500">[WIP]</span>
 						<span class="text-gray-300 line-through">{$_("nav." + key)}</span>
 					</div>
 				{:else}
-					<a class="text-white font-semibold hover:text-amber-400" href={value} title={key}>{$_("nav." + key)}</a>
+					<a class="font-semibold hover:text-amber-500" href={value} title={key}>{$_("nav." + key)}</a>
 				{/if}
 			{/if}
 		{/each}
-		<LangSelector />
+		<div class="flex flex-row gap-3 items-center justify-center">
+			<ThemeButton />
+			<LangSelector />
+		</div>
 	</div>
 </nav>
 

@@ -2,12 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+
+[data-theme="light"] {
+    --color-bg: #ffffff;
+    --color-fg: #000000;
+    --color-p: #000000;
+    --color-bg-container: #ffffff;
+    --color-bg-hover: #afafaf;
+    --color-bg-focus: #939393;
+    --color-border: #000000;
+}
+
+[data-theme="dark"] {
+    --color-bg: #000000;
+    --color-fg: #ffffff;
+    --color-p: #d2d2d2;
+    --color-bg-container: rgb(29, 44, 72);
+    --color-bg-hover: #676666;
+    --color-bg-focus: #5d5d5d;
+    --color-border: #ffffff;
+}
+
 body {
-    color: white;
+    color: var(--color-fg);
     max-width: 100%;
     min-width: 400px;
     min-height: 100vh;
     margin: 0;
+}
+
+a, h1, h2, h3, h4, h5, h6, li, span, button {
+    color: var(--color-fg);
+}
+
+p, .special, input::placeholder, textarea::placeholder {
+    color: var(--color-p);
+}
+
+.canva, nav {
+    background-color: var(--color-bg);
+}
+
+.container {
+    background-color: var(--color-bg-container);
+}
+
+.container-border {
+    border-color: var(--color-border);
+}
+
+.container:hover {
+    background-color: var(--color-bg-hover);
+}
+
+.container:focus {
+    background-color: var(--color-bg-focus);
 }
 
 section {

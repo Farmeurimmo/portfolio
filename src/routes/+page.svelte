@@ -364,7 +364,7 @@
 <NavigationBar />
 
 <body class="flex flex-col min-h-screen">
-<button class="visible text-4xl font-extrabold fixed bottom-8 right-8 bg-gray-800 text-white p-2 rounded-full z-40"
+<button class="visible text-4xl font-extrabold fixed bottom-8 right-8 text-white bg-gray-800 p-2 rounded-full z-40"
 				id="scrollToTop">&uarr;
 </button>
 
@@ -374,17 +374,17 @@
 		<h2 class="text-5xl md:text-6xl font-bold text-center justify-center">Farmeurimmo</h2>
 	</div>
 	<p
-		class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium text-gray-300">{$_('pages.about.description_1')}</p>
+		class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium">{$_('pages.about.description_1')}</p>
 	<p
-		class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium text-gray-300">{$_('pages.about.description_2')}</p>
+		class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium">{$_('pages.about.description_2')}</p>
 	<p
-		class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium text-gray-300">{$_('pages.about.description_3')}</p>
-	<div class="flex expand border-2 border-white p-1 rounded-full mt-auto mb-10">
-		<a class="text-6xl font-bold text-gray-400 hover:text-gray-200" href="#skills" title="gotoskills">&darr;</a>
+		class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium">{$_('pages.about.description_3')}</p>
+	<div class="flex expand border-2 container-border p-1 rounded-full mt-auto mb-10">
+		<a class="text-6xl font-bold special" href="#skills" title="gotoskills">&darr;</a>
 	</div>
 </section>
 
-<section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top" id="skills">
+<section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top p-6" id="skills">
 	<h2 class="text-6xl font-bold mt-32">{$_('pages.skills.title')}</h2>
 	<h3 class="text-xl inline">{$_('pages.skills.description')}</h3>
 	<div class="grid grid-cols-3 sm:grid-cols-5 categories gap-2">
@@ -428,10 +428,10 @@
 <section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top p-8" id="projects">
 	<h2 class="text-6xl font-bold mt-32 text-center">{$_('pages.home.projects.title')}</h2>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	<h2 class="text-xl text-gray-200 text-center justify-center">{@html $_('pages.home.projects.description')}</h2>
-	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 items-start z-0 mt-6">
-		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
-            transform transition duration-500 hover:scale-105 hover:bg-gray-800 min-h-full"
+	<p class="text-xl text-center justify-center">{@html $_('pages.home.projects.description')}</p>
+	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 items-start z-0 mt-6">
+		<a class="flex flex-col p-5 container rounded-2xl
+            transform transition duration-500 hover:scale-105 min-h-full"
 			 href="/projects/reapersanction" title="ReaperSanction">
 			<div class="flex flex-row gap-5 w-full">
 				<Image className="rounded-t-2xl w-full h-96"
@@ -449,8 +449,8 @@
 				</div>
 			</div>
 		</a>
-		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
-            transform transition duration-500 hover:scale-105 hover:bg-gray-800 min-h-full"
+		<a class="flex flex-col p-5 container rounded-2xl
+            transform transition duration-500 hover:scale-105 min-h-full"
 			 href="/blog/27-08-2024-dev-blog-4-build-a-skyblock-plugin" title="Article of the 27-08-2024">
 			<div class="flex flex-row gap-5 w-full">
 				<Image className="rounded-t-2xl w-full h-96"
@@ -467,8 +467,8 @@
 				</div>
 			</div>
 		</a>
-		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
-            transform transition duration-500 hover:scale-105 hover:bg-gray-800 min-h-full"
+		<a class="flex flex-col p-5 container rounded-2xl
+            transform transition duration-500 hover:scale-105 min-h-full"
 			 href="/blog/18-07-2024-dev-blog-3-build-a-skyblock-plugin" title="Article of the 18-07-2024">
 			<div class="flex flex-row gap-5 w-full">
 				<Image className="rounded-t-2xl w-full h-96"
@@ -485,8 +485,8 @@
 				</div>
 			</div>
 		</a>
-		<a class="flex flex-col p-5 bg-gray-900 rounded-2xl
-            transform transition duration-500 hover:scale-105 hover:bg-gray-800 min-h-full"
+		<a class="flex flex-col p-5 container rounded-2xl
+            transform transition duration-500 hover:scale-105 min-h-full"
 			 href="/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin" title="Article of the 15-04-2024">
 			<div class="flex flex-row gap-5 w-full">
 				<Image className="rounded-t-2xl w-full h-96"
@@ -504,14 +504,14 @@
 			</div>
 		</a>
 	</div>
-	<div class="flex flex-row gap-3 text-left justify-center p-10">
-		<a class="text-center flex flex-col justify-center items-start p-6 bg-gray-900 text-xl rounded-2xl
-            transform transition duration-500 hover:scale-105 hover:bg-gray-800"
+	<div class="flex flex-row gap-6 text-left justify-center p-10">
+		<a class="text-center flex flex-col justify-center items-start p-6 container text-xl rounded-2xl
+            transform transition duration-500 hover:scale-105"
 			 href="/blog/" title="All articles">
 			{$_('pages.home.projects.more_blog')} &nearr;
 		</a>
-		<a class="text-center flex flex-col justify-center items-start p-6 bg-gray-900 text-xl rounded-2xl
-            transform transition duration-500 hover:scale-105 hover:bg-gray-800"
+		<a class="text-center flex flex-col justify-center items-start p-6 container text-xl rounded-2xl
+            transform transition duration-500 hover:scale-105"
 			 href="/projects/" title="All projects">
 			{$_('pages.home.projects.more_projects')} &nearr;
 		</a>
@@ -524,26 +524,26 @@
 
 <section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top" id="contact">
 	<h2 class="text-6xl font-bold text-center justify-center mt-22">{$_('pages.contact.title')}</h2>
-	<h2 class="text-4xl text-gray-200 text-center justify-center">{$_('pages.contact.description')}</h2>
+	<p class="text-4xl  text-center justify-center">{$_('pages.contact.description')}</p>
 	<p class="mt-10" />
 	{#if formSent}
 		<p class="text-4xl mt-10 text-green-600">{$_('pages.contact.formSent')}</p>
 	{:else }
-		<form class="flex flex-col justify-center items-center w-full text-white">
+		<form class="flex flex-col justify-center items-center w-full special">
 			<input bind:value={name}
-						 class="bg-gray-800 rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 hover:bg-gray-700 opacity-85 focus:outline-none focus:bg-gray-700"
+						 class="container rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 opacity-85 focus:outline-none"
 						 placeholder={$_('pages.contact.name')}
 						 type="text" />
 			<p class="text-red-500"
 				 hidden={!name_invalid}>{$_('pages.contact.name') + ' ' + $_('pages.contact.required')}</p>
 			<input bind:value={email}
-						 class="bg-gray-800 rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 mt-5 hover:bg-gray-700 opacity-85 focus:outline-none focus:bg-gray-700"
+						 class="container rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 mt-5 opacity-85 focus:outline-none"
 						 placeholder={$_('pages.contact.email')}
 						 type="email" />
 			<p class="text-red-500"
 				 hidden={!email_invalid}>{$_('pages.contact.email') + ' ' + $_('pages.contact.required')}</p>
 			<textarea bind:value={message}
-								class="bg-gray-800 rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 h-64 mt-5 hover:bg-gray-700 opacity-85 focus:outline-none focus:bg-gray-700"
+								class="container rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 h-64 mt-5 opacity-85 focus:outline-none "
 								placeholder={$_('pages.contact.message')} />
 			<p class="text-red-500"
 				 hidden={!message_invalid}>{$_('pages.contact.message') + ' ' + $_('pages.contact.required')}</p>
