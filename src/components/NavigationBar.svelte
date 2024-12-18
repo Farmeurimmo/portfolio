@@ -108,7 +108,7 @@
 
 <nav class="flex border-0 {navBorder} {isMobile} top-0 z-50  w-full">
 	<div class="flex flex-row items-center justify-evenly min-w-full h-12" id="items">
-		<a class="text-white hover:text-gray-300 flex flex-row items-center gap-3" href="https://farmeurimmo.fr"
+		<a class="special flex flex-row items-center gap-3 font-bold" href="https://farmeurimmo.fr"
 			 title="Farmeurimmo - Accueil">
 			<Image className="rounded-full border-0 w-8" src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
 			Farmeurimmo
