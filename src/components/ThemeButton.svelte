@@ -54,7 +54,5 @@
 		data-theme-toggle
 		on:click={handleButtonClick}
 		type="button"
-	>
-		Change to light themea
-	</SunSolid>
+	/>
 </div>

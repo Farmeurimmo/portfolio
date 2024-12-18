@@ -127,9 +127,10 @@
 				{/if}
 			{/if}
 		{/each}
-		<LangSelector />
-
-		<ThemeButton />
+		<div class="flex flex-row gap-3 items-center justify-center">
+			<ThemeButton />
+			<LangSelector />
+		</div>
 	</div>
 </nav>
 
