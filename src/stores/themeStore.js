@@ -1,9 +1,9 @@
 // src/stores/themeStore.ts
 import { get, writable } from 'svelte/store';
 
-export let currentThemeSetting = writable('light');
+export let currentThemeSetting = writable('dark');
 
-export const setTheme = (theme) => {
+export const setTheme = (/** @type {string} */ theme) => {
 	currentThemeSetting.set(theme);
 	localStorage.setItem('theme', theme);
 };

@@ -115,15 +115,15 @@
 		</a>
 		{#each Object.entries(endPoints) as [key, value]}
 			{#if key === currentPage}
-				<a class="text-orange-400 font-bold hover:text-blue-400" href={value} title={key}>{$_("nav." + key)}</a>
+				<a class="text-orange-500 font-bold hover:text-blue-400" href={value} title={key}>{$_("nav." + key)}</a>
 			{:else}
 				{#if value === "/disabled"}
 					<div class="flex flex-row items-center gap-1">
-						<span class="text-red-400">[WIP]</span>
+						<span class="text-red-500">[WIP]</span>
 						<span class="text-gray-300 line-through">{$_("nav." + key)}</span>
 					</div>
 				{:else}
-					<a class="font-semibold hover:text-amber-400" href={value} title={key}>{$_("nav." + key)}</a>
+					<a class="font-semibold hover:text-amber-500" href={value} title={key}>{$_("nav." + key)}</a>
 				{/if}
 			{/if}
 		{/each}

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Canvas, Layer } from 'svelte-canvas';
 	import { onMount } from 'svelte';
-	import { currentThemeSetting } from '../stores/themeStore';
+	import { currentThemeSetting, getTheme } from '../stores/themeStore';
 
 	let particles: Particle[] = [];
 
@@ -145,7 +145,7 @@
 		});
 	});
 
-	let theme = `light`;
+	let theme = getTheme();
 
 	function start() {
 		generateParticles();
