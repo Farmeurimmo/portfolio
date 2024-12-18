@@ -130,15 +130,15 @@
 	}
 
 	onMount(async () => {
-		let interval = setInterval(() => {
-			if (document.readyState === 'complete') {
-				let intervalStart = setInterval(() => {
+		if ('requestIdleCallback' in window) {
+			requestIdleCallback(() => {
+				setTimeout(() => {
 					start();
-					clearInterval(intervalStart);
 				}, 1_000);
-				clearInterval(interval);
-			}
-		}, 1_000);
+			});
+		} else {
+			setTimeout(start, 15_000); // Fallback for browsers that do not support requestIdleCallback
+		}
 
 		currentThemeSetting.subscribe(value => {
 			theme = value;
