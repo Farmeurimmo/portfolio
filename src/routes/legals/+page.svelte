@@ -37,13 +37,13 @@
 			<li>Covina, CA 91723</li>
 			<li>United States</li>
 		</ul>
-		<p>{$_('pages.legals.privacy')}: <a class="text-white font-bold underline hover:text-amber-400"
+		<p>{$_('pages.legals.privacy')}: <a class="text-white font-bold underline special hover:text-amber-400"
 																				href="mailto:privacy@vercel.com">privacy@vercel.com</a>
 		</p>
 		<p>{$_('pages.legals.denomination')}: <strong>Vercel Inc</strong></p>
 		<h2 class="text-3xl mt-8 font-bold">{$_('pages.legals.maintainer')}</h2>
 		<p>{$_('pages.legals.pseudo')}: <strong>Farmeurimmo</strong></p>
-		<p>{$_('pages.legals.contact')}: <a class="text-white font-bold underline hover:text-amber-400"
+		<p>{$_('pages.legals.contact')}: <a class="text-white font-bold underline special hover:text-amber-400"
 																				href="mailto:contact@farmeurimmo.fr">contact@farmeurimmo.fr</a>
 		</p>
 		<p>Discord: <strong>Farmeurimmo</strong></p>
