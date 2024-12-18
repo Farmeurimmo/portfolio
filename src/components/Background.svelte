@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Canvas, Layer } from 'svelte-canvas';
 	import { onMount } from 'svelte';
+	import { currentThemeSetting } from '../stores/themeStore';
 
 	let particles: Particle[] = [];
 
@@ -109,7 +110,7 @@
 	}
 
 	const render = ({ context, width, height }: { context: CanvasRenderingContext2D, width: number, height: number }) => {
-		context.fillStyle = 'black';
+		context.fillStyle = theme === 'dark' ? 'black' : '#e6e6e6';
 		context.fillRect(0, 0, width, height);
 
 		for (let i = 0; i < particles.length; i++) {
@@ -138,7 +139,13 @@
 				clearInterval(interval);
 			}
 		}, 1_000);
+
+		currentThemeSetting.subscribe(value => {
+			theme = value;
+		});
 	});
+
+	let theme = `light`;
 
 	function start() {
 		generateParticles();
@@ -152,6 +159,6 @@
 	}
 </script>
 
-<Canvas autoplay style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+<Canvas autoplay style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;" {theme}>
 	<Layer {render} />
 </Canvas>

@@ -3,6 +3,7 @@
 	import LangSelector from './LangSelector.svelte';
 	import { _ } from 'svelte-i18n';
 	import { onMount } from 'svelte';
+	import ThemeButton from './ThemeButton.svelte';
 
 	export let currentPage = 'home';
 
@@ -105,7 +106,7 @@
 	});
 </script>
 
-<nav class="flex border-0 {navBorder} {isMobile} top-0 z-50 bg-black w-full">
+<nav class="flex border-0 {navBorder} {isMobile} top-0 z-50  w-full">
 	<div class="flex flex-row items-center justify-evenly min-w-full h-12" id="items">
 		<a class="text-white hover:text-gray-300 flex flex-row items-center gap-3" href="https://farmeurimmo.fr"
 			 title="Farmeurimmo - Accueil">
@@ -122,11 +123,14 @@
 						<span class="text-gray-300 line-through">{$_("nav." + key)}</span>
 					</div>
 				{:else}
-					<a class="text-white font-semibold hover:text-amber-400" href={value} title={key}>{$_("nav." + key)}</a>
+					<a class="font-semibold hover:text-amber-400" href={value} title={key}>{$_("nav." + key)}</a>
 				{/if}
 			{/if}
 		{/each}
 		<LangSelector />
+
+
+		<ThemeButton />
 	</div>
 </nav>
 

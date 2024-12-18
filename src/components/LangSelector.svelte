@@ -44,19 +44,19 @@
 </style>
 
 <div class="locale-selector flex rounded">
-	<Button class="flex flex-row p-2 justify-items-center text-lg">{current}
+	<Button class="flex flex-row p-2 justify-items-center text-lg special">{current}
 		{#if (dropdownOpen)}
-			<ChevronDownSolid class="w-3 h-3 ml-2 dark:text-white" />
+			<ChevronDownSolid class="w-3 h-3 ml-2 special" />
 		{/if}
 		{#if (!dropdownOpen)}
-			<ChevronLeftSolid class="w-3 h-3 ml-2 text-white dark:text-white" />
+			<ChevronLeftSolid class="w-3 h-3 ml-2 special" />
 		{/if}
 	</Button>
-	<Dropdown bind:open={dropdownOpen} class="justify-center bg-gray-900 flex flex-col items-center rounded">
+	<Dropdown bind:open={dropdownOpen} class="justify-center flex flex-col items-center rounded container">
 		{#each languageOptions as option}
 			<DropdownItem
 				on:click={() => {value = option.code; handleLocaleChange();}}
-				class="p-3 text-white dark:text-white hover:bg-gray-800 w-40 rounded">
+				class="p-3 container special w-40 rounded">
 				{option.flag + ' ' + option.name}
 			</DropdownItem>
 		{/each}
