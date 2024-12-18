@@ -62,6 +62,7 @@
 			this.ay = Math.sin(angle + curveFactor) * 0.01;
 		}
 
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
 		render(context: CanvasRenderingContext2D, width: number, height: number) {
 			context.strokeStyle = 'tomato';
 			context.lineWidth = 1;
@@ -163,7 +164,7 @@
 </script>
 
 {#if pageLoaded}
-<Canvas autoplay style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;" {theme}>
-	<Layer {render} />
-</Canvas>
+	<Canvas autoplay style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;" {theme}>
+		<Layer {render} />
+	</Canvas>
 {/if}

@@ -48,11 +48,10 @@
 </script>
 
 
-<div class="w-8">
+<button class="w-8" on:click={handleButtonClick} type="button">
 	<SunSolid
 		aria-label="Change to light theme"
 		data-theme-toggle
-		on:click={handleButtonClick}
 		type="button"
 	/>
-</div>
+</button>

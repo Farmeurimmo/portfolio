@@ -363,35 +363,35 @@
 
 <NavigationBar />
 
-<body class="flex flex-col min-h-screen">
-<button class="visible text-4xl font-extrabold fixed bottom-8 right-8 text-white bg-gray-800 p-2 rounded-full z-40"
-				id="scrollToTop">&uarr;
-</button>
+<main class="flex flex-col min-h-screen">
+	<button class="visible text-4xl font-extrabold fixed bottom-8 right-8 text-white bg-gray-800 p-2 rounded-full z-40"
+					id="scrollToTop">&uarr;
+	</button>
 
-<section class="justify-center items-center flex flex-col min-h-screen gap-6 p-6" id="home">
-	<div class="flex flex-row flex-wrap mt-32 justify-center items-center gap-6">
-		<Image className="rounded-full border-0 w-16 h-16" src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
-		<h2 class="text-5xl md:text-6xl font-bold text-center justify-center">Farmeurimmo</h2>
-	</div>
-	<p
-		class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium">{$_('pages.about.description_1')}</p>
-	<p
-		class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium">{$_('pages.about.description_2')}</p>
-	<p
-		class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium">{$_('pages.about.description_3')}</p>
-	<div class="flex expand border-2 container-border p-1 rounded-full mt-auto mb-10">
-		<a class="text-6xl font-bold special" href="#skills" title="gotoskills">&darr;</a>
-	</div>
-</section>
+	<section class="justify-center items-center flex flex-col min-h-screen gap-6 p-6" id="home">
+		<div class="flex flex-row flex-wrap mt-32 justify-center items-center gap-6">
+			<Image className="rounded-full border-0 w-16 h-16" src="https://cdn.farmeurimmo.fr/img/logo.jpg" />
+			<h2 class="text-5xl md:text-6xl font-bold text-center justify-center">Farmeurimmo</h2>
+		</div>
+		<p
+			class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium">{$_('pages.about.description_1')}</p>
+		<p
+			class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium">{$_('pages.about.description_2')}</p>
+		<p
+			class="text-2xl justify-center text-left leading-8 mt-5 xl:w-2/3 mx-3 font-medium">{$_('pages.about.description_3')}</p>
+		<div class="flex expand border-2 container-border p-1 rounded-full mt-auto mb-10">
+			<a class="text-6xl font-bold special" href="#skills" title="gotoskills">&darr;</a>
+		</div>
+	</section>
 
-<section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top p-6" id="skills">
-	<h2 class="text-6xl font-bold mt-32">{$_('pages.skills.title')}</h2>
-	<h3 class="text-xl inline">{$_('pages.skills.description')}</h3>
-	<div class="grid grid-cols-3 sm:grid-cols-5 categories gap-2">
-		{#each categories as category}
-			<button class="border-1 border-gray-900 rounded-3xl p-3 mt-5 text-white bg-blue-900 opacity-85
+	<section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top p-6" id="skills">
+		<h2 class="text-6xl font-bold mt-32">{$_('pages.skills.title')}</h2>
+		<h3 class="text-xl inline">{$_('pages.skills.description')}</h3>
+		<div class="grid grid-cols-3 sm:grid-cols-5 categories gap-2">
+			{#each categories as category}
+				<button class="border-1 border-gray-900 rounded-3xl p-3 mt-5 text-white bg-blue-900 opacity-85
             focus:outline-none focus:bg-blue-600 focus:scale-105 {(selectedCategory === category ? 'bg-blue-600' : '')}"
-							on:click={() => {
+								on:click={() => {
                 selectedCategory = category;
                 goingToTop = true;
                 let dom = document.getElementById('skills');
@@ -403,162 +403,162 @@
                 }, 1_500);
             }
                 }>{category}</button>
-		{/each}
-	</div>
-	<div class="mt-3 skills gap-6 grid grid-cols-5 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 xl:grid-cols-14">
-		{#each filterSkills(selectedCategory) as skill}
-			<div class="card">
-				<a href={skill.href} target="_blank" class="flex flex-col items-center gap-2" title={skill.name}>
-					<Image src={`https://skillicons.dev/icons?i=${skill.name.toLowerCase()}`}
-								 className="w-16 h-16 rounded-full" />
-					<div class="flex flex-col items-center">
-						<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-						<div class="text-sm text-center text-gray-400">{@html progressionBar(skill.level).join('')}</div>
+			{/each}
+		</div>
+		<div class="mt-3 skills gap-6 grid grid-cols-5 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 xl:grid-cols-14">
+			{#each filterSkills(selectedCategory) as skill}
+				<div class="card">
+					<a href={skill.href} target="_blank" class="flex flex-col items-center gap-2" title={skill.name}>
+						<Image src={`https://skillicons.dev/icons?i=${skill.name.toLowerCase()}`}
+									 className="w-16 h-16 rounded-full" />
+						<div class="flex flex-col items-center">
+							<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+							<div class="text-sm text-center text-gray-400">{@html progressionBar(skill.level).join('')}</div>
+						</div>
+					</a>
+				</div>
+			{/each}
+		</div>
+		<p class="mt-10"></p>
+		<div class="flex expand border-2 container-border p-1 rounded-full mt-auto mb-10">
+			<a class="text-6xl font-bold special" href="#projects" title="gotoprojects">&darr;</a>
+		</div>
+	</section>
+
+	<section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top p-8" id="projects">
+		<h2 class="text-6xl font-bold mt-32 text-center">{$_('pages.home.projects.title')}</h2>
+		<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+		<p class="text-xl text-center justify-center">{@html $_('pages.home.projects.description')}</p>
+		<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 items-start z-0 mt-6">
+			<a class="flex flex-col p-5 container rounded-2xl
+            transform transition duration-500 hover:scale-105 min-h-full"
+				 href="/projects/reapersanction" title="ReaperSanction">
+				<div class="flex flex-row gap-5 w-full">
+					<Image className="rounded-t-2xl w-full h-96"
+								 src="https://cdn.farmeurimmo.fr/img/projects/89580.png" />
+				</div>
+				<div class="py-3">
+					<p class="text-2xl font-bold">Reaper Sanction (Minecraft plugin)</p>
+					<p class="text-lg mt-6">Reaper Sanction is a Minecraft plugin that simplifies server management.
+						Its integrated sanction system and customizable GUIs make it easy to handle player misconduct.
+						Tailor sanctions to fit your server's rules and enforce them efficiently with user-friendly interfaces.</p>
+					<div class="flex flex-row gap-2 mt-2">
+						{#each ["Plugin", "Spigot", "Java", "Minecraft"] as tag}
+							<span class="bg-blue-900 text-gray-200 p-2 rounded-md">{tag}</span>
+						{/each}
 					</div>
-				</a>
-			</div>
-		{/each}
-	</div>
-	<p class="mt-10" />
-	<div class="flex expand border-2 border-white p-1 rounded-full mt-auto mb-10">
-		<a class="text-6xl font-bold text-gray-400 hover:text-gray-200" href="#projects" title="gotoprojects">&darr;</a>
-	</div>
-</section>
-
-<section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top p-8" id="projects">
-	<h2 class="text-6xl font-bold mt-32 text-center">{$_('pages.home.projects.title')}</h2>
-	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	<p class="text-xl text-center justify-center">{@html $_('pages.home.projects.description')}</p>
-	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 items-start z-0 mt-6">
-		<a class="flex flex-col p-5 container rounded-2xl
-            transform transition duration-500 hover:scale-105 min-h-full"
-			 href="/projects/reapersanction" title="ReaperSanction">
-			<div class="flex flex-row gap-5 w-full">
-				<Image className="rounded-t-2xl w-full h-96"
-							 src="https://cdn.farmeurimmo.fr/img/projects/89580.png" />
-			</div>
-			<div class="py-3">
-				<p class="text-2xl font-bold">Reaper Sanction (Minecraft plugin)</p>
-				<p class="text-lg mt-6">Reaper Sanction is a Minecraft plugin that simplifies server management.
-					Its integrated sanction system and customizable GUIs make it easy to handle player misconduct.
-					Tailor sanctions to fit your server's rules and enforce them efficiently with user-friendly interfaces.</p>
-				<div class="flex flex-row gap-2 mt-2">
-					{#each ["Plugin", "Spigot", "Java", "Minecraft"] as tag}
-						<span class="bg-blue-900 text-gray-200 p-2 rounded-md">{tag}</span>
-					{/each}
 				</div>
-			</div>
-		</a>
-		<a class="flex flex-col p-5 container rounded-2xl
+			</a>
+			<a class="flex flex-col p-5 container rounded-2xl
             transform transition duration-500 hover:scale-105 min-h-full"
-			 href="/blog/27-08-2024-dev-blog-4-build-a-skyblock-plugin" title="Article of the 27-08-2024">
-			<div class="flex flex-row gap-5 w-full">
-				<Image className="rounded-t-2xl w-full h-96"
-							 src="https://cdn.farmeurimmo.fr/img/blog/27-08-2024-dev-blog-4-build-a-skyblock-plugin.jpeg" />
-			</div>
-			<div class="py-3">
-				<p class="text-2xl font-bold">Build a Skyblock Plugin (part 4): Cross server auction house</p>
-				<p class="text-lg mt-6">This article explores the Skyblock plugin's auction system,
-					detailing how players can sell and buy items across servers.</p>
-				<div class="flex flex-row gap-2 mt-2">
-					{#each ["Article", "Skyblock", "Minecraft", "Auctions"] as tag}
-						<span class="bg-blue-900 text-gray-200 p-2 rounded-md">{tag}</span>
-					{/each}
+				 href="/blog/27-08-2024-dev-blog-4-build-a-skyblock-plugin" title="Article of the 27-08-2024">
+				<div class="flex flex-row gap-5 w-full">
+					<Image className="rounded-t-2xl w-full h-96"
+								 src="https://cdn.farmeurimmo.fr/img/blog/27-08-2024-dev-blog-4-build-a-skyblock-plugin.jpeg" />
 				</div>
-			</div>
-		</a>
-		<a class="flex flex-col p-5 container rounded-2xl
+				<div class="py-3">
+					<p class="text-2xl font-bold">Build a Skyblock Plugin (part 4): Cross server auction house</p>
+					<p class="text-lg mt-6">This article explores the Skyblock plugin's auction system,
+						detailing how players can sell and buy items across servers.</p>
+					<div class="flex flex-row gap-2 mt-2">
+						{#each ["Article", "Skyblock", "Minecraft", "Auctions"] as tag}
+							<span class="bg-blue-900 text-gray-200 p-2 rounded-md">{tag}</span>
+						{/each}
+					</div>
+				</div>
+			</a>
+			<a class="flex flex-col p-5 container rounded-2xl
             transform transition duration-500 hover:scale-105 min-h-full"
-			 href="/blog/18-07-2024-dev-blog-3-build-a-skyblock-plugin" title="Article of the 18-07-2024">
-			<div class="flex flex-row gap-5 w-full">
-				<Image className="rounded-t-2xl w-full h-96"
-							 src="https://cdn.farmeurimmo.fr/img/blog/18-07-2024-dev-blog-3-build-a-skyblock-plugin.jpeg" />
-			</div>
-			<div class="py-3">
-				<p class="text-2xl font-bold">Build a Skyblock Plugin (part 3): Inventory Sync System</p>
-				<p class="text-lg mt-6">This article explores the Skyblock plugin's inventory synchronization
-					system, detailing how player inventories are managed across servers.</p>
-				<div class="flex flex-row gap-2 mt-2">
-					{#each ["Article", "Skyblock", "Minecraft", "Inventory Sync"] as tag}
-						<span class="bg-blue-900 text-gray-200 p-2 rounded-md">{tag}</span>
-					{/each}
+				 href="/blog/18-07-2024-dev-blog-3-build-a-skyblock-plugin" title="Article of the 18-07-2024">
+				<div class="flex flex-row gap-5 w-full">
+					<Image className="rounded-t-2xl w-full h-96"
+								 src="https://cdn.farmeurimmo.fr/img/blog/18-07-2024-dev-blog-3-build-a-skyblock-plugin.jpeg" />
 				</div>
-			</div>
-		</a>
-		<a class="flex flex-col p-5 container rounded-2xl
+				<div class="py-3">
+					<p class="text-2xl font-bold">Build a Skyblock Plugin (part 3): Inventory Sync System</p>
+					<p class="text-lg mt-6">This article explores the Skyblock plugin's inventory synchronization
+						system, detailing how player inventories are managed across servers.</p>
+					<div class="flex flex-row gap-2 mt-2">
+						{#each ["Article", "Skyblock", "Minecraft", "Inventory Sync"] as tag}
+							<span class="bg-blue-900 text-gray-200 p-2 rounded-md">{tag}</span>
+						{/each}
+					</div>
+				</div>
+			</a>
+			<a class="flex flex-col p-5 container rounded-2xl
             transform transition duration-500 hover:scale-105 min-h-full"
-			 href="/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin" title="Article of the 15-04-2024">
-			<div class="flex flex-row gap-5 w-full">
-				<Image className="rounded-t-2xl w-full h-96"
-							 src="https://cdn.farmeurimmo.fr/img/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin.jpeg" />
-			</div>
-			<div class="py-3">
-				<p class="text-2xl font-bold">Build a Skyblock Plugin (part 2): Island System</p>
-				<p class="text-lg mt-6">This article delves into the Skyblock plugin's island system,
-					focusing on cross-server compatibility, island distribution, and data management.</p>
-				<div class="flex flex-row gap-2 mt-2">
-					{#each ["Article", "Skyblock", "Minecraft", "Islands"] as tag}
-						<span class="bg-blue-900 text-gray-200 p-2 rounded-md">{tag}</span>
-					{/each}
+				 href="/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin" title="Article of the 15-04-2024">
+				<div class="flex flex-row gap-5 w-full">
+					<Image className="rounded-t-2xl w-full h-96"
+								 src="https://cdn.farmeurimmo.fr/img/blog/15-04-2024-dev-blog-2-build-a-skyblock-plugin.jpeg" />
 				</div>
-			</div>
-		</a>
-	</div>
-	<div class="flex flex-row gap-6 text-left justify-center p-10">
-		<a class="text-center flex flex-col justify-center items-start p-6 container text-xl rounded-2xl
+				<div class="py-3">
+					<p class="text-2xl font-bold">Build a Skyblock Plugin (part 2): Island System</p>
+					<p class="text-lg mt-6">This article delves into the Skyblock plugin's island system,
+						focusing on cross-server compatibility, island distribution, and data management.</p>
+					<div class="flex flex-row gap-2 mt-2">
+						{#each ["Article", "Skyblock", "Minecraft", "Islands"] as tag}
+							<span class="bg-blue-900 text-gray-200 p-2 rounded-md">{tag}</span>
+						{/each}
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="flex flex-row gap-6 text-left justify-center p-10">
+			<a class="text-center flex flex-col justify-center items-start p-6 container text-xl rounded-2xl
             transform transition duration-500 hover:scale-105"
-			 href="/blog/" title="All articles">
-			{$_('pages.home.projects.more_blog')} &nearr;
-		</a>
-		<a class="text-center flex flex-col justify-center items-start p-6 container text-xl rounded-2xl
+				 href="/blog/" title="All articles">
+				{$_('pages.home.projects.more_blog')} &nearr;
+			</a>
+			<a class="text-center flex flex-col justify-center items-start p-6 container text-xl rounded-2xl
             transform transition duration-500 hover:scale-105"
-			 href="/projects/" title="All projects">
-			{$_('pages.home.projects.more_projects')} &nearr;
-		</a>
-	</div>
-	<p class="mt-10" />
-	<div class="flex expand border-2 border-white p-1 rounded-full mt-auto mb-10">
-		<a class="text-6xl font-bold text-gray-400 hover:text-gray-200" href="#contact" title="gotocontact">&darr;</a>
-	</div>
-</section>
+				 href="/projects/" title="All projects">
+				{$_('pages.home.projects.more_projects')} &nearr;
+			</a>
+		</div>
+		<p class="mt-10"></p>
+		<div class="flex expand border-2 container-border p-1 rounded-full mt-auto mb-10">
+			<a class="text-6xl font-bold special" href="#contact" title="gotocontact">&darr;</a>
+		</div>
+	</section>
 
-<section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top" id="contact">
-	<h2 class="text-6xl font-bold text-center justify-center mt-22">{$_('pages.contact.title')}</h2>
-	<p class="text-4xl  text-center justify-center">{$_('pages.contact.description')}</p>
-	<p class="mt-10" />
-	{#if formSent}
-		<p class="text-4xl mt-10 text-green-600">{$_('pages.contact.formSent')}</p>
-	{:else }
-		<form class="flex flex-col justify-center items-center w-full special">
-			<input bind:value={name}
-						 class="container rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 opacity-85 focus:outline-none"
-						 placeholder={$_('pages.contact.name')}
-						 type="text" />
-			<p class="text-red-500"
-				 hidden={!name_invalid}>{$_('pages.contact.name') + ' ' + $_('pages.contact.required')}</p>
-			<input bind:value={email}
-						 class="container rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 mt-5 opacity-85 focus:outline-none"
-						 placeholder={$_('pages.contact.email')}
-						 type="email" />
-			<p class="text-red-500"
-				 hidden={!email_invalid}>{$_('pages.contact.email') + ' ' + $_('pages.contact.required')}</p>
-			<textarea bind:value={message}
-								class="container rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 h-64 mt-5 opacity-85 focus:outline-none "
-								placeholder={$_('pages.contact.message')} />
-			<p class="text-red-500"
-				 hidden={!message_invalid}>{$_('pages.contact.message') + ' ' + $_('pages.contact.required')}</p>
-			<button
-				class="border-1 border-gray-900 rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 mt-5 text-white bg-blue-900 {buttonColor}
+	<section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top" id="contact">
+		<h2 class="text-6xl font-bold text-center justify-center mt-22">{$_('pages.contact.title')}</h2>
+		<p class="text-4xl  text-center justify-center">{$_('pages.contact.description')}</p>
+		<p class="mt-10"></p>
+		{#if formSent}
+			<p class="text-4xl mt-10 text-green-600">{$_('pages.contact.formSent')}</p>
+		{:else }
+			<form class="flex flex-col justify-center items-center w-full special">
+				<input bind:value={name}
+							 class="container rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 opacity-85 focus:outline-none"
+							 placeholder={$_('pages.contact.name')}
+							 type="text" />
+				<p class="text-red-500"
+					 hidden={!name_invalid}>{$_('pages.contact.name') + ' ' + $_('pages.contact.required')}</p>
+				<input bind:value={email}
+							 class="container rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 mt-5 opacity-85 focus:outline-none"
+							 placeholder={$_('pages.contact.email')}
+							 type="email" />
+				<p class="text-red-500"
+					 hidden={!email_invalid}>{$_('pages.contact.email') + ' ' + $_('pages.contact.required')}</p>
+				<textarea bind:value={message}
+									class="container rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 h-64 mt-5 opacity-85 focus:outline-none "
+									placeholder={$_('pages.contact.message')}></textarea>
+				<p class="text-red-500"
+					 hidden={!message_invalid}>{$_('pages.contact.message') + ' ' + $_('pages.contact.required')}</p>
+				<button
+					class="border-1 border-gray-900 rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 mt-5 text-white bg-blue-900 {buttonColor}
             opacity-85 focus:outline-none focus:bg-blue-600 focus:scale-105"
-				id="card"
-				on:click={() => callDiscordWebhook()}>{buttonText}</button>
-		</form>
-	{/if}
-</section>
+					id="card"
+					on:click={() => callDiscordWebhook()}>{buttonText}</button>
+			</form>
+		{/if}
+	</section>
+
+</main>
 
 <CommonFooter />
-
-</body>
 
 <style>
     .expand:hover {

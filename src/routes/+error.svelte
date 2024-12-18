@@ -27,8 +27,8 @@
         border-radius: 16px;
         transition: 0.5s;
         animation: pulseShadow 1s infinite;
-				color: black;
-				background-color: white;
+        color: black;
+        background-color: white;
     }
 
     a:hover {
