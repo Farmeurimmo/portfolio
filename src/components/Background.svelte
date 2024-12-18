@@ -129,12 +129,15 @@
 		}
 	}
 
+	let pageLoaded = false;
+
 	onMount(async () => {
 		if ('requestIdleCallback' in window) {
 			requestIdleCallback(() => {
+				pageLoaded = true;
 				setTimeout(() => {
 					start();
-				}, 1_000);
+				}, 5_000);
 			});
 		} else {
 			setTimeout(start, 15_000); // Fallback for browsers that do not support requestIdleCallback
@@ -159,6 +162,8 @@
 	}
 </script>
 
+{#if pageLoaded}
 <Canvas autoplay style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;" {theme}>
 	<Layer {render} />
 </Canvas>
+{/if}
