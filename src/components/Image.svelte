@@ -26,7 +26,7 @@
 				loadImage();
 			});
 		} else {
-			setTimeout(loadImage, 1);
+			setTimeout(loadImage, 5_000);
 		}
 	};
 
