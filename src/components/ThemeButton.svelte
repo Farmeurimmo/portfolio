@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { getTheme, setTheme } from '../stores/themeStore';
+	import { SunSolid } from 'flowbite-svelte-icons';
 
 	function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
 		if (localStorageTheme !== null) {
@@ -46,11 +47,14 @@
 	});
 </script>
 
-<button
-	aria-label="Change to light theme"
-	data-theme-toggle
-	on:click={handleButtonClick}
-	type="button"
->
-	Change to light themea
-</button>
+
+<div class="w-8">
+	<SunSolid
+		aria-label="Change to light theme"
+		data-theme-toggle
+		on:click={handleButtonClick}
+		type="button"
+	>
+		Change to light themea
+	</SunSolid>
+</div>
