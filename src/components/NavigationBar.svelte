@@ -77,7 +77,7 @@
 			}
 			scrollY = window.scrollY;
 			if (window.innerWidth < 980) {
-				isMobile = 'mt-2';
+				isMobile = 'pt-2';
 			} else {
 				isMobile = 'sticky';
 			}
