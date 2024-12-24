@@ -28,10 +28,12 @@
     "tailwindcss": "^3.4.17",
     "tslib": "^2.8.1",
     "typescript": "^5.7.2",
-    "vite": "^6.0.3"
+    "vite": "^6.0.3",
+    "vite-plugin-compression": "^0.5.1"
   },
   "type": "module",
   "dependencies": {
+    "@sveltejs/adapter-static": "^3.0.8",
     "@sveltejs/adapter-vercel": "^5.5.2",
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
     "@types/node": "^22.10.2",

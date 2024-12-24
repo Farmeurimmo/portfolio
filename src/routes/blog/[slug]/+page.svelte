@@ -54,7 +54,8 @@
 
 <main class="flex flex-col min-h-fit">
 	<button aria-labelledby="scrollToTop"
-					class="visible text-4xl font-extrabold fixed bottom-8 right-8 bg-gray-800 text-white p-2 rounded-full z-40" id="scrollToTop">&uarr;
+					class="visible text-4xl font-extrabold fixed bottom-8 right-8 bg-gray-800 text-white p-2 rounded-full z-40"
+					id="scrollToTop">&uarr;
 	</button>
 	<a aria-labelledby="blog page" class="fixed bottom-24 right-8 p-2 bg-bl rounded-full bg-gray-800 text-white"
 		 href="/blog">
