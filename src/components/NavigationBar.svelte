@@ -47,7 +47,7 @@
 
 				window.addEventListener('click', (e) => {
 					if (!e.target) return;
-					
+
 					if (window.location.pathname.match(/^\/(?!$).+/) !== null) {
 						// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 						// @ts-expect-error
