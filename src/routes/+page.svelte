@@ -111,27 +111,10 @@
 	let goingToTop = false;
 	let isMobile = false;
 
+	let ContactForm;
+	let formSent = false;
+
 	onMount(async () => {
-		let sections = document.querySelectorAll('section');
-
-		let observer = new IntersectionObserver((entries) => {
-			entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					if (goingToTop) return;
-					// The section is in the viewport, scroll to it
-					entry.target.scrollIntoView({ behavior: 'smooth' });
-					// set the hash to the id of the section
-					//window.location.hash = entry.target.id;
-				}
-			});
-		}, {
-			threshold: 0.05 // Trigger the callback when half of the section is in the viewport
-		});
-
-		sections.forEach(section => {
-			observer.observe(section);
-		});
-
 		const scrollToTopButton = document.getElementById('scrollToTop');
 
 		if (scrollToTopButton != null) {
@@ -151,16 +134,6 @@
 
 		window.addEventListener('scroll', () => {
 			if (scrollToTopButton == null) return;
-			if (initSending) {
-				let contact = document.getElementById('contact');
-				if (contact) {
-					goingToTop = true;
-					contact.scrollIntoView({ behavior: 'smooth' });
-					setTimeout(() => {
-						goingToTop = false;
-					}, 1_500);
-				}
-			}
 			if (window.pageYOffset > 350) {
 				scrollToTopButton.classList.add('visible');
 			} else {
@@ -220,6 +193,38 @@
 		}
 
 		applyOnATag();
+
+		if ('requestIdleCallback' in window) {
+			requestIdleCallback(async () => {
+				let sections = document.querySelectorAll('section');
+
+				let observer = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							if (goingToTop) return;
+							// The section is in the viewport, scroll to it
+							entry.target.scrollIntoView({ behavior: 'smooth' });
+							// set the hash to the id of the section
+							//window.location.hash = entry.target.id;
+						}
+					});
+				}, {
+					threshold: 0.05 // Trigger the callback when half of the section is in the viewport
+				});
+
+				sections.forEach(section => {
+					observer.observe(section);
+				});
+
+				const module = await import('../components/ContactForm.svelte');
+				ContactForm = module.default;
+			});
+		} else {
+			setTimeout(async () => {
+				const module = await import('../components/ContactForm.svelte');
+				ContactForm = module.default;
+			}, 15_000); // Fallback for browsers that do not support requestIdleCallback
+		}
 	});
 
 	export function applyOnATag() {
@@ -256,87 +261,6 @@
 			isMobile = window.innerWidth < 980;
 		}
 	}
-
-	let formSent = false;
-
-	let name = '';
-	let email = '';
-	let message = '';
-
-	let name_invalid = false;
-	let email_invalid = false;
-	let message_invalid = false;
-
-	let formSubmitted = false;
-
-	let buttonColor = 'bg-blue-900';
-	let buttonText = $_('pages.contact.send');
-
-	$: {
-		if (formSubmitted) {
-			name_invalid = !(name !== '' && name.length > 3);
-			email_invalid = !(email !== '' && email.indexOf('@') !== -1 && email.indexOf('.') !== -1);
-			message_invalid = !(message !== '' && message.length > 10);
-		}
-		if (sending) {
-			buttonColor = 'bg-amber-400';
-			buttonText = '...';
-		} else {
-			buttonColor = 'bg-blue-900 hover:bg-blue-800';
-			buttonText = $_('pages.contact.send');
-		}
-	}
-
-	let sending = false;
-	let initSending = false;
-
-	function callDiscordWebhook() {
-		formSubmitted = true;
-
-		sending = true;
-		initSending = true;
-
-		setTimeout(() => {
-			initSending = false;
-		}, 1_500);
-
-		setTimeout(async () => {
-			if (name_invalid) {
-				sending = false;
-				return;
-			}
-			if (email_invalid) {
-				sending = false;
-				return;
-			}
-			if (message_invalid) {
-				sending = false;
-				return;
-			}
-
-			let url = '../api/contact';
-			let formData = new FormData();
-			formData.append('name', name);
-			formData.append('email', email);
-			formData.append('message', message);
-			fetch(url, {
-				method: 'POST',
-				body: formData
-			}).then(response => {
-				if (response.status === 200) {
-					name = '';
-					email = '';
-					message = '';
-					formSent = true;
-				} else {
-					alert($_('pages.contact.error'));
-				}
-			}).catch(error => {
-				alert($_('pages.contact.error'));
-				error && console.error(error);
-			});
-		}, 100);
-	}
 </script>
 
 <svelte:head>
@@ -359,9 +283,9 @@
 		name="twitter:description" />
 </svelte:head>
 
-<Background />
-
 <NavigationBar />
+
+<Background />
 
 <main class="flex flex-col min-h-screen">
 	<button class="visible text-4xl font-extrabold fixed bottom-8 right-8 text-white bg-gray-800 p-2 rounded-full z-40"
@@ -526,33 +450,8 @@
 		<h2 class="text-6xl font-bold text-center justify-center mt-22">{$_('pages.contact.title')}</h2>
 		<p class="text-4xl  text-center justify-center">{$_('pages.contact.description')}</p>
 		<p class="mt-10"></p>
-		{#if formSent}
-			<p class="text-4xl mt-10 text-green-600">{$_('pages.contact.formSent')}</p>
-		{:else }
-			<form class="flex flex-col justify-center items-center w-full special">
-				<input bind:value={name}
-							 class="container rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 opacity-85 focus:outline-none"
-							 placeholder={$_('pages.contact.name')}
-							 type="text" />
-				<p class="text-red-500"
-					 hidden={!name_invalid}>{$_('pages.contact.name') + ' ' + $_('pages.contact.required')}</p>
-				<input bind:value={email}
-							 class="container rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 mt-5 opacity-85 focus:outline-none"
-							 placeholder={$_('pages.contact.email')}
-							 type="email" />
-				<p class="text-red-500"
-					 hidden={!email_invalid}>{$_('pages.contact.email') + ' ' + $_('pages.contact.required')}</p>
-				<textarea bind:value={message}
-									class="container rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 h-64 mt-5 opacity-85 focus:outline-none "
-									placeholder={$_('pages.contact.message')}></textarea>
-				<p class="text-red-500"
-					 hidden={!message_invalid}>{$_('pages.contact.message') + ' ' + $_('pages.contact.required')}</p>
-				<button
-					class="border-1 border-gray-900 rounded-3xl p-5 w-full sm:w-3/4 2xl:w-1/2 mt-5 text-white bg-blue-900 {buttonColor}
-            opacity-85 focus:outline-none focus:bg-blue-600 focus:scale-105"
-					id="card"
-					on:click={() => callDiscordWebhook()}>{buttonText}</button>
-			</form>
+		{#if ContactForm}
+			<ContactForm {formSent} {isMobile} bind:goingToTop />
 		{/if}
 	</section>
 
