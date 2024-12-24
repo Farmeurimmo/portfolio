@@ -6,9 +6,7 @@ const config = {
 	preprocess: [vitePreprocess()],
 
 	kit: {
-		adapter: adapter({
-			out: 'public'
-		})
+		adapter: adapter()
 	}
 };
 
