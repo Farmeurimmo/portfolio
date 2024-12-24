@@ -138,10 +138,10 @@
 				pageLoaded = true;
 				setTimeout(() => {
 					start();
-				}, 5_000);
+				}, 3_000);
 			});
 		} else {
-			setTimeout(start, 15_000); // Fallback for browsers that do not support requestIdleCallback
+			setTimeout(start, 12_000); // Fallback for browsers that do not support requestIdleCallback
 		}
 
 		currentThemeSetting.subscribe(value => {

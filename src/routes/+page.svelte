@@ -114,116 +114,119 @@
 	let ContactForm;
 	let formSent = false;
 
+	async function handleIdleCallback() {
+		const scrollToTopButton = document.getElementById('scrollToTop');
+
+		if (scrollToTopButton != null) {
+			scrollToTopButton.addEventListener('click', () => {
+				const section = document.getElementById('home');
+				if (section) {
+					goingToTop = true;
+					section.scrollIntoView({
+						behavior: 'smooth'
+					});
+					setTimeout(() => {
+						goingToTop = false;
+					}, 1_500);
+				}
+			});
+		}
+
+		window.addEventListener('scroll', () => {
+			if (scrollToTopButton == null) return;
+			if (window.pageYOffset > 350) {
+				scrollToTopButton.classList.add('visible');
+			} else {
+				scrollToTopButton.classList.remove('visible');
+				if (isMobile) return;
+				if (window.pageYOffset < 2) {
+					const presentation = document.getElementById('home');
+					if (presentation) {
+						goingToTop = true;
+						presentation.scrollIntoView({ behavior: 'smooth' });
+						setTimeout(() => {
+							goingToTop = false;
+						}, 1_500);
+					}
+				}
+			}
+		});
+
+		let ro = new ResizeObserver(entries => {
+			for (let entry of entries) {
+				if (entry.contentBoxSize) {
+					isMobile = entry.contentBoxSize[0].inlineSize < 980;
+				} else {
+					isMobile = entry.contentRect.width < 980;
+				}
+			}
+		});
+
+		ro.observe(document.body);
+
+		window.addEventListener('hashchange', function() {
+			let element = document.getElementById(window.location.hash.split('#')[1]);
+			if (element) {
+				setTimeout(() => {
+					window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
+				}, 500);
+			}
+		});
+
+		if (window.location.hash) {
+			let element = document.getElementById(window.location.hash.split('#')[1]);
+			setTimeout(() => {
+				if (element) {
+					goingToTop = true;
+					element.scrollIntoView({ behavior: 'smooth' });
+					setTimeout(() => {
+						goingToTop = false;
+					}, 1_500);
+					window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
+				}
+			}, 500);
+		}
+
+		const presentation = document.getElementById('home');
+		if (!isMobile && presentation) {
+			presentation.scrollIntoView({ behavior: 'smooth' });
+		}
+
+		applyOnATag();
+
+		let sections = document.querySelectorAll('section');
+
+		let observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					if (goingToTop) return;
+					// The section is in the viewport, scroll to it
+					entry.target.scrollIntoView({ behavior: 'smooth' });
+					// set the hash to the id of the section
+					//window.location.hash = entry.target.id;
+				}
+			});
+		}, {
+			threshold: 0.05 // Trigger the callback when half of the section is in the viewport
+		});
+
+		sections.forEach(section => {
+			observer.observe(section);
+		});
+
+		const module = await import('../components/ContactForm.svelte');
+		ContactForm = module.default;
+	}
+
 	onMount(async () => {
 		if ('requestIdleCallback' in window) {
 			requestIdleCallback(async () => {
-				const scrollToTopButton = document.getElementById('scrollToTop');
-
-				if (scrollToTopButton != null) {
-					scrollToTopButton.addEventListener('click', () => {
-						const section = document.getElementById('home');
-						if (section) {
-							goingToTop = true;
-							section.scrollIntoView({
-								behavior: 'smooth'
-							});
-							setTimeout(() => {
-								goingToTop = false;
-							}, 1_500);
-						}
-					});
-				}
-
-				window.addEventListener('scroll', () => {
-					if (scrollToTopButton == null) return;
-					if (window.pageYOffset > 350) {
-						scrollToTopButton.classList.add('visible');
-					} else {
-						scrollToTopButton.classList.remove('visible');
-						if (isMobile) return;
-						if (window.pageYOffset < 2) {
-							const presentation = document.getElementById('home');
-							if (presentation) {
-								goingToTop = true;
-								presentation.scrollIntoView({ behavior: 'smooth' });
-								setTimeout(() => {
-									goingToTop = false;
-								}, 1_500);
-							}
-						}
-					}
-				});
-
-				let ro = new ResizeObserver(entries => {
-					for (let entry of entries) {
-						if (entry.contentBoxSize) {
-							isMobile = entry.contentBoxSize[0].inlineSize < 980;
-						} else {
-							isMobile = entry.contentRect.width < 980;
-						}
-					}
-				});
-
-				ro.observe(document.body);
-
-				window.addEventListener('hashchange', function() {
-					let element = document.getElementById(window.location.hash.split('#')[1]);
-					if (element) {
-						setTimeout(() => {
-							window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
-						}, 500);
-					}
-				});
-
-				if (window.location.hash) {
-					let element = document.getElementById(window.location.hash.split('#')[1]);
-					setTimeout(() => {
-						if (element) {
-							goingToTop = true;
-							element.scrollIntoView({ behavior: 'smooth' });
-							setTimeout(() => {
-								goingToTop = false;
-							}, 1_500);
-							window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
-						}
-					}, 500);
-				}
-
-				const presentation = document.getElementById('home');
-				if (!isMobile && presentation) {
-					presentation.scrollIntoView({ behavior: 'smooth' });
-				}
-
-				applyOnATag();
-
-				let sections = document.querySelectorAll('section');
-
-				let observer = new IntersectionObserver((entries) => {
-					entries.forEach(entry => {
-						if (entry.isIntersecting) {
-							if (goingToTop) return;
-							// The section is in the viewport, scroll to it
-							entry.target.scrollIntoView({ behavior: 'smooth' });
-							// set the hash to the id of the section
-							//window.location.hash = entry.target.id;
-						}
-					});
-				}, {
-					threshold: 0.05 // Trigger the callback when half of the section is in the viewport
-				});
-
-				sections.forEach(section => {
-					observer.observe(section);
-				});
-
-				const module = await import('../components/ContactForm.svelte');
-				ContactForm = module.default;
+				await handleIdleCallback();
 			});
 		} else {
 			setTimeout(async () => {
-				const module = await import('../components/ContactForm.svelte');
-				ContactForm = module.default;
-			}, 15_000); // Fallback for browsers that do not support requestIdleCallback
+				await handleIdleCallback();
+			}, 10_000); // Fallback for browsers that do not support requestIdleCallback
 		}
 	});
 
