@@ -61,7 +61,6 @@
 							}
 						}
 					}
-					console.log('test');
 					// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 					// @ts-expect-error
 					if (e.target.tagName === 'A') {
@@ -86,7 +85,7 @@
 		navBorder = scrollY > 0 ? 'border-bottom' : '';
 	}
 
-	onMount(() => {
+	function handleRequestCallback() {
 		const contactSection = document.querySelector('#contact');
 		if (contactSection) {
 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -102,6 +101,15 @@
 			updateCurrentPage('projects');
 		} else {
 			updateCurrentPage('contact');
+		}
+	}
+
+	onMount(() => {
+		if ('requestIdleCallback' in window) {
+			requestIdleCallback(handleRequestCallback);
+		} else {
+			// Fallback for browsers that do not support requestIdleCallback
+			setTimeout(handleRequestCallback, 3_000);
 		}
 	});
 </script>
