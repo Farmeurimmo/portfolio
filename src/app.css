@@ -11,6 +11,7 @@
     --color-bg-hover: #afafaf;
     --color-bg-focus: #939393;
     --color-border: #000000;
+    --color-active-nav: rgb(124, 59, 22)
 }
 
 [data-theme="dark"] {
@@ -21,6 +22,7 @@
     --color-bg-hover: #676666;
     --color-bg-focus: #5d5d5d;
     --color-border: #ffffff;
+    --color-active-nav: rgb(255, 131, 22);
 }
 
 body {
@@ -29,6 +31,10 @@ body {
     min-width: 400px;
     min-height: 100vh;
     margin: 0;
+}
+
+.active-nav {
+    color: var(--color-active-nav);
 }
 
 a, h1, h2, h3, h4, h5, h6, li, span, button {
