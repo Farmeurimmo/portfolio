@@ -1,5 +1,5 @@
 <script>
-	import { _ } from 'svelte-i18n';
+	import { _, json } from 'svelte-i18n';
 	import Background from '../../../components/Background.svelte';
 	import CommonFooter from '../../../components/CommonFooter.svelte';
 	import NavigationBar from '../../../components/NavigationBar.svelte';
@@ -9,15 +9,15 @@
 	import Highlight from 'svelte-highlight';
 	import { onMount } from 'svelte';
 
-	let good_points = $_('pages.projects.reapersanction.good_points');
-	let indev_things = $_('pages.projects.reapersanction.indev_things');
-	let install_intructions = $_('pages.projects.reapersanction.wiki.install_instructions');
-	let code = $_('pages.projects.reapersanction.wiki.code');
+	let good_points = $json('pages.projects.reapersanction.good_points');
+	let indev_things = $json('pages.projects.reapersanction.indev_things');
+	let install_intructions = $json('pages.projects.reapersanction.wiki.install_instructions');
+	let code = $json('pages.projects.reapersanction.wiki.code');
 
-	$: good_points = $_('pages.projects.reapersanction.good_points');
-	$: indev_things = $_('pages.projects.reapersanction.indev_things');
-	$: install_intructions = $_('pages.projects.reapersanction.wiki.install_instructions');
-	$: code = $_('pages.projects.reapersanction.wiki.code');
+	$: good_points = $json('pages.projects.reapersanction.good_points');
+	$: indev_things = $json('pages.projects.reapersanction.indev_things');
+	$: install_intructions = $json('pages.projects.reapersanction.wiki.install_instructions');
+	$: code = $json('pages.projects.reapersanction.wiki.code');
 
 	const links = [
 		{
@@ -92,7 +92,7 @@
 		</svg>
 	</a>
 
-	<section class="items-center flex flex-col min-h-screen gap-5 border-top w-full" id="scrollToTop">
+	<section class="items-center flex flex-col min-h-screen gap-5 border-top w-full" id="content">
 		<div class=" w-5/6 lg:3/4">
 			<h1 class="text-5xl mt-8 font-bold">{$_('pages.projects.reapersanction.title')}</h1>
 			<p class="text-2xl mt-2">{$_('pages.projects.reapersanction.description')}</p>
