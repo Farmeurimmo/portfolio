@@ -1,7 +1,6 @@
 <script>
 	import { _ } from 'svelte-i18n';
 	import Image from './Image.svelte';
-	import { onMount } from 'svelte';
 
 	export let goingToTop;
 
@@ -29,7 +28,7 @@
 		{ name: 'Debian', href: 'https://en.wikipedia.org/wiki/Debian', level: 5, category: 'Tools' },
 		{ name: 'Kali', href: 'https://en.wikipedia.org/wiki/Kali_Linux', level: 5, category: 'Tools' },
 		{ name: 'Cloudflare', href: 'https://en.wikipedia.org/wiki/Cloudflare', level: 5, category: 'Tools' },
-		{ name: 'Tailwind', href: 'https://en.wikipedia.org/wiki/Tailwind_CSS', level: 5, category: 'Frameworks' },
+		{ name: 'TailwindCSS', href: 'https://en.wikipedia.org/wiki/Tailwind_CSS', level: 5, category: 'Frameworks' },
 		{ name: 'Idea', href: 'https://en.wikipedia.org/wiki/IntelliJ_IDEA', level: 5, category: 'Tools' },
 		{ name: 'Pycharm', href: 'https://en.wikipedia.org/wiki/PyCharm', level: 5, category: 'Tools' },
 		{ name: 'GitHub', href: 'https://en.wikipedia.org/wiki/GitHub', level: 5, category: 'Tools' },
@@ -40,19 +39,27 @@
 		{ name: 'Git', href: 'https://en.wikipedia.org/wiki/Git', level: 5, category: 'Tools' },
 		{ name: 'Redis', href: 'https://en.wikipedia.org/wiki/Redis', level: 5, category: 'Databases' },
 		{ name: 'Bash', href: 'https://en.wikipedia.org/wiki/Bash_(Unix_shell)', level: 5, category: 'Tools' },
+		{ name: 'MYSQL', href: 'https://en.wikipedia.org/wiki/MySQL', level: 5, category: 'Databases' },
 		{ name: 'Maven', href: 'https://en.wikipedia.org/wiki/Apache_Maven', level: 4, category: 'Tools' },
 		{ name: 'MongoDB', href: 'https://en.wikipedia.org/wiki/MongoDB', level: 4, category: 'Databases' },
-		{ name: 'MYSQL', href: 'https://en.wikipedia.org/wiki/MySQL', level: 4, category: 'Databases' },
 		{ name: 'Arduino', href: 'https://en.wikipedia.org/wiki/Arduino', level: 4, category: 'Tools' },
 		{ name: 'Flask', href: 'https://en.wikipedia.org/wiki/Flask_(web_framework)', level: 4, category: 'Frameworks' },
+		{ name: 'FastAPI', href: 'https://en.wikipedia.org/wiki/FastAPI', level: 4, category: 'Frameworks' },
 		{ name: 'Docker', href: 'https://en.wikipedia.org/wiki/Docker_(software)', level: 4, category: 'Tools' },
 		{ name: 'Svelte', href: 'https://en.wikipedia.org/wiki/Svelte', level: 4, category: 'Frameworks' },
 		{ name: 'Vercel', href: 'https://en.wikipedia.org/wiki/Vercel', level: 4, category: 'Tools' },
+		{ name: 'Spring', href: 'https://en.wikipedia.org/wiki/Spring_Boot', level: 4, category: 'Frameworks' },
 		{
 			name: 'JavaScript',
 			href: 'https://en.wikipedia.org/wiki/JavaScript',
-			level: 3,
+			level: 4,
 			category: 'Programming Languages'
+		},
+		{
+			name: 'GithubActions',
+			href: 'https://en.wikipedia.org/wiki/GitHub#GitHub_Actions',
+			level: 4,
+			category: 'Tools'
 		},
 		{
 			name: 'TypeScript',
@@ -60,7 +67,6 @@
 			level: 3,
 			category: 'Programming Languages'
 		},
-		{ name: 'Spring', href: 'https://en.wikipedia.org/wiki/Spring_Framework', level: 3, category: 'Frameworks' },
 		{
 			name: 'React',
 			href: 'https://en.wikipedia.org/wiki/React_(JavaScript_library)',
@@ -75,8 +81,7 @@
 			category: 'Tools'
 		},
 		{ name: 'Vue', href: 'https://en.wikipedia.org/wiki/Vue.js', level: 2, category: 'Frameworks' },
-		{ name: 'RabbitMQ', href: 'https://en.wikipedia.org/wiki/RabbitMQ', level: 2, category: 'Tools' },
-		{ name: 'Yarn', href: 'https://en.wikipedia.org/wiki/Yarn_(package_manager)', level: 2, category: 'Tools' }
+		{ name: 'RabbitMQ', href: 'https://en.wikipedia.org/wiki/RabbitMQ', level: 2, category: 'Tools' }
 	];
 
 	let categories = ['All', 'Programming Languages', 'Frameworks', 'Databases', 'Tools'];
@@ -106,10 +111,6 @@
 		}
 		return bars;
 	}
-
-	onMount(() => {
-		console.log('SkillsComponent mounted');
-	});
 </script>
 
 <section class="justify-center items-center flex flex-col min-h-screen gap-3 border-top p-6" id="skills">

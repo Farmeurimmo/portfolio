@@ -86,8 +86,6 @@
 	}
 
 	onMount(() => {
-		console.log('ContactForm mounted');
-
 		const scrollToTopButton = document.getElementById('scrollToTop');
 
 		window.addEventListener('scroll', () => {
