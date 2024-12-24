@@ -115,87 +115,87 @@
 	let formSent = false;
 
 	onMount(async () => {
-		const scrollToTopButton = document.getElementById('scrollToTop');
-
-		if (scrollToTopButton != null) {
-			scrollToTopButton.addEventListener('click', () => {
-				const section = document.getElementById('home');
-				if (section) {
-					goingToTop = true;
-					section.scrollIntoView({
-						behavior: 'smooth'
-					});
-					setTimeout(() => {
-						goingToTop = false;
-					}, 1_500);
-				}
-			});
-		}
-
-		window.addEventListener('scroll', () => {
-			if (scrollToTopButton == null) return;
-			if (window.pageYOffset > 350) {
-				scrollToTopButton.classList.add('visible');
-			} else {
-				scrollToTopButton.classList.remove('visible');
-				if (isMobile) return;
-				if (window.pageYOffset < 2) {
-					const presentation = document.getElementById('home');
-					if (presentation) {
-						goingToTop = true;
-						presentation.scrollIntoView({ behavior: 'smooth' });
-						setTimeout(() => {
-							goingToTop = false;
-						}, 1_500);
-					}
-				}
-			}
-		});
-
-		let ro = new ResizeObserver(entries => {
-			for (let entry of entries) {
-				if (entry.contentBoxSize) {
-					isMobile = entry.contentBoxSize[0].inlineSize < 980;
-				} else {
-					isMobile = entry.contentRect.width < 980;
-				}
-			}
-		});
-
-		ro.observe(document.body);
-
-		window.addEventListener('hashchange', function() {
-			let element = document.getElementById(window.location.hash.split('#')[1]);
-			if (element) {
-				setTimeout(() => {
-					window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
-				}, 500);
-			}
-		});
-
-		if (window.location.hash) {
-			let element = document.getElementById(window.location.hash.split('#')[1]);
-			setTimeout(() => {
-				if (element) {
-					goingToTop = true;
-					element.scrollIntoView({ behavior: 'smooth' });
-					setTimeout(() => {
-						goingToTop = false;
-					}, 1_500);
-					window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
-				}
-			}, 500);
-		}
-
-		const presentation = document.getElementById('home');
-		if (!isMobile && presentation) {
-			presentation.scrollIntoView({ behavior: 'smooth' });
-		}
-
-		applyOnATag();
-
 		if ('requestIdleCallback' in window) {
 			requestIdleCallback(async () => {
+				const scrollToTopButton = document.getElementById('scrollToTop');
+
+				if (scrollToTopButton != null) {
+					scrollToTopButton.addEventListener('click', () => {
+						const section = document.getElementById('home');
+						if (section) {
+							goingToTop = true;
+							section.scrollIntoView({
+								behavior: 'smooth'
+							});
+							setTimeout(() => {
+								goingToTop = false;
+							}, 1_500);
+						}
+					});
+				}
+
+				window.addEventListener('scroll', () => {
+					if (scrollToTopButton == null) return;
+					if (window.pageYOffset > 350) {
+						scrollToTopButton.classList.add('visible');
+					} else {
+						scrollToTopButton.classList.remove('visible');
+						if (isMobile) return;
+						if (window.pageYOffset < 2) {
+							const presentation = document.getElementById('home');
+							if (presentation) {
+								goingToTop = true;
+								presentation.scrollIntoView({ behavior: 'smooth' });
+								setTimeout(() => {
+									goingToTop = false;
+								}, 1_500);
+							}
+						}
+					}
+				});
+
+				let ro = new ResizeObserver(entries => {
+					for (let entry of entries) {
+						if (entry.contentBoxSize) {
+							isMobile = entry.contentBoxSize[0].inlineSize < 980;
+						} else {
+							isMobile = entry.contentRect.width < 980;
+						}
+					}
+				});
+
+				ro.observe(document.body);
+
+				window.addEventListener('hashchange', function() {
+					let element = document.getElementById(window.location.hash.split('#')[1]);
+					if (element) {
+						setTimeout(() => {
+							window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
+						}, 500);
+					}
+				});
+
+				if (window.location.hash) {
+					let element = document.getElementById(window.location.hash.split('#')[1]);
+					setTimeout(() => {
+						if (element) {
+							goingToTop = true;
+							element.scrollIntoView({ behavior: 'smooth' });
+							setTimeout(() => {
+								goingToTop = false;
+							}, 1_500);
+							window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
+						}
+					}, 500);
+				}
+
+				const presentation = document.getElementById('home');
+				if (!isMobile && presentation) {
+					presentation.scrollIntoView({ behavior: 'smooth' });
+				}
+
+				applyOnATag();
+
 				let sections = document.querySelectorAll('section');
 
 				let observer = new IntersectionObserver((entries) => {
@@ -227,7 +227,7 @@
 		}
 	});
 
-	export function applyOnATag() {
+	function applyOnATag() {
 		// Attach the event listener to the body or another parent element
 		document.body.addEventListener('click', event => {
 			// Check if event.target is not null and is an <a> element
