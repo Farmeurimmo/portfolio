@@ -47,8 +47,8 @@
 
 				window.addEventListener('click', (e) => {
 					if (!e.target) return;
-					//if current location contains /blog open in new tab if the link is #
-					if (window.location.pathname.match('/blog') !== null) {
+					
+					if (window.location.pathname.match(/^\/(?!$).+/) !== null) {
 						// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 						// @ts-expect-error
 						if (e.target.tagName === 'A') {
@@ -56,12 +56,12 @@
 							// @ts-expect-error
 							const href = e.target.getAttribute('href');
 							if (href && href.includes('#')) {
-								e.preventDefault();
 								window.open(href, '_self');
 								return;
 							}
 						}
 					}
+					console.log('test');
 					// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 					// @ts-expect-error
 					if (e.target.tagName === 'A') {
